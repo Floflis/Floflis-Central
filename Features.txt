@@ -1,0 +1,6 @@
+* Ao clicar algumas vezes na versão, easter egg+historico;
+
+* lvl da Máquina e lvl do Usuário;
+
+Programa que trás informações completas referêntes aos hardwares do computador.
+Ex: Leitor de Mídia e sua velocidade de gravação
