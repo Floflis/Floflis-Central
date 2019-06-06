@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2project>
-    <name>FrameworkJS</name>
+    <name>Floflis Central</name>
     <description></description>
-    <version>r2</version>
+    <version>061</version>
     <author></author>
     <author-email></author-email>
     <author-website>http://</author-website>
-    <app-id>com.plasnerd.frameworkc2</app-id>
+    <app-id>com.floflis.central</app-id>
     <unique-id>1a0mdkjfspcoo</unique-id>
     <saved-with-version>24400</saved-with-version>
     <used-plugins>
