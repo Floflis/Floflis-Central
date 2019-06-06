@@ -85,9 +85,8 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="8" name="Load content" sid="208140225315479" type="UI">
-                    <param id="0" name="URL">AJAX.LastData</param>
-                    <param id="1" name="POST Data (Optional)">&quot;&quot;</param>
+                <action id="6" name="Set HTML" sid="208140225315479" type="UI">
+                    <param id="0" name="Set HTML">AJAX.LastData</param>
                 </action>
             </actions>
         </event-block>
