@@ -88,6 +88,32 @@
                 <action id="6" name="Set HTML" sid="208140225315479" type="UI">
                     <param id="0" name="Set HTML">AJAX.LastData</param>
                 </action>
+                <action id="-16" name="Wait" sid="452367930864856" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action id="9" name="Read" sid="491998598005987" type="Electron">
+                    <param id="0" name="Tag">&quot;&quot;</param>
+                    <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/home.html&quot;</param>
+                    <param id="2" name="Encoding">&quot;utf8&quot;</param>
+                </action>
+                <action id="0" name="Request URL" sid="786273892473119" type="AJAX">
+                    <param id="0" name="Tag">&quot;home&quot;</param>
+                    <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/Central/home.html&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="165718121899390">
+            <conditions>
+                <condition id="0" name="On completed" sid="498176490474734" type="AJAX">
+                    <param id="0" name="Tag">&quot;home&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="24" name="Get elements" sid="909469975111192" type="UI">
+                    <param id="0" name="ID/Class">&quot;#nav-home&quot;</param>
+                    <param id="1" name="Set">AJAX.LastData</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
             </actions>
         </event-block>
     </events>
