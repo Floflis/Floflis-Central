@@ -138,6 +138,42 @@
                     <param id="1" name="Set">Electron.GetOSArch</param>
                     <param id="2" name="Append">&quot;&quot;</param>
                 </action>
+                <action id="9" name="Read" sid="763160356006702" type="Electron">
+                    <param id="0" name="Tag">&quot;&quot;</param>
+                    <param id="1" name="Path">&quot;/1/Floflis/Resources/floflis.json&quot;</param>
+                    <param id="2" name="Encoding">&quot;utf8&quot;</param>
+                </action>
+                <action id="0" name="Request URL" sid="187235534389324" type="AJAX">
+                    <param id="0" name="Tag">&quot;sysinfo&quot;</param>
+                    <param id="1" name="URL">&quot;/1/Floflis/Resources/floflis.json&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="789558813079017">
+            <conditions>
+                <condition id="0" name="On completed" sid="310609077792917" type="AJAX">
+                    <param id="0" name="Tag">&quot;sysinfo&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="60" name="LoadJSON" sid="816729337016876" type="sysinfo">
+                    <param id="0" name="JSON">AJAX.LastData</param>
+                    <param id="1" name="Reference point">0</param>
+                    <param id="2" name="Key {n}"></param>
+                </action>
+                <action id="-16" name="Wait" sid="222011797375985" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action id="24" name="Get elements" sid="140198382132215" type="UI">
+                    <param id="0" name="ID/Class">&quot;#version&quot;</param>
+                    <param id="1" name="Set">sysinfo.Value(0,&quot;version&quot;)</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action id="24" name="Get elements" sid="351016147782121" type="UI">
+                    <param id="0" name="ID/Class">&quot;#build&quot;</param>
+                    <param id="1" name="Set">sysinfo.Value(0,&quot;build&quot;)</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="881038938035709">
@@ -269,7 +305,23 @@
                 </condition>
                 <condition id="-4" name="Trigger once while true" sid="374229626765685" type="System" />
             </conditions>
-            <actions />
+            <actions>
+                <action id="24" name="Get elements" sid="394394345251010" type="UI">
+                    <param id="0" name="ID/Class">&quot;#version&quot;</param>
+                    <param id="1" name="Set">sysinfo.Value(0,&quot;version&quot;)</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action id="24" name="Get elements" sid="350488573913096" type="UI">
+                    <param id="0" name="ID/Class">&quot;#build&quot;</param>
+                    <param id="1" name="Set">sysinfo.Value(0,&quot;build&quot;)</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action id="24" name="Get elements" sid="432847699615646" type="UI">
+                    <param id="0" name="ID/Class">&quot;#year&quot;</param>
+                    <param id="1" name="Set">sysinfo.Value(0,&quot;year&quot;)</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+            </actions>
             <sub-events>
                 <event-block sid="220382542737547">
                     <conditions>

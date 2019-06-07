@@ -13,8 +13,10 @@
         <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="PlayLive" id="HTML_iFrame" version="1.419999957">HTML | iFrame</plugin>
+        <plugin author="Yann Granjon" id="JSON" version="1.200000048">JSON</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Armaldio" id="armaldio_electron" version="1">Electron</plugin>
+        <plugin author="Armaldio" id="nfc" version="1">NFC</plugin>
     </used-plugins>
     <used-behaviors />
     <used-effects />
@@ -63,6 +65,12 @@
         <object-type name="Keyboard" sid="630822245513938">
             <plugin id="Keyboard" />
         </object-type>
+        <object-type global="1" name="sysinfo" sid="502989363564829">
+            <plugin id="JSON" />
+        </object-type>
+        <object-type name="NFC" sid="506608621701179">
+            <plugin id="nfc" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -79,6 +87,7 @@
         <global-instance type="Browser" uid="2" />
         <global-instance type="Electron" uid="5" />
         <global-instance type="Keyboard" uid="3" />
+        <global-instance type="NFC" uid="7" />
     </global-instances>
     <sounds-folder />
     <music-folder />
