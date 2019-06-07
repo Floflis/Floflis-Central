@@ -115,10 +115,9 @@
         <file name="icon.png" />
         <file name="style.css" />
         <file name="loading.gif" />
-        <file name="app-custom.css" />
         <file name="init.html" />
-        <file name="app-common.css" />
         <file name="page-common.css" />
         <file name="page-common.js" />
+        <file name="app-common.css" />
     </files-folder>
 </c2project>

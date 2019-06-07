@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>App sheet</name>
     <events>
+        <variable constant="0" name="LoadedAbout" sid="270706131919194" static="0" type="number">0</variable>
         <include>Common sheet</include>
         <event-block sid="806523564058118">
             <conditions>
@@ -19,7 +20,7 @@
                 <action id="2" name="Import CSS file" sid="943792650552138" type="UI">
                     <param id="0" name="CSS file">&quot;page-common.css&quot;</param>
                 </action>
-                <action id="2" name="Import CSS file" sid="289795678845114" type="UI">
+                <action disabled="1" id="2" name="Import CSS file" sid="289795678845114" type="UI">
                     <param id="0" name="CSS file">&quot;page-custom.css&quot;</param>
                 </action>
                 <action id="2" name="Import CSS file" sid="302918853826804" type="UI">
@@ -114,7 +115,323 @@
                     <param id="1" name="Set">AJAX.LastData</param>
                     <param id="2" name="Append">&quot;&quot;</param>
                 </action>
+                <action id="24" name="Get elements" sid="152239138209834" type="UI">
+                    <param id="0" name="ID/Class">&quot;#nav-about&quot;</param>
+                    <param id="1" name="Set">&quot;...&quot;</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action id="24" name="Get elements" sid="196114118579901" type="UI">
+                    <param id="0" name="ID/Class">&quot;#nav-moresettings&quot;</param>
+                    <param id="1" name="Set">&quot;...&quot;</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="259161177564151" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action id="24" name="Get elements" sid="512124103606351" type="UI">
+                    <param id="0" name="ID/Class">&quot;#hostname&quot;</param>
+                    <param id="1" name="Set">&quot;&lt;i class=material-icons&gt;devices&lt;/i&gt; &quot; &amp; Electron.GetOSHostname</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action id="24" name="Get elements" sid="828155125456504" type="UI">
+                    <param id="0" name="ID/Class">&quot;#osarch&quot;</param>
+                    <param id="1" name="Set">Electron.GetOSArch</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
             </actions>
+        </event-block>
+        <event-block sid="881038938035709">
+            <conditions>
+                <condition id="3" name="On C2 Function" sid="599378927953557" type="UI" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="891491303707848">
+                    <conditions>
+                        <condition id="4" name="Compare C2 Function" sid="345816259372814" type="UI">
+                            <param id="0" name="C2">&quot;home&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Read" sid="148401893420264" type="Electron">
+                            <param id="0" name="Tag">&quot;&quot;</param>
+                            <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/home.html&quot;</param>
+                            <param id="2" name="Encoding">&quot;utf8&quot;</param>
+                        </action>
+                        <action id="0" name="Request URL" sid="497600830498433" type="AJAX">
+                            <param id="0" name="Tag">&quot;home&quot;</param>
+                            <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/Central/home.html&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="536490077227212">
+            <conditions>
+                <condition id="3" name="On C2 Function" sid="729844925882283" type="UI" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="221169535228367">
+                    <conditions>
+                        <condition id="4" name="Compare C2 Function" sid="158969982352662" type="UI">
+                            <param id="0" name="C2">&quot;about&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Read" sid="654508956613230" type="Electron">
+                            <param id="0" name="Tag">&quot;&quot;</param>
+                            <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/about.html&quot;</param>
+                            <param id="2" name="Encoding">&quot;utf8&quot;</param>
+                        </action>
+                        <action id="0" name="Request URL" sid="797805574002876" type="AJAX">
+                            <param id="0" name="Tag">&quot;about&quot;</param>
+                            <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/Central/about.html&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="385270924200990">
+            <conditions>
+                <condition id="3" name="On C2 Function" sid="445277239234498" type="UI" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="440358694717458">
+                    <conditions>
+                        <condition id="4" name="Compare C2 Function" sid="537679178620923" type="UI">
+                            <param id="0" name="C2">&quot;about-show&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="17" name="Execute Javascript" sid="916889334749497" type="Browser">
+                            <param id="0" name="Javascript">&quot;$(&apos;#navdrawerPermanentClipped li:nth-child(2) a&apos;).tab(&apos;show&apos;)&quot;</param>
+                        </action>
+                        <action id="9" name="Read" sid="754763944426627" type="Electron">
+                            <param id="0" name="Tag">&quot;&quot;</param>
+                            <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/about.html&quot;</param>
+                            <param id="2" name="Encoding">&quot;utf8&quot;</param>
+                        </action>
+                        <action id="0" name="Request URL" sid="840065130177495" type="AJAX">
+                            <param id="0" name="Tag">&quot;about&quot;</param>
+                            <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/Central/about.html&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="750230484601938">
+            <conditions>
+                <condition id="0" name="On completed" sid="206326669269007" type="AJAX">
+                    <param id="0" name="Tag">&quot;about&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="24" name="Get elements" sid="213546584759930" type="UI">
+                    <param id="0" name="ID/Class">&quot;#nav-about&quot;</param>
+                    <param id="1" name="Set">AJAX.LastData</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action id="24" name="Get elements" sid="552019844133743" type="UI">
+                    <param id="0" name="ID/Class">&quot;#nav-home&quot;</param>
+                    <param id="1" name="Set">&quot;...&quot;</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action id="24" name="Get elements" sid="307861214802552" type="UI">
+                    <param id="0" name="ID/Class">&quot;#nav-moresettings&quot;</param>
+                    <param id="1" name="Set">&quot;...&quot;</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="286192666833254" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action id="24" name="Get elements" sid="388720423894542" type="UI">
+                    <param id="0" name="ID/Class">&quot;#hostname&quot;</param>
+                    <param id="1" name="Set">Electron.GetOSHostname</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="427029388405571" type="System">
+                    <param id="0" name="Variable">LoadedAbout</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="779404018750831">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="332158729210241" type="System">
+                    <param id="0" name="Variable">LoadedAbout</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="374229626765685" type="System" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="220382542737547">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="626170895193972" type="System">
+                            <param id="0" name="First value">Electron.GetOSArch</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;x16&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="24" name="Get elements" sid="277596967143349" type="UI">
+                            <param id="0" name="ID/Class">&quot;#osarch&quot;</param>
+                            <param id="1" name="Set">&quot;16-bit&quot;</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="651288067214764" type="System">
+                            <param id="0" name="Seconds">dt</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="297858030500027" type="System">
+                            <param id="0" name="Variable">LoadedAbout</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="135535379368625">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="632051168411815" type="System">
+                            <param id="0" name="First value">Electron.GetOSArch</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;x32&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="24" name="Get elements" sid="927385033950224" type="UI">
+                            <param id="0" name="ID/Class">&quot;#osarch&quot;</param>
+                            <param id="1" name="Set">&quot;32-bit&quot;</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="580816573740533" type="System">
+                            <param id="0" name="Seconds">dt</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="191937733273782" type="System">
+                            <param id="0" name="Variable">LoadedAbout</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="207167837303768">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="591556674862678" type="System">
+                            <param id="0" name="First value">Electron.GetOSArch</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;x64&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="24" name="Get elements" sid="651776092808784" type="UI">
+                            <param id="0" name="ID/Class">&quot;#osarch&quot;</param>
+                            <param id="1" name="Set">&quot;64-bit&quot;</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="100859791019602" type="System">
+                            <param id="0" name="Seconds">dt</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="478647950396784" type="System">
+                            <param id="0" name="Variable">LoadedAbout</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="111480317611705">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="790254148026094" type="System">
+                            <param id="0" name="First value">Electron.GetOSArch</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">&quot;x128&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="24" name="Get elements" sid="914301173257609" type="UI">
+                            <param id="0" name="ID/Class">&quot;#osarch&quot;</param>
+                            <param id="1" name="Set">&quot;128-bit&quot;</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="411196504675114" type="System">
+                            <param id="0" name="Seconds">dt</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="184655760901253" type="System">
+                            <param id="0" name="Variable">LoadedAbout</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="520931420957353">
+            <conditions>
+                <condition id="3" name="On C2 Function" sid="615645490983312" type="UI" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="630244702321831">
+                    <conditions>
+                        <condition id="4" name="Compare C2 Function" sid="444149181177631" type="UI">
+                            <param id="0" name="C2">&quot;moresettings&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Read" sid="175950542818577" type="Electron">
+                            <param id="0" name="Tag">&quot;&quot;</param>
+                            <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/moresettings.html&quot;</param>
+                            <param id="2" name="Encoding">&quot;utf8&quot;</param>
+                        </action>
+                        <action id="0" name="Request URL" sid="461676204055740" type="AJAX">
+                            <param id="0" name="Tag">&quot;moresettings&quot;</param>
+                            <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/Central/moresettings.html&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="172754224303482">
+            <conditions>
+                <condition id="0" name="On completed" sid="723263957851611" type="AJAX">
+                    <param id="0" name="Tag">&quot;moresettings&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="24" name="Get elements" sid="725114431468340" type="UI">
+                    <param id="0" name="ID/Class">&quot;#nav-about&quot;</param>
+                    <param id="1" name="Set">&quot;...&quot;</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action id="24" name="Get elements" sid="865678647827580" type="UI">
+                    <param id="0" name="ID/Class">&quot;#nav-home&quot;</param>
+                    <param id="1" name="Set">&quot;...&quot;</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action id="24" name="Get elements" sid="126793561992630" type="UI">
+                    <param id="0" name="ID/Class">&quot;#nav-moresettings&quot;</param>
+                    <param id="1" name="Set">AJAX.LastData</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="180708258338539">
+            <conditions>
+                <condition id="3" name="On C2 Function" sid="261023827841708" type="UI" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="530659203806135">
+                    <conditions>
+                        <condition id="4" name="Compare C2 Function" sid="362580387386151" type="UI">
+                            <param id="0" name="C2">&quot;gnomesettings&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
         </event-block>
     </events>
 </c2eventsheet>
