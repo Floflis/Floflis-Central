@@ -138,14 +138,41 @@
                     <param id="1" name="Set">Electron.GetOSArch</param>
                     <param id="2" name="Append">&quot;&quot;</param>
                 </action>
-                <action id="9" name="Read" sid="763160356006702" type="Electron">
+                <action disabled="1" id="9" name="Read" sid="763160356006702" type="Electron">
                     <param id="0" name="Tag">&quot;&quot;</param>
                     <param id="1" name="Path">&quot;/1/Floflis/Resources/floflis.json&quot;</param>
                     <param id="2" name="Encoding">&quot;utf8&quot;</param>
                 </action>
-                <action id="0" name="Request URL" sid="187235534389324" type="AJAX">
+                <action disabled="1" id="0" name="Request URL" sid="187235534389324" type="AJAX">
                     <param id="0" name="Tag">&quot;sysinfo&quot;</param>
                     <param id="1" name="URL">&quot;/1/Floflis/Resources/floflis.json&quot;</param>
+                </action>
+                <action id="9" name="Read" sid="437110018315917" type="Electron">
+                    <param id="0" name="Tag">&quot;&quot;</param>
+                    <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/floflis.json&quot;</param>
+                    <param id="2" name="Encoding">&quot;utf8&quot;</param>
+                </action>
+                <action id="0" name="Request URL" sid="848517685601580" type="AJAX">
+                    <param id="0" name="Tag">&quot;sysinfo&quot;</param>
+                    <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/Central/floflis.json&quot;</param>
+                </action>
+                <action disabled="1" id="9" name="Read" sid="565493980579437" type="Electron">
+                    <param id="0" name="Tag">&quot;&quot;</param>
+                    <param id="1" name="Path">&quot;/1/Floflis/Resources/img/logo.png&quot;</param>
+                    <param id="2" name="Encoding">&quot;base64&quot;</param>
+                </action>
+                <action disabled="1" id="0" name="Request URL" sid="488589660911723" type="AJAX">
+                    <param id="0" name="Tag">&quot;iconajx&quot;</param>
+                    <param id="1" name="URL">&quot;/1/Floflis/Resources/img/logo.png&quot;</param>
+                </action>
+                <action id="9" name="Read" sid="952300222970365" type="Electron">
+                    <param id="0" name="Tag">&quot;&quot;</param>
+                    <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/icon.png&quot;</param>
+                    <param id="2" name="Encoding">&quot;base64&quot;</param>
+                </action>
+                <action id="0" name="Request URL" sid="151099340431140" type="AJAX">
+                    <param id="0" name="Tag">&quot;iconajx&quot;</param>
+                    <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/Central/icon.png&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -173,6 +200,19 @@
                     <param id="0" name="ID/Class">&quot;#build&quot;</param>
                     <param id="1" name="Set">sysinfo.Value(0,&quot;build&quot;)</param>
                     <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="391721475483705">
+            <conditions>
+                <condition id="0" name="On completed" sid="431745045079168" type="AJAX">
+                    <param id="0" name="Tag">&quot;iconajx&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Add key" sid="336191926002030" type="Dictionary">
+                    <param id="0" name="Key">&quot;OSicon&quot;</param>
+                    <param id="1" name="Value">&quot;&lt;img width=200px src=&quot; &amp; AJAX.LastData &amp; &quot;/&gt;&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -288,6 +328,11 @@
                 <action id="24" name="Get elements" sid="388720423894542" type="UI">
                     <param id="0" name="ID/Class">&quot;#hostname&quot;</param>
                     <param id="1" name="Set">Electron.GetOSHostname</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action disabled="1" id="24" name="Get elements" sid="415341770561459" type="UI">
+                    <param id="0" name="ID/Class">&quot;#osicon&quot;</param>
+                    <param id="1" name="Set">Dictionary.Get(&quot;OSicon&quot;)</param>
                     <param id="2" name="Append">&quot;&quot;</param>
                 </action>
                 <action id="-9" name="Set value" sid="427029388405571" type="System">
@@ -451,6 +496,11 @@
                 </condition>
             </conditions>
             <actions>
+                <action id="24" name="Get elements" sid="126793561992630" type="UI">
+                    <param id="0" name="ID/Class">&quot;#nav-moresettings&quot;</param>
+                    <param id="1" name="Set">AJAX.LastData</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
                 <action id="24" name="Get elements" sid="725114431468340" type="UI">
                     <param id="0" name="ID/Class">&quot;#nav-about&quot;</param>
                     <param id="1" name="Set">&quot;...&quot;</param>
@@ -459,11 +509,6 @@
                 <action id="24" name="Get elements" sid="865678647827580" type="UI">
                     <param id="0" name="ID/Class">&quot;#nav-home&quot;</param>
                     <param id="1" name="Set">&quot;...&quot;</param>
-                    <param id="2" name="Append">&quot;&quot;</param>
-                </action>
-                <action id="24" name="Get elements" sid="126793561992630" type="UI">
-                    <param id="0" name="ID/Class">&quot;#nav-moresettings&quot;</param>
-                    <param id="1" name="Set">AJAX.LastData</param>
                     <param id="2" name="Append">&quot;&quot;</param>
                 </action>
             </actions>
@@ -481,7 +526,12 @@
                             <param id="1" name="Case">0</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="25" name="Run file" sid="837708817829031" type="Electron">
+                            <param id="0" name="Path">&quot;cinnamon-settings&quot;</param>
+                            <param id="1" name="Parameters">&quot;&quot;</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-block>

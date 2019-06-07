@@ -70,6 +70,7 @@
     </layers>
     <nonworld-instances>
         <instance type="sysinfo" uid="4" />
+        <instance type="Dictionary" uid="8" />
     </nonworld-instances>
     <effects />
 </c2layout>

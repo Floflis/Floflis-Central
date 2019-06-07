@@ -12,6 +12,7 @@
     <used-plugins>
         <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
+        <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
         <plugin author="PlayLive" id="HTML_iFrame" version="1.419999957">HTML | iFrame</plugin>
         <plugin author="Yann Granjon" id="JSON" version="1.200000048">JSON</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
@@ -70,6 +71,9 @@
         </object-type>
         <object-type name="NFC" sid="506608621701179">
             <plugin id="nfc" />
+        </object-type>
+        <object-type global="1" name="Dictionary" sid="124561956691048">
+            <plugin id="Dictionary" />
         </object-type>
     </object-folder>
     <families />
