@@ -132,5 +132,8 @@
         <file name="page-common.css" />
         <file name="page-common.js" />
         <file name="app-common.css" />
+        <file name="ipfs.png" />
+        <file name="cjdns.png" />
+        <file name="yggdrasil.png" />
     </files-folder>
 </c2project>
