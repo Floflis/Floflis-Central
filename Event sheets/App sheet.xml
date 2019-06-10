@@ -59,6 +59,7 @@
                     <param id="0" name="Tag">&quot;init&quot;</param>
                     <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/Central/app.html&quot;</param>
                 </action>
+                <action id="3" name="Focus" sid="603720114526800" type="Electron" />
             </actions>
             <sub-events>
                 <event-block disabled="1" sid="590001726326575">
@@ -209,6 +210,23 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="654890099669215">
+            <conditions>
+                <condition id="3" name="On C2 Function" sid="357538067965898" type="UI" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="830438585205710">
+                    <conditions>
+                        <condition id="4" name="Compare C2 Function" sid="189243554386137" type="UI">
+                            <param id="0" name="C2">&quot;playwith&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-block>
         <event-block disabled="1" sid="391721475483705">
             <conditions>
                 <condition id="0" name="On completed" sid="431745045079168" type="AJAX">
@@ -291,7 +309,7 @@
                     </conditions>
                     <actions>
                         <action id="17" name="Execute Javascript" sid="916889334749497" type="Browser">
-                            <param id="0" name="Javascript">&quot;$(&apos;#navdrawerPermanentClipped li:nth-child(2) a&apos;).tab(&apos;show&apos;)&quot;</param>
+                            <param id="0" name="Javascript">&quot;$(&apos;#navdrawerPermanentClipped li:nth-child(3) a&apos;).tab(&apos;show&apos;)&quot;</param>
                         </action>
                         <action id="9" name="Read" sid="754763944426627" type="Electron">
                             <param id="0" name="Tag">&quot;&quot;</param>
@@ -491,6 +509,36 @@
                             <param id="2" name="Encoding">&quot;utf8&quot;</param>
                         </action>
                         <action id="0" name="Request URL" sid="461676204055740" type="AJAX">
+                            <param id="0" name="Tag">&quot;moresettings&quot;</param>
+                            <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/Central/moresettings.html&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="181163129663691">
+            <conditions>
+                <condition id="3" name="On C2 Function" sid="946586706963767" type="UI" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="221336749855364">
+                    <conditions>
+                        <condition id="4" name="Compare C2 Function" sid="799969271262649" type="UI">
+                            <param id="0" name="C2">&quot;moresettings-show&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="17" name="Execute Javascript" sid="421815443445419" type="Browser">
+                            <param id="0" name="Javascript">&quot;$(&apos;#navdrawerPermanentClipped li:nth-child(4) a&apos;).tab(&apos;show&apos;)&quot;</param>
+                        </action>
+                        <action id="9" name="Read" sid="699079803833537" type="Electron">
+                            <param id="0" name="Tag">&quot;&quot;</param>
+                            <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/moresettings.html&quot;</param>
+                            <param id="2" name="Encoding">&quot;utf8&quot;</param>
+                        </action>
+                        <action id="0" name="Request URL" sid="534747951510868" type="AJAX">
                             <param id="0" name="Tag">&quot;moresettings&quot;</param>
                             <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/Central/moresettings.html&quot;</param>
                         </action>

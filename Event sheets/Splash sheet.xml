@@ -30,6 +30,14 @@
                 <action id="2" name="Import CSS file" sid="915354609713368" type="Splash">
                     <param id="0" name="CSS file">&quot;robotofont.css&quot;</param>
                 </action>
+                <action id="45" name="Register a shortcut" sid="470136238014674" type="Electron">
+                    <param id="0" name="Accelerator">&quot;F11&quot;</param>
+                    <param id="1" name="Tag">&quot;fullscreen&quot;</param>
+                </action>
+                <action id="45" name="Register a shortcut" sid="529915642542751" type="Electron">
+                    <param id="0" name="Accelerator">&quot;ESC&quot;</param>
+                    <param id="1" name="Tag">&quot;close&quot;</param>
+                </action>
             </actions>
         </event-block>
         <comment>On completed loading, go to App layout.</comment>
