@@ -223,7 +223,17 @@
                             <param id="1" name="Case">0</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="9" name="Read" sid="283033050067706" type="Electron">
+                            <param id="0" name="Tag">&quot;&quot;</param>
+                            <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/playwith.html&quot;</param>
+                            <param id="2" name="Encoding">&quot;utf8&quot;</param>
+                        </action>
+                        <action id="0" name="Request URL" sid="109477494041092" type="AJAX">
+                            <param id="0" name="Tag">&quot;playwith&quot;</param>
+                            <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/Central/playwith.html&quot;</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-block>
@@ -323,6 +333,38 @@
                     </actions>
                 </event-block>
             </sub-events>
+        </event-block>
+        <event-block sid="408557609751044">
+            <conditions>
+                <condition id="0" name="On completed" sid="196295101397736" type="AJAX">
+                    <param id="0" name="Tag">&quot;playwith&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="24" name="Get elements" sid="437686587143724" type="UI">
+                    <param id="0" name="ID/Class">&quot;#nav-playwith&quot;</param>
+                    <param id="1" name="Set">AJAX.LastData</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action id="24" name="Get elements" sid="152854116402728" type="UI">
+                    <param id="0" name="ID/Class">&quot;#nav-home&quot;</param>
+                    <param id="1" name="Set">&quot;...&quot;</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action id="24" name="Get elements" sid="842280581513074" type="UI">
+                    <param id="0" name="ID/Class">&quot;#nav-about&quot;</param>
+                    <param id="1" name="Set">&quot;...&quot;</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action id="24" name="Get elements" sid="124905249734473" type="UI">
+                    <param id="0" name="ID/Class">&quot;#nav-moresettings&quot;</param>
+                    <param id="1" name="Set">&quot;...&quot;</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action id="30" name="Set title" sid="591191818469322" type="Electron">
+                    <param id="0" name="Title">&quot;Floflis Central - Play with&quot;</param>
+                </action>
+            </actions>
         </event-block>
         <event-block sid="750230484601938">
             <conditions>
