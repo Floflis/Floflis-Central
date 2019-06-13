@@ -4,3 +4,9 @@
 #logo{box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);margin-top:45px;border-radius: 20px}
 #logotext{font-size:30px}
 #bellowtabs{height:calc(100% - 48px)!important;overflow-x:hidden}
+
+.scroller.setupstatus {
+    position: absolute;
+    top: 17px;
+    left: calc(9px - -312px)
+}

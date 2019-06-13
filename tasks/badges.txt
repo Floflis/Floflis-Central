@@ -1,0 +1,3 @@
+<i class="material-icons">bubble_chart</i>
+
+issue badges

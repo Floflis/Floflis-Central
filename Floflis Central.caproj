@@ -75,6 +75,9 @@
         <object-type global="1" name="Dictionary" sid="124561956691048">
             <plugin id="Dictionary" />
         </object-type>
+        <object-type global="1" name="settingsfile" sid="896115479558149">
+            <plugin id="JSON" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -103,6 +106,14 @@
             <file name="icon-128.png" />
             <file name="icon-256.png" />
             <file name="loading-logo.png" />
+        </file-folder>
+        <file-folder name="Setup">
+            <file name="step2.html" />
+            <file name="step3.html" />
+            <file name="step4.html" />
+            <file name="step5.html" />
+            <file name="step6.html" />
+            <file name="step7.html" />
         </file-folder>
         <file name="bootstrap.min.js" />
         <file name="font.eot" />

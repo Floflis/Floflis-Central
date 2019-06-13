@@ -50,29 +50,9 @@
                 <action id="2" name="Import CSS file" sid="982682542923008" type="UI">
                     <param id="0" name="CSS file">&quot;iconsfont.css&quot;</param>
                 </action>
-                <action id="9" name="Read" sid="274219178347086" type="Electron">
-                    <param id="0" name="Tag">&quot;&quot;</param>
-                    <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/app.html&quot;</param>
-                    <param id="2" name="Encoding">&quot;utf8&quot;</param>
-                </action>
-                <action id="0" name="Request URL" sid="775921904630032" type="AJAX">
-                    <param id="0" name="Tag">&quot;init&quot;</param>
-                    <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/Central/app.html&quot;</param>
-                </action>
                 <action id="3" name="Focus" sid="603720114526800" type="Electron" />
             </actions>
             <sub-events>
-                <event-block disabled="1" sid="590001726326575">
-                    <conditions />
-                    <actions>
-                        <action id="19" name="Include Javascript file" sid="655332235255019" type="UI">
-                            <param id="0" name="Javascript file">&quot;ZeroFrame.js&quot;</param>
-                        </action>
-                        <action id="19" name="Include Javascript file" sid="551232901630855" type="UI">
-                            <param id="0" name="Javascript file">&quot;ZeroPage.js&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="811395584260083">
                     <conditions />
                     <actions>
@@ -81,8 +61,348 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="594655322647805">
+                    <conditions>
+                        <condition id="6" name="Path exists" sid="466845572524476" type="Electron">
+                            <param id="0" name="Path">Electron.GetAppPath &amp; &quot;/Central/setup.json&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Read" sid="482585686794622" type="Electron">
+                            <param id="0" name="Tag">&quot;&quot;</param>
+                            <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/setup/setup.html&quot;</param>
+                            <param id="2" name="Encoding">&quot;utf8&quot;</param>
+                        </action>
+                        <action id="0" name="Request URL" sid="228018667136444" type="AJAX">
+                            <param id="0" name="Tag">&quot;setup&quot;</param>
+                            <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/Central/setup/setup.html&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="732332951143077">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="646029443376750" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Read" sid="968422829009343" type="Electron">
+                            <param id="0" name="Tag">&quot;&quot;</param>
+                            <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/app.html&quot;</param>
+                            <param id="2" name="Encoding">&quot;utf8&quot;</param>
+                        </action>
+                        <action id="0" name="Request URL" sid="757110351826136" type="AJAX">
+                            <param id="0" name="Tag">&quot;init&quot;</param>
+                            <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/Central/app.html&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-block>
+        <event-group description="" sid="313311825004114" title="Setup">
+            <sub-events>
+                <event-block sid="847035470452167">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="586288359979661" type="AJAX">
+                            <param id="0" name="Tag">&quot;setup&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="6" name="Set HTML" sid="156167025912050" type="UI">
+                            <param id="0" name="Set HTML">AJAX.LastData</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="310750656438271" type="System">
+                            <param id="0" name="Seconds">dt</param>
+                        </action>
+                        <action id="0" name="Add key" sid="131675115306631" type="Dictionary">
+                            <param id="0" name="Key">&quot;setup-step&quot;</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="125158669933414">
+                    <conditions>
+                        <condition id="0" name="Compare value" sid="140250808268264" type="Dictionary">
+                            <param id="0" name="Key">&quot;setup-step&quot;</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="854036090856306" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="24" name="Get elements" sid="788236549064167" type="UI">
+                            <param id="0" name="ID/Class">&quot;#setupstatus&quot;</param>
+                            <param id="1" name="Set">&quot;&lt;i class=material-icons&gt;create_new_folder&lt;/i&gt; Creating /1 folder...&quot;</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="17" name="Execute Javascript" sid="528621176188028" type="Browser">
+                            <param id="0" name="Javascript">&quot;sudo.exec(&apos;mkdir /1&apos;, options, function(error, stdout, stderr){if (error) throw error;console.log(&apos;stdout: &apos; + stdout);});&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="818814938133027" type="System">
+                            <param id="0" name="Seconds">2.5</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="221029068708314" type="UI">
+                            <param id="0" name="ID/Class">&quot;#setupstatus&quot;</param>
+                            <param id="1" name="Set">&quot;&lt;i class=material-icons&gt;folder_special&lt;/i&gt; Setting permissions on /1 (tree) folder...&quot;</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="17" name="Execute Javascript" sid="453001392964449" type="Browser">
+                            <param id="0" name="Javascript">&quot;sudo.exec(&apos;chown -R $(id -u):$(id -g) /1&apos;, options, function(error, stdout, stderr){if (error) throw error;console.log(&apos;stdout: &apos; + stdout);});&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="211113116593826" type="System">
+                            <param id="0" name="Seconds">2.5</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="587518539217366" type="UI">
+                            <param id="0" name="ID/Class">&quot;#setupstatus&quot;</param>
+                            <param id="1" name="Set">&quot;&lt;i class=material-icons&gt;assignment&lt;/i&gt; Testing write permissions on tree folder...&quot;</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="1" name="Set key" sid="526100213873786" type="Dictionary">
+                            <param id="0" name="Key">&quot;setup-step&quot;</param>
+                            <param id="1" name="Value">1.1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="124280069330226">
+                            <conditions>
+                                <condition id="0" name="Compare value" sid="362961655420489" type="Dictionary">
+                                    <param id="0" name="Key">&quot;setup-step&quot;</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1.1</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="436270789750599" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Write" sid="691201292758805" type="Electron">
+                                    <param id="0" name="Tag">&quot;treewritetest&quot;</param>
+                                    <param id="1" name="Path">&quot;/1/temp.txt&quot;</param>
+                                    <param id="2" name="Data">&quot;temp&quot;</param>
+                                    <param id="3" name="Encoding Mode">0</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="634970420689532">
+                                    <conditions>
+                                        <condition id="1" name="On write fail" sid="994237018091419" type="Electron">
+                                            <param id="0" name="Tag">&quot;treewritetest&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="24" name="Get elements" sid="148811517018117" type="UI">
+                                            <param id="0" name="ID/Class">&quot;#setupcontent&quot;</param>
+                                            <param id="1" name="Set">&quot;&lt;h1 id=setupstatus&gt;&lt;i class=material-icons&gt;warning&lt;/i&gt; Couldn&apos;t write files to /1 folder. Please reboot your device and try again.&quot;</param>
+                                            <param id="2" name="Append">&quot;&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="364089188486578">
+                                    <conditions>
+                                        <condition id="0" name="On write success" sid="639513905126243" type="Electron">
+                                            <param id="0" name="Tag">&quot;treewritetest&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="24" name="Get elements" sid="488147956857114" type="UI">
+                                            <param id="0" name="ID/Class">&quot;#setupstatus&quot;</param>
+                                            <param id="1" name="Set">&quot;&lt;i class=material-icons&gt;create_new_folder&lt;/i&gt; Creating settings folder...&quot;</param>
+                                            <param id="2" name="Append">&quot;&quot;</param>
+                                        </action>
+                                        <action id="1" name="Set key" sid="897112493749613" type="Dictionary">
+                                            <param id="0" name="Key">&quot;setup-step&quot;</param>
+                                            <param id="1" name="Value">1.2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="190124167844903">
+                            <conditions>
+                                <condition id="0" name="Compare value" sid="169867991156624" type="Dictionary">
+                                    <param id="0" name="Key">&quot;setup-step&quot;</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1.2</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="402429250360207" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="17" name="Create folder" sid="170837947091161" type="Electron">
+                                    <param id="0" name="Path">&quot;/1/config&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="380475557014560" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="1" name="Set key" sid="624247371345370" type="Dictionary">
+                                    <param id="0" name="Key">&quot;setup-step&quot;</param>
+                                    <param id="1" name="Value">1.3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="777629784169944">
+                            <conditions>
+                                <condition id="0" name="Compare value" sid="114095919593612" type="Dictionary">
+                                    <param id="0" name="Key">&quot;setup-step&quot;</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1.3</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="441709590174549" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="195279635029292">
+                                    <conditions>
+                                        <condition id="6" name="Path exists" sid="276731248361693" type="Electron">
+                                            <param id="0" name="Path">&quot;/1/config&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="24" name="Get elements" sid="742497413249583" type="UI">
+                                            <param id="0" name="ID/Class">&quot;#setupstatus&quot;</param>
+                                            <param id="1" name="Set">&quot;&lt;i class=material-icons&gt;folder_shared&lt;/i&gt; Getting and storing username...&quot;</param>
+                                            <param id="2" name="Append">&quot;&quot;</param>
+                                        </action>
+                                        <action id="60" name="LoadJSON" sid="379837502605173" type="settingsfile">
+                                            <param id="0" name="JSON">&quot;{}&quot;</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}"></param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="963368812325064" type="System">
+                                            <param id="0" name="Seconds">dt</param>
+                                        </action>
+                                        <action id="0" name="Set New Object" sid="961549480032820" type="settingsfile">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}">&quot;type&quot;</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="253163536655478" type="System">
+                                            <param id="0" name="Seconds">dt</param>
+                                        </action>
+                                        <action id="0" name="Set New Object" sid="797508450522251" type="settingsfile">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}">&quot;url&quot;</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="685595211023237" type="System">
+                                            <param id="0" name="Seconds">dt</param>
+                                        </action>
+                                        <action id="0" name="Set New Object" sid="907556709344218" type="settingsfile">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}">&quot;lang&quot;</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="866082196286115" type="System">
+                                            <param id="0" name="Seconds">dt</param>
+                                        </action>
+                                        <action id="0" name="Set New Object" sid="872117438599983" type="settingsfile">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}">&quot;title&quot;</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="964877013052756" type="System">
+                                            <param id="0" name="Seconds">dt</param>
+                                        </action>
+                                        <action id="0" name="Set New Object" sid="446374177051079" type="settingsfile">
+                                            <param id="0" name="Reference point">0</param>
+                                            <param id="1" name="Key {n}">&quot;user&quot;</param>
+                                        </action>
+                                        <action id="20" name="Set Value" sid="353168643632843" type="settingsfile">
+                                            <param id="0" name="Value">&quot;config/os&quot;</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;type&quot;</param>
+                                        </action>
+                                        <action id="20" name="Set Value" sid="784182093209241" type="settingsfile">
+                                            <param id="0" name="Value">&quot;en-us&quot;</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;lang&quot;</param>
+                                        </action>
+                                        <action id="20" name="Set Value" sid="454391475483803" type="settingsfile">
+                                            <param id="0" name="Value">Browser.ExecJS(&quot;username.sync()&quot;)</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;user&quot;</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="862735842357125" type="System">
+                                            <param id="0" name="Seconds">dt</param>
+                                        </action>
+                                        <action id="20" name="Set Value" sid="233466327211930" type="settingsfile">
+                                            <param id="0" name="Value">&quot;Floflis Settings - &quot; &amp; settingsfile.Value(0,&quot;user&quot;)</param>
+                                            <param id="1" name="Reference point">0</param>
+                                            <param id="2" name="Key {n}">&quot;title&quot;</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="286868031407675" type="System">
+                                            <param id="0" name="Seconds">dt</param>
+                                        </action>
+                                        <action id="0" name="Write" sid="157333421193540" type="Electron">
+                                            <param id="0" name="Tag">&quot;settingsfile&quot;</param>
+                                            <param id="1" name="Path">&quot;/1/config/dat.json&quot;</param>
+                                            <param id="2" name="Data">settingsfile.AsJson(0)</param>
+                                            <param id="3" name="Encoding Mode">0</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="528859567057615">
+                                            <conditions>
+                                                <condition id="1" name="On write fail" sid="570571614852974" type="Electron">
+                                                    <param id="0" name="Tag">&quot;settingsfile&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="24" name="Get elements" sid="353611515705914" type="UI">
+                                                    <param id="0" name="ID/Class">&quot;#setupcontent&quot;</param>
+                                                    <param id="1" name="Set">&quot;&lt;h1 id=setupstatus&gt;&lt;i class=material-icons&gt;warning&lt;/i&gt; Couldn&apos;t write settings file. Please reboot your device and try again.&quot;</param>
+                                                    <param id="2" name="Append">&quot;&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="181344953441253">
+                                            <conditions>
+                                                <condition id="0" name="On write success" sid="649484221165279" type="Electron">
+                                                    <param id="0" name="Tag">&quot;settingsfile&quot;</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="1" name="Set key" sid="103803751836853" type="Dictionary">
+                                                    <param id="0" name="Key">&quot;setup-step&quot;</param>
+                                                    <param id="1" name="Value">2</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="890869117514764">
+                            <conditions>
+                                <condition id="0" name="Compare value" sid="494028220703011" type="Dictionary">
+                                    <param id="0" name="Key">&quot;setup-step&quot;</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="368314627561968" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="24" name="Get elements" sid="716971424735350" type="UI">
+                                    <param id="0" name="ID/Class">&quot;#setupstepper&quot;</param>
+                                    <param id="1" name="Set">&quot;step2.html&quot;</param>
+                                    <param id="2" name="Append">&quot;&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="814963724268707" type="System">
+                                    <param id="0" name="Seconds">dt</param>
+                                </action>
+                                <action id="24" name="Get elements" sid="462924184826373" type="UI">
+                                    <param id="0" name="ID/Class">&quot;#setupstatus&quot;</param>
+                                    <param id="1" name="Set">&quot;&lt;i class=material-icons&gt;create_new_folder&lt;/i&gt; Creating sys folder...&quot;</param>
+                                    <param id="2" name="Append">&quot;&quot;</param>
+                                </action>
+                                <action id="17" name="Create folder" sid="536324561361811" type="Electron">
+                                    <param id="0" name="Path">&quot;/1/Floflis&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="108075240846973" type="System">
+                                    <param id="0" name="Seconds">2.5</param>
+                                </action>
+                                <action id="24" name="Get elements" sid="771091540289885" type="UI">
+                                    <param id="0" name="ID/Class">&quot;#setupstatus&quot;</param>
+                                    <param id="1" name="Set">&quot;&lt;i class=material-icons&gt;save_alt&lt;/i&gt; Extracting data to sys folder...&quot;</param>
+                                    <param id="2" name="Append">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-block sid="328075382242918">
             <conditions>
                 <condition id="0" name="On completed" sid="643374519154222" type="AJAX">
@@ -615,27 +935,427 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="180708258338539">
-            <conditions>
-                <condition id="3" name="On C2 Function" sid="261023827841708" type="UI" />
-            </conditions>
-            <actions />
+        <event-group description="" sid="939219859635454" title="Run lnx programs">
             <sub-events>
-                <event-block sid="530659203806135">
+                <event-block sid="180708258338539">
                     <conditions>
-                        <condition id="4" name="Compare C2 Function" sid="362580387386151" type="UI">
-                            <param id="0" name="C2">&quot;gnomesettings&quot;</param>
-                            <param id="1" name="Case">0</param>
-                        </condition>
+                        <condition id="3" name="On C2 Function" sid="261023827841708" type="UI" />
                     </conditions>
-                    <actions>
-                        <action id="25" name="Run file" sid="837708817829031" type="Electron">
-                            <param id="0" name="Path">&quot;cinnamon-settings&quot;</param>
-                            <param id="1" name="Parameters">&quot;&quot;</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="530659203806135">
+                            <conditions>
+                                <condition id="4" name="Compare C2 Function" sid="362580387386151" type="UI">
+                                    <param id="0" name="C2">&quot;gnomesettings&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="25" name="Run file" sid="837708817829031" type="Electron">
+                                    <param id="0" name="Path">&quot;cinnamon-settings&quot;</param>
+                                    <param id="1" name="Parameters">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="807448542626919">
+                    <conditions>
+                        <condition id="3" name="On C2 Function" sid="527883734752782" type="UI" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="615202482396701">
+                            <conditions>
+                                <condition id="4" name="Compare C2 Function" sid="288805272310101" type="UI">
+                                    <param id="0" name="C2">&quot;opennewbrowser&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="25" name="Run file" sid="972947105853369" type="Electron">
+                                    <param id="0" name="Path">&quot;/1/Apps/beaker/node_modules/electron/dist/electron --js-flags=&apos;&apos;--throw-deprecation&apos;&apos; /1/Apps/beaker/app&quot;</param>
+                                    <param id="1" name="Parameters">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="315473609370174">
+                    <conditions>
+                        <condition id="3" name="On C2 Function" sid="136445500235470" type="UI" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="974148211037369">
+                            <conditions>
+                                <condition id="4" name="Compare C2 Function" sid="843646738183899" type="UI">
+                                    <param id="0" name="C2">&quot;opentorrent&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="25" name="Run file" sid="470120147260822" type="Electron">
+                                    <param id="0" name="Path">&quot;/home/floflis/biglybt/biglybt %U&quot;</param>
+                                    <param id="1" name="Parameters">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="433461710440198">
+                    <conditions>
+                        <condition id="3" name="On C2 Function" sid="530440561103249" type="UI" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="725414017405398">
+                            <conditions>
+                                <condition id="4" name="Compare C2 Function" sid="613570059636648" type="UI">
+                                    <param id="0" name="C2">&quot;openvideodownload&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="25" name="Run file" sid="457291613875700" type="Electron">
+                                    <param id="0" name="Path">&quot;/1/Apps/electron-video-downloader/node_modules/electron/dist/electron .&quot;</param>
+                                    <param id="1" name="Parameters">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="572850744524659">
+                    <conditions>
+                        <condition id="3" name="On C2 Function" sid="343493298131687" type="UI" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="354341141068307">
+                            <conditions>
+                                <condition id="4" name="Compare C2 Function" sid="267999600665084" type="UI">
+                                    <param id="0" name="C2">&quot;opengbrainy&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="25" name="Run file" sid="894975614229189" type="Electron">
+                                    <param id="0" name="Path">&quot;gbrainy&quot;</param>
+                                    <param id="1" name="Parameters">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="364133926310986">
+                    <conditions>
+                        <condition id="3" name="On C2 Function" sid="427154642385017" type="UI" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="676392863874980">
+                            <conditions>
+                                <condition id="4" name="Compare C2 Function" sid="913655114238134" type="UI">
+                                    <param id="0" name="C2">&quot;opengames&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="25" name="Run file" sid="231820575542712" type="Electron">
+                                    <param id="0" name="Path">&quot;gnome-games %U&quot;</param>
+                                    <param id="1" name="Parameters">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="745389231766425">
+                    <conditions>
+                        <condition id="3" name="On C2 Function" sid="116355356739380" type="UI" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="434393309817634">
+                            <conditions>
+                                <condition id="4" name="Compare C2 Function" sid="416992220963587" type="UI">
+                                    <param id="0" name="C2">&quot;openpasswords&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="25" name="Run file" sid="612266096266774" type="Electron">
+                                    <param id="0" name="Path">&quot;keepassxc %f&quot;</param>
+                                    <param id="1" name="Parameters">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="765055269291220">
+                    <conditions>
+                        <condition id="3" name="On C2 Function" sid="964733910273489" type="UI" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="756810643324482">
+                            <conditions>
+                                <condition id="4" name="Compare C2 Function" sid="662895385596816" type="UI">
+                                    <param id="0" name="C2">&quot;openelecbtc&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="25" name="Run file" sid="736824156178391" type="Electron">
+                                    <param id="0" name="Path">&quot;/usr/local/bin/electrum&quot;</param>
+                                    <param id="1" name="Parameters">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="255036555907568">
+                    <conditions>
+                        <condition id="3" name="On C2 Function" sid="296215466148326" type="UI" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="383892473285239">
+                            <conditions>
+                                <condition id="4" name="Compare C2 Function" sid="622930365667908" type="UI">
+                                    <param id="0" name="C2">&quot;openarbore&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="25" name="Run file" sid="141676548681929" type="Electron">
+                                    <param id="0" name="Path">&quot;&apos;&apos;/opt/Arbore/arbore&apos;&apos;&quot;</param>
+                                    <param id="1" name="Parameters">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="563577752845818">
+                    <conditions>
+                        <condition id="3" name="On C2 Function" sid="846674015809667" type="UI" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="636017748786680">
+                            <conditions>
+                                <condition id="4" name="Compare C2 Function" sid="839167136859724" type="UI">
+                                    <param id="0" name="C2">&quot;open-obs&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="25" name="Run file" sid="151825711421121" type="Electron">
+                                    <param id="0" name="Path">&quot;obs&quot;</param>
+                                    <param id="1" name="Parameters">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="220303086766250">
+                    <conditions>
+                        <condition id="3" name="On C2 Function" sid="881097237896208" type="UI" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="477619907883337">
+                            <conditions>
+                                <condition id="4" name="Compare C2 Function" sid="275100882919771" type="UI">
+                                    <param id="0" name="C2">&quot;open-aud&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="25" name="Run file" sid="221702077319836" type="Electron">
+                                    <param id="0" name="Path">&quot;audacity %F&quot;</param>
+                                    <param id="1" name="Parameters">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="761172779312393">
+                    <conditions>
+                        <condition id="3" name="On C2 Function" sid="869340878908905" type="UI" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="147155163518157">
+                            <conditions>
+                                <condition id="4" name="Compare C2 Function" sid="729706064813719" type="UI">
+                                    <param id="0" name="C2">&quot;openlutris&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="25" name="Run file" sid="228323248019296" type="Electron">
+                                    <param id="0" name="Path">&quot;lutris %U&quot;</param>
+                                    <param id="1" name="Parameters">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="279064494438941">
+                    <conditions>
+                        <condition id="3" name="On C2 Function" sid="735474029738404" type="UI" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="482704193135990">
+                            <conditions>
+                                <condition id="4" name="Compare C2 Function" sid="572397994966774" type="UI">
+                                    <param id="0" name="C2">&quot;opentux&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="25" name="Run file" sid="126915335366760" type="Electron">
+                                    <param id="0" name="Path">&quot;supertux2&quot;</param>
+                                    <param id="1" name="Parameters">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="755310700863897">
+                    <conditions>
+                        <condition id="3" name="On C2 Function" sid="401960073452736" type="UI" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="578426665022941">
+                            <conditions>
+                                <condition id="4" name="Compare C2 Function" sid="136886645110427" type="UI">
+                                    <param id="0" name="C2">&quot;openminetest&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="25" name="Run file" sid="672909674064682" type="Electron">
+                                    <param id="0" name="Path">&quot;minetest&quot;</param>
+                                    <param id="1" name="Parameters">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="758538780889106">
+                    <conditions>
+                        <condition id="3" name="On C2 Function" sid="520533055060705" type="UI" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="645642743078328">
+                            <conditions>
+                                <condition id="4" name="Compare C2 Function" sid="407847612223402" type="UI">
+                                    <param id="0" name="C2">&quot;opengdevelop&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="25" name="Run file" sid="213300623705754" type="Electron">
+                                    <param id="0" name="Path">&quot;/1/Apps/gdevelop/gdevelop&quot;</param>
+                                    <param id="1" name="Parameters">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="838454491973686">
+                    <conditions>
+                        <condition id="3" name="On C2 Function" sid="149037574413802" type="UI" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="427476488480158">
+                            <conditions>
+                                <condition id="4" name="Compare C2 Function" sid="296959169643107" type="UI">
+                                    <param id="0" name="C2">&quot;openetcher&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="25" name="Run file" sid="530520922562635" type="Electron">
+                                    <param id="0" name="Path">&quot;&apos;&apos;/opt/balenaEtcher/balena-etcher-electron&apos;&apos; %U&quot;</param>
+                                    <param id="1" name="Parameters">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="807415893818868">
+                    <conditions>
+                        <condition id="3" name="On C2 Function" sid="874746363221513" type="UI" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="440601426927130">
+                            <conditions>
+                                <condition id="4" name="Compare C2 Function" sid="955687571501163" type="UI">
+                                    <param id="0" name="C2">&quot;opendiskmanager&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="25" name="Run file" sid="103787499378718" type="Electron">
+                                    <param id="0" name="Path">&quot;gnome-disks&quot;</param>
+                                    <param id="1" name="Parameters">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="687744213603016">
+                    <conditions>
+                        <condition id="3" name="On C2 Function" sid="754765699339543" type="UI" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="333076005321992">
+                            <conditions>
+                                <condition id="4" name="Compare C2 Function" sid="583310031945656" type="UI">
+                                    <param id="0" name="C2">&quot;opencharacters&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="25" name="Run file" sid="435818102187552" type="Electron">
+                                    <param id="0" name="Path">&quot;env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/gnome-characters_gnome-characters.desktop /snap/bin/gnome-characters %U&quot;</param>
+                                    <param id="1" name="Parameters">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="888513245005644">
+                    <conditions>
+                        <condition id="3" name="On C2 Function" sid="942541479202046" type="UI" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="779749618507273">
+                            <conditions>
+                                <condition id="4" name="Compare C2 Function" sid="891784094219233" type="UI">
+                                    <param id="0" name="C2">&quot;opentaskmanager&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="25" name="Run file" sid="132150134523284" type="Electron">
+                                    <param id="0" name="Path">&quot;env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/gnome-system-monitor_gnome-system-monitor.desktop /snap/bin/gnome-system-monitor %U&quot;</param>
+                                    <param id="1" name="Parameters">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
-        </event-block>
+        </event-group>
     </events>
 </c2eventsheet>
