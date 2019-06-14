@@ -1,0 +1,123 @@
+----- 1. Creating tree folder above root -----
+
+Creating /1 folder...
+>
+mkdir /1
+
+Setting permissions on /1 (tree) folder...
+If folder exists, Chmod permissions (get username to apply) on 1/ folder; if no, wait some seconds
+>
+chown -R $(id -u):$(id -g) /1
+
+Testing write permissions on tree folder...
+write a temp file on /1 folder; if can't, wait some seconds; if file exists, rmv it and nxt stp
+
+Creating settings folder...
+/1/config
+
+Getting and storing username...
+{"type":"config/os","url":"","lang":"en-us","title":"","user":""}
+/1/config/dat.json
+
+----- 2. Creating sys folder -----
+
+Creating sys folder...
+/1/Floflis
+
+Extracting data to sys folder...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Setting permissions on /1/Floflis folder...
+>
+chown -R root:root /1/Floflis
+
+>
+chmod 700 /1/Floflis
+
+----- 3. Setting Open Badges -----
+
+Creating Open Badges folder...
+/1/Badges
+
+badge for pneer since 06
+
+file with claimed badges, send it to Floflis (and store its date), tell when badges are available for download
+
+----- 4. Installing apps -----
+
+Creating Apps folder...
+/1/Apps
+
+Installing apps...
+
+Creating folder for classic apps (AppsOld)...
+/1/AppsOld
+
+Installing classic apps...
+chmod cj
+
+----- 5. Creating folders for games and HTML5 files -----
+
+Creating Games folder...
+/1/Games
+
+Creating HTML5 folder...
+/1/html5
+
+Installing HTML5 files...
+
+----- 6. Set device -----
+
+Get Device name, opt chng (tell abt Blth)
+>
+hostnamectl set-hostname {string}
+
+Set device type
+<i class="material-icons">desktop_windows</i>
+<i class="material-icons">laptop</i>
+<i class="material-icons">tv</i>
+<i class="material-icons">videogame_asset</i>
+<i class="material-icons">developer_board</i>
+
+<i class="material-icons">phone_android</i>
+<i class="material-icons">tablet_android</i>
+<i class="material-icons">watch</i>
+<i class="material-icons">headset</i>
+<i class="material-icons">headset_mic</i>
+<i class="material-icons">keyboard</i>
+<i class="material-icons">mouse</i>
+<i class="material-icons">router</i>
+<i class="material-icons">scanner</i>
+<i class="material-icons">speaker</i>
+<i class="material-icons">device_unknown</i>

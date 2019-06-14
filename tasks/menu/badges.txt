@@ -1,0 +1,6 @@
+<i class="material-icons">bubble_chart</i>
+
+https://github.com/badgealliance/openbadges-displayer.js/wiki
+https://github.com/badgealliance/openbadges-displayer.js
+
+issue badges

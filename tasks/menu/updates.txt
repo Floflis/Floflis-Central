@@ -14,3 +14,8 @@ updates: if no new file but modified, just point it instead of adding to update 
 - when applied update, addto "nextupdate" on floflis.json
 - if no folder for nextupdate but dt already updated, its updated
 - update timestamp of last update
+
+API:
+extract: from/to
+scripts to exe (bash?)
+files to rmv
