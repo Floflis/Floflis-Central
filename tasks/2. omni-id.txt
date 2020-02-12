@@ -1,0 +1,13 @@
+Dat (Peeper - advice public key is private)
+ETH (Peepeth/3box/Civic/uPort)
+IPFS peer ID
+other signs (BTC, BTC segwit, BTC lightning, QRL, NMC, EMC, Sia, Dun)
+
+trustablity level
+
+C/Y
+IPv4
+
+export public info as .people file
+
+print prvtk as mini book wallet
