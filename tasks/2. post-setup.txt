@@ -1,0 +1,54 @@
+----- 1. Set user -----
+
+Set dun username
+Set Fullname (earn achiev)
+
+Tell about nxt stps, but option to remember on next boot.
+
+----- 2. User details -----
+
+Set photo (default folder, choose folder, URL) - achiev for default photo or badge for both folder/URL photo
+- pin photo on dat/ipfs
+
+set user bio
+
+set favorite color
+
+set region
+
+set addresses (homes, work, minetest, decentraland, others)
+
+optional fields: phone, email
+
+omni-id.txt
+
+Create .people file
+
+Create /1/Contacts folder, xtrct
+
+Create /1/Favorites folder, xtrct
+
+Tell about nxt stps, but option to remember on next boot.
+
+----- 3. Set Web -----
+
+setting IPFS (store its ID on .ppl)
+
+symlink user/Sites
+
+turn /1/config into a dat
+get its dat url
+
+store dat url in /1/config/dat.json
+
+----- 4. Set Internet -----
+
+setting CJDNS (store its data on .ppl)
+
+setting Yggdrasil (store its data on .ppl)
+
+----- 5. Set bc -----
+
+store crypto data on .ppl in bc wizard
+
+profile display: username with link to folder and dun, photo with lnk to dat/ipfs
