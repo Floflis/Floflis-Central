@@ -18,6 +18,9 @@
                 <action id="30" name="Set title" sid="118451295452074" type="Electron">
                     <param id="0" name="Title">&quot;Floflis Central | Loading...&quot;</param>
                 </action>
+                <action id="19" name="Include Javascript file" sid="715117151730533" type="UI">
+                    <param id="0" name="Javascript file">&quot;jquery.min.js&quot;</param>
+                </action>
                 <action id="19" name="Include Javascript file" sid="335393644757179" type="Splash">
                     <param id="0" name="Javascript file">&quot;script.js&quot;</param>
                 </action>

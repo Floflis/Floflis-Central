@@ -1,0 +1,2 @@
+Open C drive
+/home/floflis/.PlayOnLinux/wineprefix/C/drive_c

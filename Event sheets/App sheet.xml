@@ -14,6 +14,9 @@
                     <param id="0" name="Title">&quot;Floflis Central&quot;</param>
                 </action>
                 <action id="32" name="Maximize" sid="568563506455960" type="Electron" />
+                <action id="19" name="Include Javascript file" sid="151088756958675" type="UI">
+                    <param id="0" name="Javascript file">&quot;jquery.min.js&quot;</param>
+                </action>
                 <action id="19" name="Include Javascript file" sid="994970542104687" type="UI">
                     <param id="0" name="Javascript file">&quot;script.js&quot;</param>
                 </action>
@@ -51,6 +54,24 @@
                     <param id="0" name="CSS file">&quot;iconsfont.css&quot;</param>
                 </action>
                 <action id="3" name="Focus" sid="603720114526800" type="Electron" />
+                <action disabled="1" id="9" name="Read" sid="862797236799126" type="Electron">
+                    <param id="0" name="Tag">&quot;&quot;</param>
+                    <param id="1" name="Path">&quot;require.txt&quot;</param>
+                    <param id="2" name="Encoding">&quot;utf8&quot;</param>
+                </action>
+                <action disabled="1" id="0" name="Request URL" sid="185355700163183" type="AJAX">
+                    <param id="0" name="Tag">&quot;requiremodule&quot;</param>
+                    <param id="1" name="URL">&quot;require.txt&quot;</param>
+                </action>
+                <action id="9" name="Read" sid="852171897768643" type="Electron">
+                    <param id="0" name="Tag">&quot;init&quot;</param>
+                    <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/app.html&quot;</param>
+                    <param id="2" name="Encoding">&quot;utf8&quot;</param>
+                </action>
+                <action disabled="1" id="0" name="Request URL" sid="311905878561186" type="AJAX">
+                    <param id="0" name="Tag">&quot;init&quot;</param>
+                    <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/Central/app.html&quot;</param>
+                </action>
             </actions>
             <sub-events>
                 <event-block sid="811395584260083">
@@ -61,45 +82,81 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="594655322647805">
+            </sub-events>
+        </event-block>
+        <event-block disabled="1" sid="287814634929795">
+            <conditions>
+                <condition id="0" name="On completed" sid="707978036472146" type="AJAX">
+                    <param id="0" name="Tag">&quot;requiremodule&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="24" name="Get elements" sid="569039992441047" type="UI">
+                    <param id="0" name="ID/Class">&quot;#electronmore&quot;</param>
+                    <param id="1" name="Set">AJAX.LastData</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="321487219332343" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action id="0" name="Add key" sid="146116339770244" type="Dictionary">
+                    <param id="0" name="Key">&quot;requireok&quot;</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block disabled="1" sid="815742996058693">
                     <conditions>
-                        <condition id="6" name="Path exists" sid="466845572524476" type="Electron">
-                            <param id="0" name="Path">Electron.GetAppPath &amp; &quot;/Central/setup.json&quot;</param>
+                        <condition id="0" name="Compare value" sid="976899250276164" type="Dictionary">
+                            <param id="0" name="Key">&quot;requireok&quot;</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
                         </condition>
+                        <condition id="-4" name="Trigger once while true" sid="133799847544934" type="System" />
                     </conditions>
-                    <actions>
-                        <action id="9" name="Read" sid="482585686794622" type="Electron">
-                            <param id="0" name="Tag">&quot;&quot;</param>
-                            <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/setup/setup.html&quot;</param>
-                            <param id="2" name="Encoding">&quot;utf8&quot;</param>
-                        </action>
-                        <action id="0" name="Request URL" sid="228018667136444" type="AJAX">
-                            <param id="0" name="Tag">&quot;setup&quot;</param>
-                            <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/Central/setup/setup.html&quot;</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="732332951143077">
-                    <conditions>
-                        <condition id="-22" name="Else" sid="646029443376750" type="System" />
-                    </conditions>
-                    <actions>
-                        <action id="9" name="Read" sid="968422829009343" type="Electron">
-                            <param id="0" name="Tag">&quot;&quot;</param>
-                            <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/app.html&quot;</param>
-                            <param id="2" name="Encoding">&quot;utf8&quot;</param>
-                        </action>
-                        <action id="0" name="Request URL" sid="757110351826136" type="AJAX">
-                            <param id="0" name="Tag">&quot;init&quot;</param>
-                            <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/Central/app.html&quot;</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block disabled="1" sid="594655322647805">
+                            <conditions>
+                                <condition id="6" name="Path exists" sid="466845572524476" type="Electron">
+                                    <param id="0" name="Path">Electron.GetAppPath &amp; &quot;/Central/setup.json&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Read" sid="482585686794622" type="Electron">
+                                    <param id="0" name="Tag">&quot;&quot;</param>
+                                    <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/setup/setup.html&quot;</param>
+                                    <param id="2" name="Encoding">&quot;utf8&quot;</param>
+                                </action>
+                                <action id="0" name="Request URL" sid="228018667136444" type="AJAX">
+                                    <param id="0" name="Tag">&quot;setup&quot;</param>
+                                    <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/Central/setup/setup.html&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="732332951143077">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="646029443376750" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Read" sid="968422829009343" type="Electron">
+                                    <param id="0" name="Tag">&quot;&quot;</param>
+                                    <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/app.html&quot;</param>
+                                    <param id="2" name="Encoding">&quot;utf8&quot;</param>
+                                </action>
+                                <action id="0" name="Request URL" sid="757110351826136" type="AJAX">
+                                    <param id="0" name="Tag">&quot;init&quot;</param>
+                                    <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/Central/app.html&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-block>
         <event-group description="" sid="313311825004114" title="Setup">
             <sub-events>
-                <event-block sid="847035470452167">
+                <event-block disabled="1" sid="847035470452167">
                     <conditions>
                         <condition id="0" name="On completed" sid="586288359979661" type="AJAX">
                             <param id="0" name="Tag">&quot;setup&quot;</param>
@@ -118,7 +175,7 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="125158669933414">
+                <event-block disabled="1" sid="125158669933414">
                     <conditions>
                         <condition id="0" name="Compare value" sid="140250808268264" type="Dictionary">
                             <param id="0" name="Key">&quot;setup-step&quot;</param>
@@ -128,274 +185,331 @@
                         <condition id="-4" name="Trigger once while true" sid="854036090856306" type="System" />
                     </conditions>
                     <actions>
+                        <action id="0" name="Add key" sid="780604271359120" type="Dictionary">
+                            <param id="0" name="Key">&quot;htmlcontent&quot;</param>
+                            <param id="1" name="Value">&quot;&lt;h1 id=setupstatus&gt;&lt;i class=material-icons&gt;create_new_folder&lt;/i&gt; Creating /1 folder...&lt;/h1&gt;&lt;p&gt;&lt;i class=material-icons&gt;vpn_key&lt;/i&gt; Floflis will ask for your password.&lt;/p&gt;&lt;small&gt;🤓 If u`re nerd: root will be needed for creating tree folder on root directory.&lt;/small&gt;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="599505050396563" type="System">
+                            <param id="0" name="Seconds">dt</param>
+                        </action>
                         <action id="24" name="Get elements" sid="788236549064167" type="UI">
                             <param id="0" name="ID/Class">&quot;#setupstatus&quot;</param>
-                            <param id="1" name="Set">&quot;&lt;i class=material-icons&gt;create_new_folder&lt;/i&gt; Creating /1 folder...&quot;</param>
+                            <param id="1" name="Set">Dictionary.Get(&quot;htmlcontent&quot;)</param>
                             <param id="2" name="Append">&quot;&quot;</param>
                         </action>
                         <action id="17" name="Execute Javascript" sid="528621176188028" type="Browser">
-                            <param id="0" name="Javascript">&quot;sudo.exec(&apos;mkdir /1&apos;, options, function(error, stdout, stderr){if (error) throw error;console.log(&apos;stdout: &apos; + stdout);});&quot;</param>
+                            <param id="0" name="Javascript">&quot;sudo.exec(&apos;chmod 755 /1/Floflis/floflis-installer &amp;&amp; cd /1/Floflis &amp;&amp; ./floflis-installer&apos;, options, function(error, stdout, stderr){if (error) throw error;console.log(&apos;stdout: &apos; + stdout);});&quot;</param>
                         </action>
-                        <action id="-16" name="Wait" sid="818814938133027" type="System">
-                            <param id="0" name="Seconds">2.5</param>
-                        </action>
-                        <action id="24" name="Get elements" sid="221029068708314" type="UI">
-                            <param id="0" name="ID/Class">&quot;#setupstatus&quot;</param>
-                            <param id="1" name="Set">&quot;&lt;i class=material-icons&gt;folder_special&lt;/i&gt; Setting permissions on /1 (tree) folder...&quot;</param>
-                            <param id="2" name="Append">&quot;&quot;</param>
-                        </action>
-                        <action id="17" name="Execute Javascript" sid="453001392964449" type="Browser">
-                            <param id="0" name="Javascript">&quot;sudo.exec(&apos;chown -R $(id -u):$(id -g) /1&apos;, options, function(error, stdout, stderr){if (error) throw error;console.log(&apos;stdout: &apos; + stdout);});&quot;</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="211113116593826" type="System">
-                            <param id="0" name="Seconds">2.5</param>
-                        </action>
-                        <action id="24" name="Get elements" sid="587518539217366" type="UI">
-                            <param id="0" name="ID/Class">&quot;#setupstatus&quot;</param>
-                            <param id="1" name="Set">&quot;&lt;i class=material-icons&gt;assignment&lt;/i&gt; Testing write permissions on tree folder...&quot;</param>
-                            <param id="2" name="Append">&quot;&quot;</param>
-                        </action>
-                        <action id="1" name="Set key" sid="526100213873786" type="Dictionary">
+                        <action id="1" name="Set key" sid="685863633905319" type="Dictionary">
                             <param id="0" name="Key">&quot;setup-step&quot;</param>
                             <param id="1" name="Value">1.1</param>
                         </action>
                     </actions>
+                </event-block>
+                <event-block disabled="1" sid="206395227259992">
+                    <conditions>
+                        <condition id="0" name="Compare value" sid="982705922313755" type="Dictionary">
+                            <param id="0" name="Key">&quot;setup-step&quot;</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1.1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
                     <sub-events>
-                        <event-block sid="124280069330226">
+                        <event-block disabled="1" sid="597683331719868">
                             <conditions>
-                                <condition id="0" name="Compare value" sid="362961655420489" type="Dictionary">
-                                    <param id="0" name="Key">&quot;setup-step&quot;</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1.1</param>
+                                <condition id="6" name="Path exists" sid="952455497233172" type="Electron">
+                                    <param id="0" name="Path">&quot;/2&quot;</param>
                                 </condition>
-                                <condition id="-4" name="Trigger once while true" sid="436270789750599" type="System" />
                             </conditions>
                             <actions>
-                                <action id="0" name="Write" sid="691201292758805" type="Electron">
-                                    <param id="0" name="Tag">&quot;treewritetest&quot;</param>
-                                    <param id="1" name="Path">&quot;/1/temp.txt&quot;</param>
-                                    <param id="2" name="Data">&quot;temp&quot;</param>
+                                <action id="24" name="Get elements" sid="195528362146828" type="UI">
+                                    <param id="0" name="ID/Class">&quot;#setupcontent&quot;</param>
+                                    <param id="1" name="Set">&quot;&lt;h1 id=setupstatus&gt;&lt;i class=material-icons&gt;folder_special&lt;/i&gt; Setting permissions on /1 (tree) folder...&quot;</param>
+                                    <param id="2" name="Append">&quot;&quot;</param>
+                                </action>
+                                <action id="1" name="Set key" sid="104353112363480" type="Dictionary">
+                                    <param id="0" name="Key">&quot;setup-step&quot;</param>
+                                    <param id="1" name="Value">1.2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block disabled="1" sid="493635274015548">
+                    <conditions>
+                        <condition id="0" name="Compare value" sid="624320739739425" type="Dictionary">
+                            <param id="0" name="Key">&quot;setup-step&quot;</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1.2</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="459274630645950" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Add key" sid="398933448955171" type="Dictionary">
+                            <param id="0" name="Key">&quot;htmlcontent&quot;</param>
+                            <param id="1" name="Value">&quot;&lt;h1 id=setupstatus&gt;&lt;i class=material-icons&gt;assignment&lt;/i&gt; Testing write permissions on tree folder...&lt;/h1&gt;&lt;ol&gt;&lt;li&gt;&lt;i class=material-icons&gt;perm_device_information&lt;/i&gt; If it takes more than 30 seconds, please reboot your device and try again.&lt;/li&gt;&lt;/ol&gt;&lt;small&gt;🤓 If u&apos;re nerd: chmod will be needed on this folder. So, instead of being owned by root, tree folder will be writable by you as normal user.&lt;/small&gt;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="688280575236288" type="System">
+                            <param id="0" name="Seconds">dt</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="148811517018117" type="UI">
+                            <param id="0" name="ID/Class">&quot;#setupcontent&quot;</param>
+                            <param id="1" name="Set">Dictionary.Get(&quot;htmlcontent&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="1" name="Set key" sid="949266855195889" type="Dictionary">
+                            <param id="0" name="Key">&quot;setup-step&quot;</param>
+                            <param id="1" name="Value">1.3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="616566802626992">
+                    <conditions>
+                        <condition id="0" name="Compare value" sid="419801594813277" type="Dictionary">
+                            <param id="0" name="Key">&quot;setup-step&quot;</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1.3</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block disabled="1" sid="606090292067651">
+                            <conditions>
+                                <condition id="6" name="Path exists" sid="630586743547246" type="Electron">
+                                    <param id="0" name="Path">&quot;/2/temp.txt&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="1" name="Set key" sid="178211502768911" type="Dictionary">
+                                    <param id="0" name="Key">&quot;setup-step&quot;</param>
+                                    <param id="1" name="Value">1.4</param>
+                                </action>
+                                <action id="13" name="Write" sid="151172753632482" type="Electron">
+                                    <param id="0" name="Path">&quot;/2/temp2.txt&quot;</param>
+                                    <param id="1" name="Data">&quot;&quot;</param>
+                                    <param id="2" name="Encoding Mode">0</param>
+                                    <param id="3" name="Overwrite">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block disabled="1" sid="190124167844903">
+                    <conditions>
+                        <condition id="0" name="Compare value" sid="169867991156624" type="Dictionary">
+                            <param id="0" name="Key">&quot;setup-step&quot;</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1.4</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="402429250360207" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="24" name="Get elements" sid="488147956857114" type="UI">
+                            <param id="0" name="ID/Class">&quot;#setupcontent&quot;</param>
+                            <param id="1" name="Set">&quot;&lt;h1 id=setupstatus&gt;&lt;i class=material-icons&gt;create_new_folder&lt;/i&gt; Creating settings folder...&quot;</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="380475557014560" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="1" name="Set key" sid="624247371345370" type="Dictionary">
+                            <param id="0" name="Key">&quot;setup-step&quot;</param>
+                            <param id="1" name="Value">1.5</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="777629784169944">
+                    <conditions>
+                        <condition id="0" name="Compare value" sid="114095919593612" type="Dictionary">
+                            <param id="0" name="Key">&quot;setup-step&quot;</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1.5</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="441709590174549" type="System" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block disabled="1" sid="195279635029292">
+                            <conditions>
+                                <condition id="6" name="Path exists" sid="276731248361693" type="Electron">
+                                    <param id="0" name="Path">&quot;/1/config&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="24" name="Get elements" sid="742497413249583" type="UI">
+                                    <param id="0" name="ID/Class">&quot;#setupstatus&quot;</param>
+                                    <param id="1" name="Set">&quot;&lt;i class=material-icons&gt;folder_shared&lt;/i&gt; Getting and storing username...&quot;</param>
+                                    <param id="2" name="Append">&quot;&quot;</param>
+                                </action>
+                                <action id="60" name="LoadJSON" sid="379837502605173" type="settingsfile">
+                                    <param id="0" name="JSON">&quot;{}&quot;</param>
+                                    <param id="1" name="Reference point">0</param>
+                                    <param id="2" name="Key {n}"></param>
+                                </action>
+                                <action id="-16" name="Wait" sid="963368812325064" type="System">
+                                    <param id="0" name="Seconds">dt</param>
+                                </action>
+                                <action id="0" name="Set New Object" sid="961549480032820" type="settingsfile">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}">&quot;type&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="253163536655478" type="System">
+                                    <param id="0" name="Seconds">dt</param>
+                                </action>
+                                <action id="0" name="Set New Object" sid="797508450522251" type="settingsfile">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}">&quot;url&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="685595211023237" type="System">
+                                    <param id="0" name="Seconds">dt</param>
+                                </action>
+                                <action id="0" name="Set New Object" sid="907556709344218" type="settingsfile">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}">&quot;lang&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="866082196286115" type="System">
+                                    <param id="0" name="Seconds">dt</param>
+                                </action>
+                                <action id="0" name="Set New Object" sid="872117438599983" type="settingsfile">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}">&quot;title&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="964877013052756" type="System">
+                                    <param id="0" name="Seconds">dt</param>
+                                </action>
+                                <action id="0" name="Set New Object" sid="446374177051079" type="settingsfile">
+                                    <param id="0" name="Reference point">0</param>
+                                    <param id="1" name="Key {n}">&quot;user&quot;</param>
+                                </action>
+                                <action id="20" name="Set Value" sid="353168643632843" type="settingsfile">
+                                    <param id="0" name="Value">&quot;config/os&quot;</param>
+                                    <param id="1" name="Reference point">0</param>
+                                    <param id="2" name="Key {n}">&quot;type&quot;</param>
+                                </action>
+                                <action id="20" name="Set Value" sid="784182093209241" type="settingsfile">
+                                    <param id="0" name="Value">&quot;en-us&quot;</param>
+                                    <param id="1" name="Reference point">0</param>
+                                    <param id="2" name="Key {n}">&quot;lang&quot;</param>
+                                </action>
+                                <action id="20" name="Set Value" sid="454391475483803" type="settingsfile">
+                                    <param id="0" name="Value">Browser.ExecJS(&quot;username.sync()&quot;)</param>
+                                    <param id="1" name="Reference point">0</param>
+                                    <param id="2" name="Key {n}">&quot;user&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="862735842357125" type="System">
+                                    <param id="0" name="Seconds">dt</param>
+                                </action>
+                                <action id="20" name="Set Value" sid="233466327211930" type="settingsfile">
+                                    <param id="0" name="Value">&quot;Floflis Settings - &quot; &amp; settingsfile.Value(0,&quot;user&quot;)</param>
+                                    <param id="1" name="Reference point">0</param>
+                                    <param id="2" name="Key {n}">&quot;title&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="286868031407675" type="System">
+                                    <param id="0" name="Seconds">dt</param>
+                                </action>
+                                <action id="0" name="Write" sid="157333421193540" type="Electron">
+                                    <param id="0" name="Tag">&quot;settsfile&quot;</param>
+                                    <param id="1" name="Path">&quot;/2/config/dat.json&quot;</param>
+                                    <param id="2" name="Data">settingsfile.AsJson(0)</param>
                                     <param id="3" name="Encoding Mode">0</param>
                                 </action>
                             </actions>
-                            <sub-events>
-                                <event-block sid="634970420689532">
-                                    <conditions>
-                                        <condition id="1" name="On write fail" sid="994237018091419" type="Electron">
-                                            <param id="0" name="Tag">&quot;treewritetest&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="24" name="Get elements" sid="148811517018117" type="UI">
-                                            <param id="0" name="ID/Class">&quot;#setupcontent&quot;</param>
-                                            <param id="1" name="Set">&quot;&lt;h1 id=setupstatus&gt;&lt;i class=material-icons&gt;warning&lt;/i&gt; Couldn&apos;t write files to /1 folder. Please reboot your device and try again.&quot;</param>
-                                            <param id="2" name="Append">&quot;&quot;</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="364089188486578">
-                                    <conditions>
-                                        <condition id="0" name="On write success" sid="639513905126243" type="Electron">
-                                            <param id="0" name="Tag">&quot;treewritetest&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="24" name="Get elements" sid="488147956857114" type="UI">
-                                            <param id="0" name="ID/Class">&quot;#setupstatus&quot;</param>
-                                            <param id="1" name="Set">&quot;&lt;i class=material-icons&gt;create_new_folder&lt;/i&gt; Creating settings folder...&quot;</param>
-                                            <param id="2" name="Append">&quot;&quot;</param>
-                                        </action>
-                                        <action id="1" name="Set key" sid="897112493749613" type="Dictionary">
-                                            <param id="0" name="Key">&quot;setup-step&quot;</param>
-                                            <param id="1" name="Value">1.2</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
                         </event-block>
-                        <event-block sid="190124167844903">
+                    </sub-events>
+                </event-block>
+                <event-block disabled="1" sid="528859567057615">
+                    <conditions>
+                        <condition id="1" name="On write fail" sid="570571614852974" type="Electron">
+                            <param id="0" name="Tag">&quot;settsfile&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="24" name="Get elements" sid="353611515705914" type="UI">
+                            <param id="0" name="ID/Class">&quot;#setupcontent&quot;</param>
+                            <param id="1" name="Set">&quot;&lt;h1 id=setupstatus&gt;&lt;i class=material-icons&gt;warning&lt;/i&gt; Couldn&apos;t write settings file. Please reboot your device and try again.&quot;</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="181344953441253">
+                    <conditions>
+                        <condition id="0" name="On write success" sid="649484221165279" type="Electron">
+                            <param id="0" name="Tag">&quot;settsfile&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="1" name="Set key" sid="103803751836853" type="Dictionary">
+                            <param id="0" name="Key">&quot;setup-step&quot;</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="0" name="Request URL" sid="821270733705219" type="AJAX">
+                            <param id="0" name="Tag">&quot;step2&quot;</param>
+                            <param id="1" name="URL">&quot;step2.html&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="159982809586331">
+                    <conditions>
+                        <condition id="0" name="On completed" sid="193060047692128" type="AJAX">
+                            <param id="0" name="Tag">&quot;step2&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="24" name="Get elements" sid="716971424735350" type="UI">
+                            <param id="0" name="ID/Class">&quot;#setupstepper&quot;</param>
+                            <param id="1" name="Set">AJAX.LastData</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="890869117514764">
+                    <conditions>
+                        <condition id="0" name="Compare value" sid="494028220703011" type="Dictionary">
+                            <param id="0" name="Key">&quot;setup-step&quot;</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="368314627561968" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="24" name="Get elements" sid="462924184826373" type="UI">
+                            <param id="0" name="ID/Class">&quot;#setupstatus&quot;</param>
+                            <param id="1" name="Set">&quot;&lt;i class=material-icons&gt;create_new_folder&lt;/i&gt; Creating sys folder...&quot;</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="17" name="Create folder" sid="536324561361811" type="Electron">
+                            <param id="0" name="Path">&quot;/2/Floflis&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="108075240846973" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="1" name="Set key" sid="343503569496854" type="Dictionary">
+                            <param id="0" name="Key">&quot;setup-step&quot;</param>
+                            <param id="1" name="Value">2.1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="133656293383741">
+                    <conditions>
+                        <condition id="0" name="Compare value" sid="964932397794253" type="Dictionary">
+                            <param id="0" name="Key">&quot;setup-step&quot;</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2.1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block disabled="1" sid="220525590344629">
                             <conditions>
-                                <condition id="0" name="Compare value" sid="169867991156624" type="Dictionary">
-                                    <param id="0" name="Key">&quot;setup-step&quot;</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1.2</param>
+                                <condition id="6" name="Path exists" sid="675629131004302" type="Electron">
+                                    <param id="0" name="Path">&quot;/2/Floflis&quot;</param>
                                 </condition>
-                                <condition id="-4" name="Trigger once while true" sid="402429250360207" type="System" />
                             </conditions>
                             <actions>
-                                <action id="17" name="Create folder" sid="170837947091161" type="Electron">
-                                    <param id="0" name="Path">&quot;/1/config&quot;</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="380475557014560" type="System">
-                                    <param id="0" name="Seconds">1</param>
-                                </action>
-                                <action id="1" name="Set key" sid="624247371345370" type="Dictionary">
+                                <action id="1" name="Set key" sid="726577351507515" type="Dictionary">
                                     <param id="0" name="Key">&quot;setup-step&quot;</param>
-                                    <param id="1" name="Value">1.3</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="777629784169944">
-                            <conditions>
-                                <condition id="0" name="Compare value" sid="114095919593612" type="Dictionary">
-                                    <param id="0" name="Key">&quot;setup-step&quot;</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1.3</param>
-                                </condition>
-                                <condition id="-4" name="Trigger once while true" sid="441709590174549" type="System" />
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="195279635029292">
-                                    <conditions>
-                                        <condition id="6" name="Path exists" sid="276731248361693" type="Electron">
-                                            <param id="0" name="Path">&quot;/1/config&quot;</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="24" name="Get elements" sid="742497413249583" type="UI">
-                                            <param id="0" name="ID/Class">&quot;#setupstatus&quot;</param>
-                                            <param id="1" name="Set">&quot;&lt;i class=material-icons&gt;folder_shared&lt;/i&gt; Getting and storing username...&quot;</param>
-                                            <param id="2" name="Append">&quot;&quot;</param>
-                                        </action>
-                                        <action id="60" name="LoadJSON" sid="379837502605173" type="settingsfile">
-                                            <param id="0" name="JSON">&quot;{}&quot;</param>
-                                            <param id="1" name="Reference point">0</param>
-                                            <param id="2" name="Key {n}"></param>
-                                        </action>
-                                        <action id="-16" name="Wait" sid="963368812325064" type="System">
-                                            <param id="0" name="Seconds">dt</param>
-                                        </action>
-                                        <action id="0" name="Set New Object" sid="961549480032820" type="settingsfile">
-                                            <param id="0" name="Reference point">0</param>
-                                            <param id="1" name="Key {n}">&quot;type&quot;</param>
-                                        </action>
-                                        <action id="-16" name="Wait" sid="253163536655478" type="System">
-                                            <param id="0" name="Seconds">dt</param>
-                                        </action>
-                                        <action id="0" name="Set New Object" sid="797508450522251" type="settingsfile">
-                                            <param id="0" name="Reference point">0</param>
-                                            <param id="1" name="Key {n}">&quot;url&quot;</param>
-                                        </action>
-                                        <action id="-16" name="Wait" sid="685595211023237" type="System">
-                                            <param id="0" name="Seconds">dt</param>
-                                        </action>
-                                        <action id="0" name="Set New Object" sid="907556709344218" type="settingsfile">
-                                            <param id="0" name="Reference point">0</param>
-                                            <param id="1" name="Key {n}">&quot;lang&quot;</param>
-                                        </action>
-                                        <action id="-16" name="Wait" sid="866082196286115" type="System">
-                                            <param id="0" name="Seconds">dt</param>
-                                        </action>
-                                        <action id="0" name="Set New Object" sid="872117438599983" type="settingsfile">
-                                            <param id="0" name="Reference point">0</param>
-                                            <param id="1" name="Key {n}">&quot;title&quot;</param>
-                                        </action>
-                                        <action id="-16" name="Wait" sid="964877013052756" type="System">
-                                            <param id="0" name="Seconds">dt</param>
-                                        </action>
-                                        <action id="0" name="Set New Object" sid="446374177051079" type="settingsfile">
-                                            <param id="0" name="Reference point">0</param>
-                                            <param id="1" name="Key {n}">&quot;user&quot;</param>
-                                        </action>
-                                        <action id="20" name="Set Value" sid="353168643632843" type="settingsfile">
-                                            <param id="0" name="Value">&quot;config/os&quot;</param>
-                                            <param id="1" name="Reference point">0</param>
-                                            <param id="2" name="Key {n}">&quot;type&quot;</param>
-                                        </action>
-                                        <action id="20" name="Set Value" sid="784182093209241" type="settingsfile">
-                                            <param id="0" name="Value">&quot;en-us&quot;</param>
-                                            <param id="1" name="Reference point">0</param>
-                                            <param id="2" name="Key {n}">&quot;lang&quot;</param>
-                                        </action>
-                                        <action id="20" name="Set Value" sid="454391475483803" type="settingsfile">
-                                            <param id="0" name="Value">Browser.ExecJS(&quot;username.sync()&quot;)</param>
-                                            <param id="1" name="Reference point">0</param>
-                                            <param id="2" name="Key {n}">&quot;user&quot;</param>
-                                        </action>
-                                        <action id="-16" name="Wait" sid="862735842357125" type="System">
-                                            <param id="0" name="Seconds">dt</param>
-                                        </action>
-                                        <action id="20" name="Set Value" sid="233466327211930" type="settingsfile">
-                                            <param id="0" name="Value">&quot;Floflis Settings - &quot; &amp; settingsfile.Value(0,&quot;user&quot;)</param>
-                                            <param id="1" name="Reference point">0</param>
-                                            <param id="2" name="Key {n}">&quot;title&quot;</param>
-                                        </action>
-                                        <action id="-16" name="Wait" sid="286868031407675" type="System">
-                                            <param id="0" name="Seconds">dt</param>
-                                        </action>
-                                        <action id="0" name="Write" sid="157333421193540" type="Electron">
-                                            <param id="0" name="Tag">&quot;settingsfile&quot;</param>
-                                            <param id="1" name="Path">&quot;/1/config/dat.json&quot;</param>
-                                            <param id="2" name="Data">settingsfile.AsJson(0)</param>
-                                            <param id="3" name="Encoding Mode">0</param>
-                                        </action>
-                                    </actions>
-                                    <sub-events>
-                                        <event-block sid="528859567057615">
-                                            <conditions>
-                                                <condition id="1" name="On write fail" sid="570571614852974" type="Electron">
-                                                    <param id="0" name="Tag">&quot;settingsfile&quot;</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="24" name="Get elements" sid="353611515705914" type="UI">
-                                                    <param id="0" name="ID/Class">&quot;#setupcontent&quot;</param>
-                                                    <param id="1" name="Set">&quot;&lt;h1 id=setupstatus&gt;&lt;i class=material-icons&gt;warning&lt;/i&gt; Couldn&apos;t write settings file. Please reboot your device and try again.&quot;</param>
-                                                    <param id="2" name="Append">&quot;&quot;</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                        <event-block sid="181344953441253">
-                                            <conditions>
-                                                <condition id="0" name="On write success" sid="649484221165279" type="Electron">
-                                                    <param id="0" name="Tag">&quot;settingsfile&quot;</param>
-                                                </condition>
-                                            </conditions>
-                                            <actions>
-                                                <action id="1" name="Set key" sid="103803751836853" type="Dictionary">
-                                                    <param id="0" name="Key">&quot;setup-step&quot;</param>
-                                                    <param id="1" name="Value">2</param>
-                                                </action>
-                                            </actions>
-                                        </event-block>
-                                    </sub-events>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block sid="890869117514764">
-                            <conditions>
-                                <condition id="0" name="Compare value" sid="494028220703011" type="Dictionary">
-                                    <param id="0" name="Key">&quot;setup-step&quot;</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">2</param>
-                                </condition>
-                                <condition id="-4" name="Trigger once while true" sid="368314627561968" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="24" name="Get elements" sid="716971424735350" type="UI">
-                                    <param id="0" name="ID/Class">&quot;#setupstepper&quot;</param>
-                                    <param id="1" name="Set">&quot;step2.html&quot;</param>
-                                    <param id="2" name="Append">&quot;&quot;</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="814963724268707" type="System">
-                                    <param id="0" name="Seconds">dt</param>
-                                </action>
-                                <action id="24" name="Get elements" sid="462924184826373" type="UI">
-                                    <param id="0" name="ID/Class">&quot;#setupstatus&quot;</param>
-                                    <param id="1" name="Set">&quot;&lt;i class=material-icons&gt;create_new_folder&lt;/i&gt; Creating sys folder...&quot;</param>
-                                    <param id="2" name="Append">&quot;&quot;</param>
-                                </action>
-                                <action id="17" name="Create folder" sid="536324561361811" type="Electron">
-                                    <param id="0" name="Path">&quot;/1/Floflis&quot;</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="108075240846973" type="System">
-                                    <param id="0" name="Seconds">2.5</param>
-                                </action>
-                                <action id="24" name="Get elements" sid="771091540289885" type="UI">
-                                    <param id="0" name="ID/Class">&quot;#setupstatus&quot;</param>
-                                    <param id="1" name="Set">&quot;&lt;i class=material-icons&gt;save_alt&lt;/i&gt; Extracting data to sys folder...&quot;</param>
-                                    <param id="2" name="Append">&quot;&quot;</param>
+                                    <param id="1" name="Value">2.2</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -403,40 +517,100 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block disabled="1" sid="695234071659068">
+            <conditions>
+                <condition id="0" name="Compare value" sid="794782444656395" type="Dictionary">
+                    <param id="0" name="Key">&quot;setup-step&quot;</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2.2</param>
+                </condition>
+                <condition id="-4" name="Trigger once while true" sid="708007261759730" type="System" />
+            </conditions>
+            <actions>
+                <action id="24" name="Get elements" sid="771091540289885" type="UI">
+                    <param id="0" name="ID/Class">&quot;#setupstatus&quot;</param>
+                    <param id="1" name="Set">&quot;&lt;i class=material-icons&gt;save_alt&lt;/i&gt; Extracting data to sys folder...&quot;</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action id="40" name="Show dev tools" sid="419811625683427" type="Electron" />
+                <action disabled="1" id="17" name="Execute Javascript" sid="330437580703426" type="Browser">
+                    <param id="0" name="Javascript">&quot;var unzipper = new DecompressZip(floflis.zip) unzipper.extract({path: &apos;/2/Floflis&apos;,});&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="385990972200190">
+            <conditions>
+                <condition id="0" name="On completed" sid="458353562140599" type="AJAX">
+                    <param id="0" name="Tag">&quot;init&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
         <event-block sid="328075382242918">
             <conditions>
-                <condition id="0" name="On completed" sid="643374519154222" type="AJAX">
+                <condition id="3" name="On read success" sid="206017059598492" type="Electron">
                     <param id="0" name="Tag">&quot;init&quot;</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="6" name="Set HTML" sid="208140225315479" type="UI">
-                    <param id="0" name="Set HTML">AJAX.LastData</param>
+                    <param id="0" name="Set HTML">Electron.LastReadAsync</param>
                 </action>
                 <action id="-16" name="Wait" sid="452367930864856" type="System">
                     <param id="0" name="Seconds">dt</param>
                 </action>
                 <action id="9" name="Read" sid="491998598005987" type="Electron">
-                    <param id="0" name="Tag">&quot;&quot;</param>
+                    <param id="0" name="Tag">&quot;home&quot;</param>
                     <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/home.html&quot;</param>
                     <param id="2" name="Encoding">&quot;utf8&quot;</param>
                 </action>
-                <action id="0" name="Request URL" sid="786273892473119" type="AJAX">
+                <action disabled="1" id="0" name="Request URL" sid="786273892473119" type="AJAX">
                     <param id="0" name="Tag">&quot;home&quot;</param>
                     <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/Central/home.html&quot;</param>
                 </action>
             </actions>
         </event-block>
+        <event-block disabled="1" sid="570437029484984">
+            <conditions />
+            <actions>
+                <action id="9" name="Read" sid="137306239782012" type="Electron">
+                    <param id="0" name="Tag">&quot;&quot;</param>
+                    <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/home.html&quot;</param>
+                    <param id="2" name="Encoding">&quot;utf8&quot;</param>
+                </action>
+                <action id="0" name="Request URL" sid="552570068438774" type="AJAX">
+                    <param id="0" name="Tag">&quot;home&quot;</param>
+                    <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/Central/home.html&quot;</param>
+                </action>
+                <action disabled="1" id="9" name="Read" sid="569130826838712" type="Electron">
+                    <param id="0" name="Tag">&quot;&quot;</param>
+                    <param id="1" name="Path">&quot;G:/bkp/ST500LM012 HN-M500MBB Dat/z/Program Files (x86)/ElectronForC2/resources/app/Central/home.html&quot;</param>
+                    <param id="2" name="Encoding">&quot;utf8&quot;</param>
+                </action>
+                <action disabled="1" id="0" name="Request URL" sid="862937121797936" type="AJAX">
+                    <param id="0" name="Tag">&quot;home&quot;</param>
+                    <param id="1" name="URL">&quot;G:/bkp/ST500LM012 HN-M500MBB Dat/z/Program Files (x86)/ElectronForC2/resources/app/Central/home.html&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="468344417080607">
+            <conditions>
+                <condition id="0" name="On completed" sid="217038478020557" type="AJAX">
+                    <param id="0" name="Tag">&quot;home&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
         <event-block sid="165718121899390">
             <conditions>
-                <condition id="0" name="On completed" sid="498176490474734" type="AJAX">
+                <condition id="3" name="On read success" sid="868825420245041" type="Electron">
                     <param id="0" name="Tag">&quot;home&quot;</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="24" name="Get elements" sid="909469975111192" type="UI">
                     <param id="0" name="ID/Class">&quot;#nav-home&quot;</param>
-                    <param id="1" name="Set">AJAX.LastData</param>
+                    <param id="1" name="Set">Electron.LastReadAsync</param>
                     <param id="2" name="Append">&quot;&quot;</param>
                 </action>
                 <action id="24" name="Get elements" sid="152239138209834" type="UI">
@@ -474,12 +648,18 @@
                     <param id="0" name="Tag">&quot;sysinfo&quot;</param>
                     <param id="1" name="URL">&quot;/1/Floflis/Resources/floflis.json&quot;</param>
                 </action>
+                <action id="-16" name="Wait" sid="803565617865849" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
                 <action id="9" name="Read" sid="437110018315917" type="Electron">
-                    <param id="0" name="Tag">&quot;&quot;</param>
+                    <param id="0" name="Tag">&quot;sysinfo&quot;</param>
                     <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/floflis.json&quot;</param>
                     <param id="2" name="Encoding">&quot;utf8&quot;</param>
                 </action>
-                <action id="0" name="Request URL" sid="848517685601580" type="AJAX">
+                <action id="-16" name="Wait" sid="539268352996645" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action disabled="1" id="0" name="Request URL" sid="848517685601580" type="AJAX">
                     <param id="0" name="Tag">&quot;sysinfo&quot;</param>
                     <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/Central/floflis.json&quot;</param>
                 </action>
@@ -503,27 +683,42 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="298241645686882">
+            <conditions />
+            <actions />
+        </event-block>
+        <event-block disabled="1" sid="393106811717467">
+            <conditions>
+                <condition id="0" name="On completed" sid="183872505176367" type="AJAX">
+                    <param id="0" name="Tag">&quot;sysinfo&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
         <event-block sid="789558813079017">
             <conditions>
-                <condition id="0" name="On completed" sid="310609077792917" type="AJAX">
+                <condition id="3" name="On read success" sid="303898774207040" type="Electron">
                     <param id="0" name="Tag">&quot;sysinfo&quot;</param>
                 </condition>
             </conditions>
             <actions>
-                <action id="60" name="LoadJSON" sid="816729337016876" type="sysinfo">
-                    <param id="0" name="JSON">AJAX.LastData</param>
+                <action id="0" name="Set text" sid="929893114151484" type="AdvancedTextBox">
+                    <param id="0" name="Text">Electron.LastReadAsync</param>
+                </action>
+                <action disabled="1" id="60" name="LoadJSON" sid="816729337016876" type="sysinfo">
+                    <param id="0" name="JSON">Electron.LastReadAsync</param>
                     <param id="1" name="Reference point">0</param>
                     <param id="2" name="Key {n}"></param>
                 </action>
                 <action id="-16" name="Wait" sid="222011797375985" type="System">
                     <param id="0" name="Seconds">dt</param>
                 </action>
-                <action id="24" name="Get elements" sid="140198382132215" type="UI">
+                <action disabled="1" id="24" name="Get elements" sid="140198382132215" type="UI">
                     <param id="0" name="ID/Class">&quot;#version&quot;</param>
                     <param id="1" name="Set">sysinfo.Value(0,&quot;version&quot;)</param>
                     <param id="2" name="Append">&quot;&quot;</param>
                 </action>
-                <action id="24" name="Get elements" sid="351016147782121" type="UI">
+                <action disabled="1" id="24" name="Get elements" sid="351016147782121" type="UI">
                     <param id="0" name="ID/Class">&quot;#build&quot;</param>
                     <param id="1" name="Set">sysinfo.Value(0,&quot;build&quot;)</param>
                     <param id="2" name="Append">&quot;&quot;</param>
@@ -545,11 +740,11 @@
                     </conditions>
                     <actions>
                         <action id="9" name="Read" sid="283033050067706" type="Electron">
-                            <param id="0" name="Tag">&quot;&quot;</param>
+                            <param id="0" name="Tag">&quot;playwith&quot;</param>
                             <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/playwith.html&quot;</param>
                             <param id="2" name="Encoding">&quot;utf8&quot;</param>
                         </action>
-                        <action id="0" name="Request URL" sid="109477494041092" type="AJAX">
+                        <action disabled="1" id="0" name="Request URL" sid="109477494041092" type="AJAX">
                             <param id="0" name="Tag">&quot;playwith&quot;</param>
                             <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/Central/playwith.html&quot;</param>
                         </action>
@@ -585,11 +780,11 @@
                     </conditions>
                     <actions>
                         <action id="9" name="Read" sid="148401893420264" type="Electron">
-                            <param id="0" name="Tag">&quot;&quot;</param>
+                            <param id="0" name="Tag">&quot;home&quot;</param>
                             <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/home.html&quot;</param>
                             <param id="2" name="Encoding">&quot;utf8&quot;</param>
                         </action>
-                        <action id="0" name="Request URL" sid="497600830498433" type="AJAX">
+                        <action disabled="1" id="0" name="Request URL" sid="497600830498433" type="AJAX">
                             <param id="0" name="Tag">&quot;home&quot;</param>
                             <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/Central/home.html&quot;</param>
                         </action>
@@ -612,11 +807,11 @@
                     </conditions>
                     <actions>
                         <action id="9" name="Read" sid="654508956613230" type="Electron">
-                            <param id="0" name="Tag">&quot;&quot;</param>
+                            <param id="0" name="Tag">&quot;about&quot;</param>
                             <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/about.html&quot;</param>
                             <param id="2" name="Encoding">&quot;utf8&quot;</param>
                         </action>
-                        <action id="0" name="Request URL" sid="797805574002876" type="AJAX">
+                        <action disabled="1" id="0" name="Request URL" sid="797805574002876" type="AJAX">
                             <param id="0" name="Tag">&quot;about&quot;</param>
                             <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/Central/about.html&quot;</param>
                         </action>
@@ -642,11 +837,11 @@
                             <param id="0" name="Javascript">&quot;$(&apos;#navdrawerPermanentClipped li:nth-child(3) a&apos;).tab(&apos;show&apos;)&quot;</param>
                         </action>
                         <action id="9" name="Read" sid="754763944426627" type="Electron">
-                            <param id="0" name="Tag">&quot;&quot;</param>
+                            <param id="0" name="Tag">&quot;about&quot;</param>
                             <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/about.html&quot;</param>
                             <param id="2" name="Encoding">&quot;utf8&quot;</param>
                         </action>
-                        <action id="0" name="Request URL" sid="840065130177495" type="AJAX">
+                        <action disabled="1" id="0" name="Request URL" sid="840065130177495" type="AJAX">
                             <param id="0" name="Tag">&quot;about&quot;</param>
                             <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/Central/about.html&quot;</param>
                         </action>
@@ -654,16 +849,24 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block disabled="1" sid="363143187523355">
+            <conditions>
+                <condition id="0" name="On completed" sid="103309429937543" type="AJAX">
+                    <param id="0" name="Tag">&quot;playwith&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
         <event-block sid="408557609751044">
             <conditions>
-                <condition id="0" name="On completed" sid="196295101397736" type="AJAX">
+                <condition id="3" name="On read success" sid="542658830718775" type="Electron">
                     <param id="0" name="Tag">&quot;playwith&quot;</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="24" name="Get elements" sid="437686587143724" type="UI">
                     <param id="0" name="ID/Class">&quot;#nav-playwith&quot;</param>
-                    <param id="1" name="Set">AJAX.LastData</param>
+                    <param id="1" name="Set">Electron.LastReadAsync</param>
                     <param id="2" name="Append">&quot;&quot;</param>
                 </action>
                 <action id="24" name="Get elements" sid="152854116402728" type="UI">
@@ -686,16 +889,24 @@
                 </action>
             </actions>
         </event-block>
+        <event-block disabled="1" sid="338737194106137">
+            <conditions>
+                <condition id="0" name="On completed" sid="641556917896790" type="AJAX">
+                    <param id="0" name="Tag">&quot;about&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
         <event-block sid="750230484601938">
             <conditions>
-                <condition id="0" name="On completed" sid="206326669269007" type="AJAX">
+                <condition id="3" name="On read success" sid="273708527276851" type="Electron">
                     <param id="0" name="Tag">&quot;about&quot;</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="24" name="Get elements" sid="213546584759930" type="UI">
                     <param id="0" name="ID/Class">&quot;#nav-about&quot;</param>
-                    <param id="1" name="Set">AJAX.LastData</param>
+                    <param id="1" name="Set">Electron.LastReadAsync</param>
                     <param id="2" name="Append">&quot;&quot;</param>
                 </action>
                 <action id="24" name="Get elements" sid="552019844133743" type="UI">
@@ -740,24 +951,24 @@
                 <condition id="-4" name="Trigger once while true" sid="374229626765685" type="System" />
             </conditions>
             <actions>
-                <action id="24" name="Get elements" sid="394394345251010" type="UI">
+                <action disabled="1" id="24" name="Get elements" sid="394394345251010" type="UI">
                     <param id="0" name="ID/Class">&quot;#version&quot;</param>
                     <param id="1" name="Set">sysinfo.Value(0,&quot;version&quot;)</param>
                     <param id="2" name="Append">&quot;&quot;</param>
                 </action>
-                <action id="24" name="Get elements" sid="350488573913096" type="UI">
+                <action disabled="1" id="24" name="Get elements" sid="350488573913096" type="UI">
                     <param id="0" name="ID/Class">&quot;#build&quot;</param>
                     <param id="1" name="Set">sysinfo.Value(0,&quot;build&quot;)</param>
                     <param id="2" name="Append">&quot;&quot;</param>
                 </action>
-                <action id="24" name="Get elements" sid="432847699615646" type="UI">
+                <action disabled="1" id="24" name="Get elements" sid="432847699615646" type="UI">
                     <param id="0" name="ID/Class">&quot;#year&quot;</param>
                     <param id="1" name="Set">sysinfo.Value(0,&quot;year&quot;)</param>
                     <param id="2" name="Append">&quot;&quot;</param>
                 </action>
             </actions>
             <sub-events>
-                <event-block sid="220382542737547">
+                <event-block disabled="1" sid="220382542737547">
                     <conditions>
                         <condition id="-8" name="Compare two values" sid="626170895193972" type="System">
                             <param id="0" name="First value">Electron.GetOSArch</param>
@@ -866,11 +1077,11 @@
                     </conditions>
                     <actions>
                         <action id="9" name="Read" sid="175950542818577" type="Electron">
-                            <param id="0" name="Tag">&quot;&quot;</param>
+                            <param id="0" name="Tag">&quot;moresettings&quot;</param>
                             <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/moresettings.html&quot;</param>
                             <param id="2" name="Encoding">&quot;utf8&quot;</param>
                         </action>
-                        <action id="0" name="Request URL" sid="461676204055740" type="AJAX">
+                        <action disabled="1" id="0" name="Request URL" sid="461676204055740" type="AJAX">
                             <param id="0" name="Tag">&quot;moresettings&quot;</param>
                             <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/Central/moresettings.html&quot;</param>
                         </action>
@@ -896,11 +1107,11 @@
                             <param id="0" name="Javascript">&quot;$(&apos;#navdrawerPermanentClipped li:nth-child(4) a&apos;).tab(&apos;show&apos;)&quot;</param>
                         </action>
                         <action id="9" name="Read" sid="699079803833537" type="Electron">
-                            <param id="0" name="Tag">&quot;&quot;</param>
+                            <param id="0" name="Tag">&quot;moresettings&quot;</param>
                             <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/moresettings.html&quot;</param>
                             <param id="2" name="Encoding">&quot;utf8&quot;</param>
                         </action>
-                        <action id="0" name="Request URL" sid="534747951510868" type="AJAX">
+                        <action disabled="1" id="0" name="Request URL" sid="534747951510868" type="AJAX">
                             <param id="0" name="Tag">&quot;moresettings&quot;</param>
                             <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/Central/moresettings.html&quot;</param>
                         </action>
@@ -908,16 +1119,24 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block disabled="1" sid="249490351708447">
+            <conditions>
+                <condition id="0" name="On completed" sid="890667776317170" type="AJAX">
+                    <param id="0" name="Tag">&quot;moresettings&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
         <event-block sid="172754224303482">
             <conditions>
-                <condition id="0" name="On completed" sid="723263957851611" type="AJAX">
+                <condition id="3" name="On read success" sid="171214488835815" type="Electron">
                     <param id="0" name="Tag">&quot;moresettings&quot;</param>
                 </condition>
             </conditions>
             <actions>
                 <action id="24" name="Get elements" sid="126793561992630" type="UI">
                     <param id="0" name="ID/Class">&quot;#nav-moresettings&quot;</param>
-                    <param id="1" name="Set">AJAX.LastData</param>
+                    <param id="1" name="Set">Electron.LastReadAsync</param>
                     <param id="2" name="Append">&quot;&quot;</param>
                 </action>
                 <action id="24" name="Get elements" sid="725114431468340" type="UI">

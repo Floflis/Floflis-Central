@@ -1,69 +1,15 @@
------ 1. Creating tree folder above root -----
-
-Creating /1 folder...
->
-mkdir /1
-
-Setting permissions on /1 (tree) folder...
-If folder exists, Chmod permissions (get username to apply) on 1/ folder; if no, wait some seconds
->
-chown -R $(id -u):$(id -g) /1
-
-Testing write permissions on tree folder...
-write a temp file on /1 folder; if can't, wait some seconds; if file exists, rmv it and nxt stp
-
-Creating settings folder...
-/1/config
-
-Getting and storing username...
-{"type":"config/os","url":"","lang":"en-us","title":"","user":""}
-/1/config/dat.json
-
 ----- 2. Creating sys folder -----
 
-Creating sys folder...
-/1/Floflis
-
 Extracting data to sys folder...
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 Setting permissions on /1/Floflis folder...
 >
 chown -R root:root /1/Floflis
 
->
-chmod 700 /1/Floflis
+? chmod 700 /1/Floflis
+
+Creating folder for source codes...
+/1/sourcecode
 
 ----- 3. Setting Open Badges -----
 
@@ -94,8 +40,6 @@ Creating Games folder...
 
 Creating HTML5 folder...
 /1/html5
-
-Installing HTML5 files...
 
 ----- 6. Set device -----
 

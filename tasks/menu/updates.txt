@@ -6,7 +6,12 @@ if more than 1 month after last update, show warn on "up-to-date" message
 
 btn to search for updates
 
-status of dt update
+If first time or updates folder isn`t present:
+dat <link> [<dir>]
+
+dat pull <link>
+
+status of update
 
 updates: if no new file but modified, just point it instead of adding to update folder
 
@@ -19,3 +24,4 @@ API:
 extract: from/to
 scripts to exe (bash?)
 files to rmv
+update type: patch, new build, new version
