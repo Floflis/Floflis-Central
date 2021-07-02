@@ -11,7 +11,6 @@
     <saved-with-version>24400</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
-        <plugin author="Pinco, Scirra" id="AdvTextBox" version="1.700000048">Advanced Text box</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
         <plugin author="Scirra" id="Dictionary" version="1">Dictionary</plugin>
         <plugin author="PlayLive" id="HTML_iFrame" version="1.419999957">HTML | iFrame</plugin>
@@ -78,9 +77,6 @@
         </object-type>
         <object-type global="1" name="settingsfile" sid="896115479558149">
             <plugin id="JSON" />
-        </object-type>
-        <object-type name="AdvancedTextBox" sid="340715591433607">
-            <plugin id="AdvTextBox" />
         </object-type>
     </object-folder>
     <families />

@@ -702,10 +702,7 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="0" name="Set text" sid="929893114151484" type="AdvancedTextBox">
-                    <param id="0" name="Text">Electron.LastReadAsync</param>
-                </action>
-                <action disabled="1" id="60" name="LoadJSON" sid="816729337016876" type="sysinfo">
+                <action id="60" name="LoadJSON" sid="816729337016876" type="sysinfo">
                     <param id="0" name="JSON">Electron.LastReadAsync</param>
                     <param id="1" name="Reference point">0</param>
                     <param id="2" name="Key {n}"></param>
@@ -713,12 +710,12 @@
                 <action id="-16" name="Wait" sid="222011797375985" type="System">
                     <param id="0" name="Seconds">dt</param>
                 </action>
-                <action disabled="1" id="24" name="Get elements" sid="140198382132215" type="UI">
+                <action id="24" name="Get elements" sid="140198382132215" type="UI">
                     <param id="0" name="ID/Class">&quot;#version&quot;</param>
                     <param id="1" name="Set">sysinfo.Value(0,&quot;version&quot;)</param>
                     <param id="2" name="Append">&quot;&quot;</param>
                 </action>
-                <action disabled="1" id="24" name="Get elements" sid="351016147782121" type="UI">
+                <action id="24" name="Get elements" sid="351016147782121" type="UI">
                     <param id="0" name="ID/Class">&quot;#build&quot;</param>
                     <param id="1" name="Set">sysinfo.Value(0,&quot;build&quot;)</param>
                     <param id="2" name="Append">&quot;&quot;</param>
@@ -951,17 +948,17 @@
                 <condition id="-4" name="Trigger once while true" sid="374229626765685" type="System" />
             </conditions>
             <actions>
-                <action disabled="1" id="24" name="Get elements" sid="394394345251010" type="UI">
+                <action id="24" name="Get elements" sid="394394345251010" type="UI">
                     <param id="0" name="ID/Class">&quot;#version&quot;</param>
                     <param id="1" name="Set">sysinfo.Value(0,&quot;version&quot;)</param>
                     <param id="2" name="Append">&quot;&quot;</param>
                 </action>
-                <action disabled="1" id="24" name="Get elements" sid="350488573913096" type="UI">
+                <action id="24" name="Get elements" sid="350488573913096" type="UI">
                     <param id="0" name="ID/Class">&quot;#build&quot;</param>
                     <param id="1" name="Set">sysinfo.Value(0,&quot;build&quot;)</param>
                     <param id="2" name="Append">&quot;&quot;</param>
                 </action>
-                <action disabled="1" id="24" name="Get elements" sid="432847699615646" type="UI">
+                <action id="24" name="Get elements" sid="432847699615646" type="UI">
                     <param id="0" name="ID/Class">&quot;#year&quot;</param>
                     <param id="1" name="Set">sysinfo.Value(0,&quot;year&quot;)</param>
                     <param id="2" name="Append">&quot;&quot;</param>
