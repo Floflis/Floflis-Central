@@ -2,7 +2,7 @@
 <c2project>
     <name>Floflis Central</name>
     <description></description>
-    <version>061</version>
+    <version>2107</version>
     <author></author>
     <author-email></author-email>
     <author-website>http://</author-website>
@@ -151,5 +151,6 @@
         <file name="yggdrasil.png" />
         <file name="require.txt" />
         <file name="jquery.min.js" />
+        <file name="OSlogotype.png" />
     </files-folder>
 </c2project>

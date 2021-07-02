@@ -938,6 +938,7 @@
                 </action>
             </actions>
         </event-block>
+        <comment>version temporarily disabled to instead use OSlogotype</comment>
         <event-block sid="779404018750831">
             <conditions>
                 <condition id="-14" name="Compare variable" sid="332158729210241" type="System">
@@ -948,7 +949,7 @@
                 <condition id="-4" name="Trigger once while true" sid="374229626765685" type="System" />
             </conditions>
             <actions>
-                <action id="24" name="Get elements" sid="394394345251010" type="UI">
+                <action disabled="1" id="24" name="Get elements" sid="394394345251010" type="UI">
                     <param id="0" name="ID/Class">&quot;#version&quot;</param>
                     <param id="1" name="Set">sysinfo.Value(0,&quot;version&quot;)</param>
                     <param id="2" name="Append">&quot;&quot;</param>
