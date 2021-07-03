@@ -152,5 +152,6 @@
         <file name="require.txt" />
         <file name="jquery.min.js" />
         <file name="OSlogotype.png" />
+        <file name="logotype_smallball.png" />
     </files-folder>
 </c2project>
