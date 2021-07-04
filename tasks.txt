@@ -1,0 +1,31 @@
+- frameless window (implement Framlr)
+- hover/title at oslogotype
+- home's up-to-date: lnksh, click and open About
+- show user's fullname, with username as hover/title
+- open neofetch
+
+- Themes tab: "Window borders", "Icons", "Controls", "Mouse Pointer", "Desktop"; install new themes, from UniStore (also fetch from spices repos)
+- Backgrounds tab: pre-picked backgrounds before new implementations
+- Account details tab: Picture, Name, Password
+- Gadgets/Widgets/Desklets tab (also get from UniStore and Spices)
+- Extensions tab (also get from UniStore and Spices)
+- Preferred applications tab
+- Windows tab (beauty option to choose window buttons position, also asked on first boot tour)
+- Startup Applications tab
+- Bluetooth
+- Disks (opens app)
+- Printers (opens app)
+- Sounds; more sounds settings
+
+disk manager
+mine
+obs studio
+
+gnome-games
+keepassxc
+audacity
+gnome-system-monitor
+
+gbrainy
+lutris
+supertux2
