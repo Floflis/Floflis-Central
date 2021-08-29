@@ -54,14 +54,14 @@
                     <param id="0" name="CSS file">&quot;iconsfont.css&quot;</param>
                 </action>
                 <action id="3" name="Focus" sid="603720114526800" type="Electron" />
-                <action disabled="1" id="9" name="Read" sid="862797236799126" type="Electron">
+                <action id="9" name="Read" sid="862797236799126" type="Electron">
                     <param id="0" name="Tag">&quot;&quot;</param>
-                    <param id="1" name="Path">&quot;require.txt&quot;</param>
+                    <param id="1" name="Path">&quot;noderequire.js&quot;</param>
                     <param id="2" name="Encoding">&quot;utf8&quot;</param>
                 </action>
-                <action disabled="1" id="0" name="Request URL" sid="185355700163183" type="AJAX">
+                <action id="0" name="Request URL" sid="185355700163183" type="AJAX">
                     <param id="0" name="Tag">&quot;requiremodule&quot;</param>
-                    <param id="1" name="URL">&quot;require.txt&quot;</param>
+                    <param id="1" name="URL">&quot;noderequire.js&quot;</param>
                 </action>
                 <action id="9" name="Read" sid="852171897768643" type="Electron">
                     <param id="0" name="Tag">&quot;init&quot;</param>
@@ -84,7 +84,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block disabled="1" sid="287814634929795">
+        <event-block sid="287814634929795">
             <conditions>
                 <condition id="0" name="On completed" sid="707978036472146" type="AJAX">
                     <param id="0" name="Tag">&quot;requiremodule&quot;</param>
@@ -105,7 +105,7 @@
                 </action>
             </actions>
             <sub-events>
-                <event-block disabled="1" sid="815742996058693">
+                <event-block sid="815742996058693">
                     <conditions>
                         <condition id="0" name="Compare value" sid="976899250276164" type="Dictionary">
                             <param id="0" name="Key">&quot;requireok&quot;</param>
@@ -116,21 +116,36 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block disabled="1" sid="594655322647805">
+                        <event-block sid="594655322647805">
                             <conditions>
                                 <condition id="6" name="Path exists" sid="466845572524476" type="Electron">
                                     <param id="0" name="Path">Electron.GetAppPath &amp; &quot;/Central/setup.json&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="9" name="Read" sid="482585686794622" type="Electron">
+                                <action disabled="1" id="9" name="Read" sid="482585686794622" type="Electron">
                                     <param id="0" name="Tag">&quot;&quot;</param>
                                     <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/setup/setup.html&quot;</param>
                                     <param id="2" name="Encoding">&quot;utf8&quot;</param>
                                 </action>
-                                <action id="0" name="Request URL" sid="228018667136444" type="AJAX">
+                                <action disabled="1" id="0" name="Request URL" sid="228018667136444" type="AJAX">
                                     <param id="0" name="Tag">&quot;setup&quot;</param>
                                     <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/Central/setup/setup.html&quot;</param>
+                                </action>
+                                <action disabled="1" id="19" name="Include Javascript file" sid="461679147832822" type="UI">
+                                    <param id="0" name="Javascript file">&quot;noderequire.js&quot;</param>
+                                </action>
+                                <action disabled="1" id="-16" name="Wait" sid="150444174959650" type="System">
+                                    <param id="0" name="Seconds">dt</param>
+                                </action>
+                                <action disabled="1" id="17" name="Execute Javascript" sid="197610410239659" type="Browser">
+                                    <param id="0" name="Javascript">&quot;sudo.exec(&apos;chmod 755 /1/Floflis/floflis-installer &amp;&amp; cd /1/Floflis &amp;&amp; ./floflis-installer&apos;, options, function(error, stdout, stderr){if (error) throw error;console.log(&apos;stdout: &apos; + stdout);});&quot;</param>
+                                </action>
+                                <action disabled="1" id="17" name="Execute Javascript" sid="646080339565191" type="Browser">
+                                    <param id="0" name="Javascript">&quot;jq.run(&apos;.&apos;, &apos;/1/bulbasaur.json&apos;).then(console.log)&quot;</param>
+                                </action>
+                                <action id="17" name="Execute Javascript" sid="290752017766952" type="Browser">
+                                    <param id="0" name="Javascript">&quot;const{exec}=require(&apos;child_process&apos;);exec(`jq &apos;.abilities&apos; /1/bulbasaur.json`,(error,stdout,stderr)=&gt;{if(error){console.log(`error:${error.message}`);return}if(stderr){console.log(`stderr:${stderr}`);return}console.log(`stdout:${stdout}`)});&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -681,7 +696,42 @@
                     <param id="0" name="Tag">&quot;iconajx&quot;</param>
                     <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/Central/icon.png&quot;</param>
                 </action>
+                <action id="24" name="Get elements" sid="489372006931318" type="UI">
+                    <param id="0" name="ID/Class">&quot;#showusername&quot;</param>
+                    <param id="1" name="Set">Browser.ExecJS(&quot;username.sync()&quot;)</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="577626938168594" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action id="24" name="Get elements" sid="461419287689159" type="UI">
+                    <param id="0" name="ID/Class">&quot;#usrpic&quot;</param>
+                    <param id="1" name="Set"> &quot;&lt;img onclick=C2(&apos;userwindow-show&apos;); width=&apos;150px&apos; style=&apos;border-radius:50%&apos; src=&apos;file://&quot; &amp; &quot;/home/&quot; &amp; Browser.ExecJS(&quot;username.sync()&quot;) &amp; &quot;/.face&quot; &amp; &quot;&apos; title=&apos;&quot; &amp; &quot;Click to change &quot; &amp; Browser.ExecJS(&quot;username.sync()&quot;) &amp; &quot;`s avatar, password, etc.&quot; &amp; &quot;&apos; class=&apos;linkish&apos;/&gt;&quot;</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
             </actions>
+        </event-block>
+        <event-block sid="904525007699867">
+            <conditions>
+                <condition id="3" name="On C2 Function" sid="347188682962400" type="UI" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="259461112838216">
+                    <conditions>
+                        <condition id="4" name="Compare C2 Function" sid="890560884101825" type="UI">
+                            <param id="0" name="C2">&quot;userwindow-show&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="25" name="Run file" sid="901160145203591" type="Electron">
+                            <param id="0" name="Path">&quot;cinnamon-settings&quot;</param>
+                            <param id="1" name="Parameters">&quot;user&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="298241645686882">
             <conditions />
@@ -1154,6 +1204,28 @@
         </event-block>
         <event-group description="" sid="939219859635454" title="Run lnx programs">
             <sub-events>
+                <event-block sid="723216836240973">
+                    <conditions>
+                        <condition id="3" name="On C2 Function" sid="478598575213280" type="UI" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="573147133039916">
+                            <conditions>
+                                <condition id="4" name="Compare C2 Function" sid="480504332694811" type="UI">
+                                    <param id="0" name="C2">&quot;moreinfo-show&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="25" name="Run file" sid="542574702634877" type="Electron">
+                                    <param id="0" name="Path">&quot;cinnamon-settings&quot;</param>
+                                    <param id="1" name="Parameters">&quot;info&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <event-block sid="180708258338539">
                     <conditions>
                         <condition id="3" name="On C2 Function" sid="261023827841708" type="UI" />
@@ -1279,8 +1351,8 @@
                             </conditions>
                             <actions>
                                 <action id="25" name="Run file" sid="231820575542712" type="Electron">
-                                    <param id="0" name="Path">&quot;gnome-games %U&quot;</param>
-                                    <param id="1" name="Parameters">&quot;&quot;</param>
+                                    <param id="0" name="Path">&quot;gnome-games&quot;</param>
+                                    <param id="1" name="Parameters">&quot;%U&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1301,8 +1373,8 @@
                             </conditions>
                             <actions>
                                 <action id="25" name="Run file" sid="612266096266774" type="Electron">
-                                    <param id="0" name="Path">&quot;keepassxc %f&quot;</param>
-                                    <param id="1" name="Parameters">&quot;&quot;</param>
+                                    <param id="0" name="Path">&quot;keepassxc&quot;</param>
+                                    <param id="1" name="Parameters">&quot;%f&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1389,7 +1461,7 @@
                             </conditions>
                             <actions>
                                 <action id="25" name="Run file" sid="221702077319836" type="Electron">
-                                    <param id="0" name="Path">&quot;audacity %F&quot;</param>
+                                    <param id="0" name="Path">&quot;audacity&quot;</param>
                                     <param id="1" name="Parameters">&quot;&quot;</param>
                                 </action>
                             </actions>
@@ -1411,8 +1483,8 @@
                             </conditions>
                             <actions>
                                 <action id="25" name="Run file" sid="228323248019296" type="Electron">
-                                    <param id="0" name="Path">&quot;lutris %U&quot;</param>
-                                    <param id="1" name="Parameters">&quot;&quot;</param>
+                                    <param id="0" name="Path">&quot;lutris&quot;</param>
+                                    <param id="1" name="Parameters">&quot;%U&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1543,7 +1615,7 @@
                             </conditions>
                             <actions>
                                 <action id="25" name="Run file" sid="435818102187552" type="Electron">
-                                    <param id="0" name="Path">&quot;env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/gnome-characters_gnome-characters.desktop /snap/bin/gnome-characters %U&quot;</param>
+                                    <param id="0" name="Path">&quot;gnome-characters&quot;</param>
                                     <param id="1" name="Parameters">&quot;&quot;</param>
                                 </action>
                             </actions>
@@ -1565,8 +1637,8 @@
                             </conditions>
                             <actions>
                                 <action id="25" name="Run file" sid="132150134523284" type="Electron">
-                                    <param id="0" name="Path">&quot;env BAMF_DESKTOP_FILE_HINT=/var/lib/snapd/desktop/applications/gnome-system-monitor_gnome-system-monitor.desktop /snap/bin/gnome-system-monitor %U&quot;</param>
-                                    <param id="1" name="Parameters">&quot;&quot;</param>
+                                    <param id="0" name="Path">&quot;gnome-system-monitor&quot;</param>
+                                    <param id="1" name="Parameters">&quot;%U&quot;</param>
                                 </action>
                             </actions>
                         </event-block>

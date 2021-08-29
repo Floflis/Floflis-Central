@@ -112,7 +112,7 @@
                 <file name="Floflis.zip" />
             </file-folder>
             <file name="step2.html" />
-            <file name="step3.html" />
+            <file name="New folder.html" />
             <file name="step4.html" />
             <file name="step5.html" />
             <file name="step6.html" />
@@ -149,9 +149,9 @@
         <file name="ipfs.png" />
         <file name="cjdns.png" />
         <file name="yggdrasil.png" />
-        <file name="require.txt" />
         <file name="jquery.min.js" />
         <file name="OSlogotype.png" />
         <file name="logotype_smallball.png" />
+        <file name="noderequire.js" />
     </files-folder>
 </c2project>

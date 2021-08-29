@@ -5,6 +5,8 @@ var options = {
 
 const username = require('username');
 
+const jq = require('node-jq');
+
 var DecompressZip = require('decompress-zip');
 
 unzipper.on('error', function (err) {
