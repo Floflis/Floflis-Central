@@ -145,7 +145,7 @@
                                     <param id="0" name="Javascript">&quot;jq.run(&apos;.&apos;, &apos;/1/bulbasaur.json&apos;).then(console.log)&quot;</param>
                                 </action>
                                 <action id="17" name="Execute Javascript" sid="290752017766952" type="Browser">
-                                    <param id="0" name="Javascript">&quot;const{exec}=require(&apos;child_process&apos;);exec(`jq &apos;.abilities&apos; /1/bulbasaur.json`,(error,stdout,stderr)=&gt;{if(error){console.log(`error:${error.message}`);return}if(stderr){console.log(`stderr:${stderr}`);return}console.log(`stdout:${stdout}`)});&quot;</param>
+                                    <param id="0" name="Javascript">&quot;const{exec}=require(&apos;child_process&apos;);exec(`jq -r &apos;.id&apos; /1/bulbasaur.json`,(error,stdout,stderr)=&gt;{if(error){console.log(`error:${error.message}`);return}if(stderr){console.log(`stderr:${stderr}`);return}console.log(`${stdout}`)});&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -698,7 +698,7 @@
                 </action>
                 <action id="24" name="Get elements" sid="489372006931318" type="UI">
                     <param id="0" name="ID/Class">&quot;#showusername&quot;</param>
-                    <param id="1" name="Set">Browser.ExecJS(&quot;username.sync()&quot;)</param>
+                    <param id="1" name="Set">&quot;@&quot; &amp; Browser.ExecJS(&quot;username.sync()&quot;)</param>
                     <param id="2" name="Append">&quot;&quot;</param>
                 </action>
                 <action id="-16" name="Wait" sid="577626938168594" type="System">
