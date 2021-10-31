@@ -1464,13 +1464,13 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="838454491973686">
+                <event-block disabled="1" sid="838454491973686">
                     <conditions>
                         <condition id="3" name="On C2 Function" sid="149037574413802" type="UI" />
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="427476488480158">
+                        <event-block disabled="1" sid="427476488480158">
                             <conditions>
                                 <condition id="4" name="Compare C2 Function" sid="296959169643107" type="UI">
                                     <param id="0" name="C2">&quot;openetcher&quot;</param>
@@ -1508,13 +1508,13 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="687744213603016">
+                <event-block disabled="1" sid="687744213603016">
                     <conditions>
                         <condition id="3" name="On C2 Function" sid="754765699339543" type="UI" />
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="333076005321992">
+                        <event-block disabled="1" sid="333076005321992">
                             <conditions>
                                 <condition id="4" name="Compare C2 Function" sid="583310031945656" type="UI">
                                     <param id="0" name="C2">&quot;opencharacters&quot;</param>
