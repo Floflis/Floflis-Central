@@ -1467,13 +1467,13 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block disabled="1" sid="838454491973686">
+                <event-block sid="838454491973686">
                     <conditions>
                         <condition id="3" name="On C2 Function" sid="149037574413802" type="UI" />
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block disabled="1" sid="427476488480158">
+                        <event-block sid="427476488480158">
                             <conditions>
                                 <condition id="4" name="Compare C2 Function" sid="296959169643107" type="UI">
                                     <param id="0" name="C2">&quot;openetcher&quot;</param>
@@ -1481,9 +1481,16 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="25" name="Run file" sid="530520922562635" type="Electron">
+                                <action disabled="1" id="25" name="Run file" sid="530520922562635" type="Electron">
                                     <param id="0" name="Path">&quot;/opt/balenaEtcher/balena-etcher-electron&quot;</param>
                                     <param id="1" name="Parameters">&quot;%U&quot;</param>
+                                </action>
+                                <action disabled="1" id="25" name="Run file" sid="372438174283983" type="Electron">
+                                    <param id="0" name="Path">&quot;/usr/share/applications/balena-etcher-electron.desktop&quot;</param>
+                                    <param id="1" name="Parameters">&quot;&quot;</param>
+                                </action>
+                                <action id="17" name="Execute Javascript" sid="720897199787545" type="Browser">
+                                    <param id="0" name="Javascript">&quot;const{exec}=require(&apos;child_process&apos;);exec(`gtk-launch balena-etcher-electron`,(error,stdout,stderr)=&gt;{if(error){console.log(`error:${error.message}`);return}if(stderr){console.log(`stderr:${stderr}`);return}console.log(`${stdout}`)});&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1511,13 +1518,13 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block disabled="1" sid="687744213603016">
+                <event-block sid="687744213603016">
                     <conditions>
                         <condition id="3" name="On C2 Function" sid="754765699339543" type="UI" />
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block disabled="1" sid="333076005321992">
+                        <event-block sid="333076005321992">
                             <conditions>
                                 <condition id="4" name="Compare C2 Function" sid="583310031945656" type="UI">
                                     <param id="0" name="C2">&quot;opencharacters&quot;</param>
@@ -1529,8 +1536,11 @@
                                     <param id="0" name="Path">&quot;gnome-characters&quot;</param>
                                     <param id="1" name="Parameters">&quot;&quot;</param>
                                 </action>
-                                <action id="17" name="Execute Javascript" sid="907513913563044" type="Browser">
+                                <action disabled="1" id="17" name="Execute Javascript" sid="907513913563044" type="Browser">
                                     <param id="0" name="Javascript">&quot;const{exec}=require(&apos;child_process&apos;);exec(`gnome-characters`,(error,stdout,stderr)=&gt;{if(error){console.log(`error:${error.message}`);return}if(stderr){console.log(`stderr:${stderr}`);return}console.log(`${stdout}`)});&quot;</param>
+                                </action>
+                                <action id="17" name="Execute Javascript" sid="498859551700868" type="Browser">
+                                    <param id="0" name="Javascript">&quot;const{exec}=require(&apos;child_process&apos;);exec(`gtk-launch org.gnome.Characters`,(error,stdout,stderr)=&gt;{if(error){console.log(`error:${error.message}`);return}if(stderr){console.log(`stderr:${stderr}`);return}console.log(`${stdout}`)});&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
