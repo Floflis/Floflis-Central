@@ -1156,13 +1156,13 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="807448542626919">
+                <event-block disabled="1" sid="807448542626919">
                     <conditions>
                         <condition id="3" name="On C2 Function" sid="527883734752782" type="UI" />
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="615202482396701">
+                        <event-block disabled="1" sid="615202482396701">
                             <conditions>
                                 <condition id="4" name="Compare C2 Function" sid="288805272310101" type="UI">
                                     <param id="0" name="C2">&quot;opennewbrowser&quot;</param>
@@ -1178,13 +1178,13 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="315473609370174">
+                <event-block disabled="1" sid="315473609370174">
                     <conditions>
                         <condition id="3" name="On C2 Function" sid="136445500235470" type="UI" />
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="974148211037369">
+                        <event-block disabled="1" sid="974148211037369">
                             <conditions>
                                 <condition id="4" name="Compare C2 Function" sid="843646738183899" type="UI">
                                     <param id="0" name="C2">&quot;opentorrent&quot;</param>
@@ -1200,13 +1200,13 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="433461710440198">
+                <event-block disabled="1" sid="433461710440198">
                     <conditions>
                         <condition id="3" name="On C2 Function" sid="530440561103249" type="UI" />
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="725414017405398">
+                        <event-block disabled="1" sid="725414017405398">
                             <conditions>
                                 <condition id="4" name="Compare C2 Function" sid="613570059636648" type="UI">
                                     <param id="0" name="C2">&quot;openvideodownload&quot;</param>
@@ -1260,7 +1260,7 @@
                             <actions>
                                 <action id="25" name="Run file" sid="231820575542712" type="Electron">
                                     <param id="0" name="Path">&quot;gnome-games&quot;</param>
-                                    <param id="1" name="Parameters">&quot;%U&quot;</param>
+                                    <param id="1" name="Parameters">&quot;&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1288,13 +1288,13 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="765055269291220">
+                <event-block disabled="1" sid="765055269291220">
                     <conditions>
                         <condition id="3" name="On C2 Function" sid="964733910273489" type="UI" />
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="756810643324482">
+                        <event-block disabled="1" sid="756810643324482">
                             <conditions>
                                 <condition id="4" name="Compare C2 Function" sid="662895385596816" type="UI">
                                     <param id="0" name="C2">&quot;openelecbtc&quot;</param>
@@ -1310,7 +1310,7 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="255036555907568">
+                <event-block disabled="1" sid="255036555907568">
                     <conditions>
                         <condition id="3" name="On C2 Function" sid="296215466148326" type="UI" />
                     </conditions>
@@ -1376,13 +1376,13 @@
                         </event-block>
                     </sub-events>
                 </event-block>
-                <event-block sid="761172779312393">
+                <event-block disabled="1" sid="761172779312393">
                     <conditions>
                         <condition id="3" name="On C2 Function" sid="869340878908905" type="UI" />
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="147155163518157">
+                        <event-block disabled="1" sid="147155163518157">
                             <conditions>
                                 <condition id="4" name="Compare C2 Function" sid="729706064813719" type="UI">
                                     <param id="0" name="C2">&quot;openlutris&quot;</param>
@@ -1479,8 +1479,8 @@
                             </conditions>
                             <actions>
                                 <action id="25" name="Run file" sid="530520922562635" type="Electron">
-                                    <param id="0" name="Path">&quot;&apos;&apos;/opt/balenaEtcher/balena-etcher-electron&apos;&apos; %U&quot;</param>
-                                    <param id="1" name="Parameters">&quot;&quot;</param>
+                                    <param id="0" name="Path">&quot;/opt/balenaEtcher/balena-etcher-electron&quot;</param>
+                                    <param id="1" name="Parameters">&quot;%U&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -1522,9 +1522,12 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="25" name="Run file" sid="435818102187552" type="Electron">
+                                <action disabled="1" id="25" name="Run file" sid="435818102187552" type="Electron">
                                     <param id="0" name="Path">&quot;gnome-characters&quot;</param>
                                     <param id="1" name="Parameters">&quot;&quot;</param>
+                                </action>
+                                <action id="17" name="Execute Javascript" sid="907513913563044" type="Browser">
+                                    <param id="0" name="Javascript">&quot;const{exec}=require(&apos;child_process&apos;);exec(`gnome-characters`,(error,stdout,stderr)=&gt;{if(error){console.log(`error:${error.message}`);return}if(stderr){console.log(`stderr:${stderr}`);return}console.log(`${stdout}`)});&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
