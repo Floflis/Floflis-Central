@@ -1412,9 +1412,12 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="25" name="Run file" sid="126915335366760" type="Electron">
+                                <action disabled="1" id="25" name="Run file" sid="126915335366760" type="Electron">
                                     <param id="0" name="Path">&quot;supertux2&quot;</param>
                                     <param id="1" name="Parameters">&quot;&quot;</param>
+                                </action>
+                                <action id="17" name="Execute Javascript" sid="950813286952840" type="Browser">
+                                    <param id="0" name="Javascript">&quot;const{exec}=require(&apos;child_process&apos;);exec(`supertux2`,(error,stdout,stderr)=&gt;{if(error){console.log(`error:${error.message}`);return}if(stderr){console.log(`stderr:${stderr}`);return}console.log(`${stdout}`)});&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
