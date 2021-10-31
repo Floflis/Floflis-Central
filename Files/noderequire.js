@@ -4,8 +4,9 @@ var options = {
 };
 
 const username = require('username');
+const fullName = require('fullname');
 
-const jq = require('node-jq');
+// const jq = require('node-jq');
 
 var DecompressZip = require('decompress-zip');
 

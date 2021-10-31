@@ -68,10 +68,6 @@
                     <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/app.html&quot;</param>
                     <param id="2" name="Encoding">&quot;utf8&quot;</param>
                 </action>
-                <action disabled="1" id="0" name="Request URL" sid="311905878561186" type="AJAX">
-                    <param id="0" name="Tag">&quot;init&quot;</param>
-                    <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/Central/app.html&quot;</param>
-                </action>
             </actions>
             <sub-events>
                 <event-block sid="811395584260083">
@@ -123,26 +119,16 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action disabled="1" id="9" name="Read" sid="482585686794622" type="Electron">
-                                    <param id="0" name="Tag">&quot;&quot;</param>
+                                <action id="9" name="Read" sid="482585686794622" type="Electron">
+                                    <param id="0" name="Tag">&quot;setup&quot;</param>
                                     <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/setup/setup.html&quot;</param>
                                     <param id="2" name="Encoding">&quot;utf8&quot;</param>
-                                </action>
-                                <action disabled="1" id="0" name="Request URL" sid="228018667136444" type="AJAX">
-                                    <param id="0" name="Tag">&quot;setup&quot;</param>
-                                    <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/Central/setup/setup.html&quot;</param>
                                 </action>
                                 <action disabled="1" id="19" name="Include Javascript file" sid="461679147832822" type="UI">
                                     <param id="0" name="Javascript file">&quot;noderequire.js&quot;</param>
                                 </action>
                                 <action disabled="1" id="-16" name="Wait" sid="150444174959650" type="System">
                                     <param id="0" name="Seconds">dt</param>
-                                </action>
-                                <action disabled="1" id="17" name="Execute Javascript" sid="197610410239659" type="Browser">
-                                    <param id="0" name="Javascript">&quot;sudo.exec(&apos;chmod 755 /1/Floflis/floflis-installer &amp;&amp; cd /1/Floflis &amp;&amp; ./floflis-installer&apos;, options, function(error, stdout, stderr){if (error) throw error;console.log(&apos;stdout: &apos; + stdout);});&quot;</param>
-                                </action>
-                                <action disabled="1" id="17" name="Execute Javascript" sid="646080339565191" type="Browser">
-                                    <param id="0" name="Javascript">&quot;jq.run(&apos;.&apos;, &apos;/1/bulbasaur.json&apos;).then(console.log)&quot;</param>
                                 </action>
                                 <action id="17" name="Execute Javascript" sid="290752017766952" type="Browser">
                                     <param id="0" name="Javascript">&quot;const{exec}=require(&apos;child_process&apos;);exec(`jq -r &apos;.id&apos; /1/bulbasaur.json`,(error,stdout,stderr)=&gt;{if(error){console.log(`error:${error.message}`);return}if(stderr){console.log(`stderr:${stderr}`);return}console.log(`${stdout}`)});&quot;</param>
@@ -155,13 +141,9 @@
                             </conditions>
                             <actions>
                                 <action id="9" name="Read" sid="968422829009343" type="Electron">
-                                    <param id="0" name="Tag">&quot;&quot;</param>
+                                    <param id="0" name="Tag">&quot;init&quot;</param>
                                     <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/app.html&quot;</param>
                                     <param id="2" name="Encoding">&quot;utf8&quot;</param>
-                                </action>
-                                <action id="0" name="Request URL" sid="757110351826136" type="AJAX">
-                                    <param id="0" name="Tag">&quot;init&quot;</param>
-                                    <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/Central/app.html&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -579,42 +561,17 @@
                     <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/home.html&quot;</param>
                     <param id="2" name="Encoding">&quot;utf8&quot;</param>
                 </action>
-                <action disabled="1" id="0" name="Request URL" sid="786273892473119" type="AJAX">
-                    <param id="0" name="Tag">&quot;home&quot;</param>
-                    <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/Central/home.html&quot;</param>
-                </action>
             </actions>
         </event-block>
         <event-block disabled="1" sid="570437029484984">
             <conditions />
             <actions>
                 <action id="9" name="Read" sid="137306239782012" type="Electron">
-                    <param id="0" name="Tag">&quot;&quot;</param>
+                    <param id="0" name="Tag">&quot;home&quot;</param>
                     <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/home.html&quot;</param>
                     <param id="2" name="Encoding">&quot;utf8&quot;</param>
                 </action>
-                <action id="0" name="Request URL" sid="552570068438774" type="AJAX">
-                    <param id="0" name="Tag">&quot;home&quot;</param>
-                    <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/Central/home.html&quot;</param>
-                </action>
-                <action disabled="1" id="9" name="Read" sid="569130826838712" type="Electron">
-                    <param id="0" name="Tag">&quot;&quot;</param>
-                    <param id="1" name="Path">&quot;G:/bkp/ST500LM012 HN-M500MBB Dat/z/Program Files (x86)/ElectronForC2/resources/app/Central/home.html&quot;</param>
-                    <param id="2" name="Encoding">&quot;utf8&quot;</param>
-                </action>
-                <action disabled="1" id="0" name="Request URL" sid="862937121797936" type="AJAX">
-                    <param id="0" name="Tag">&quot;home&quot;</param>
-                    <param id="1" name="URL">&quot;G:/bkp/ST500LM012 HN-M500MBB Dat/z/Program Files (x86)/ElectronForC2/resources/app/Central/home.html&quot;</param>
-                </action>
             </actions>
-        </event-block>
-        <event-block disabled="1" sid="468344417080607">
-            <conditions>
-                <condition id="0" name="On completed" sid="217038478020557" type="AJAX">
-                    <param id="0" name="Tag">&quot;home&quot;</param>
-                </condition>
-            </conditions>
-            <actions />
         </event-block>
         <event-block sid="165718121899390">
             <conditions>
@@ -654,15 +611,6 @@
                     <param id="1" name="Set">Electron.GetOSArch</param>
                     <param id="2" name="Append">&quot;&quot;</param>
                 </action>
-                <action disabled="1" id="9" name="Read" sid="763160356006702" type="Electron">
-                    <param id="0" name="Tag">&quot;&quot;</param>
-                    <param id="1" name="Path">&quot;/1/Floflis/Resources/floflis.json&quot;</param>
-                    <param id="2" name="Encoding">&quot;utf8&quot;</param>
-                </action>
-                <action disabled="1" id="0" name="Request URL" sid="187235534389324" type="AJAX">
-                    <param id="0" name="Tag">&quot;sysinfo&quot;</param>
-                    <param id="1" name="URL">&quot;/1/Floflis/Resources/floflis.json&quot;</param>
-                </action>
                 <action id="-16" name="Wait" sid="803565617865849" type="System">
                     <param id="0" name="Seconds">dt</param>
                 </action>
@@ -673,19 +621,6 @@
                 </action>
                 <action id="-16" name="Wait" sid="539268352996645" type="System">
                     <param id="0" name="Seconds">dt</param>
-                </action>
-                <action disabled="1" id="0" name="Request URL" sid="848517685601580" type="AJAX">
-                    <param id="0" name="Tag">&quot;sysinfo&quot;</param>
-                    <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/Central/floflis.json&quot;</param>
-                </action>
-                <action disabled="1" id="9" name="Read" sid="565493980579437" type="Electron">
-                    <param id="0" name="Tag">&quot;&quot;</param>
-                    <param id="1" name="Path">&quot;/1/Floflis/Resources/img/logo.png&quot;</param>
-                    <param id="2" name="Encoding">&quot;base64&quot;</param>
-                </action>
-                <action disabled="1" id="0" name="Request URL" sid="488589660911723" type="AJAX">
-                    <param id="0" name="Tag">&quot;iconajx&quot;</param>
-                    <param id="1" name="URL">&quot;/1/Floflis/Resources/img/logo.png&quot;</param>
                 </action>
                 <action id="9" name="Read" sid="952300222970365" type="Electron">
                     <param id="0" name="Tag">&quot;&quot;</param>
@@ -699,6 +634,11 @@
                 <action id="24" name="Get elements" sid="489372006931318" type="UI">
                     <param id="0" name="ID/Class">&quot;#showusername&quot;</param>
                     <param id="1" name="Set">&quot;@&quot; &amp; Browser.ExecJS(&quot;username.sync()&quot;)</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action disabled="1" id="24" name="Get elements" sid="140815094522019" type="UI">
+                    <param id="0" name="ID/Class">&quot;#showusername&quot;</param>
+                    <param id="1" name="Set">&quot;@&quot; &amp; Browser.ExecJS(&quot;fullname.sync()&quot;)</param>
                     <param id="2" name="Append">&quot;&quot;</param>
                 </action>
                 <action id="-16" name="Wait" sid="577626938168594" type="System">
@@ -791,10 +731,6 @@
                             <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/playwith.html&quot;</param>
                             <param id="2" name="Encoding">&quot;utf8&quot;</param>
                         </action>
-                        <action disabled="1" id="0" name="Request URL" sid="109477494041092" type="AJAX">
-                            <param id="0" name="Tag">&quot;playwith&quot;</param>
-                            <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/Central/playwith.html&quot;</param>
-                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -831,10 +767,6 @@
                             <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/home.html&quot;</param>
                             <param id="2" name="Encoding">&quot;utf8&quot;</param>
                         </action>
-                        <action disabled="1" id="0" name="Request URL" sid="497600830498433" type="AJAX">
-                            <param id="0" name="Tag">&quot;home&quot;</param>
-                            <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/Central/home.html&quot;</param>
-                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -857,10 +789,6 @@
                             <param id="0" name="Tag">&quot;about&quot;</param>
                             <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/about.html&quot;</param>
                             <param id="2" name="Encoding">&quot;utf8&quot;</param>
-                        </action>
-                        <action disabled="1" id="0" name="Request URL" sid="797805574002876" type="AJAX">
-                            <param id="0" name="Tag">&quot;about&quot;</param>
-                            <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/Central/about.html&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -887,10 +815,6 @@
                             <param id="0" name="Tag">&quot;about&quot;</param>
                             <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/about.html&quot;</param>
                             <param id="2" name="Encoding">&quot;utf8&quot;</param>
-                        </action>
-                        <action disabled="1" id="0" name="Request URL" sid="840065130177495" type="AJAX">
-                            <param id="0" name="Tag">&quot;about&quot;</param>
-                            <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/Central/about.html&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1129,10 +1053,6 @@
                             <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/moresettings.html&quot;</param>
                             <param id="2" name="Encoding">&quot;utf8&quot;</param>
                         </action>
-                        <action disabled="1" id="0" name="Request URL" sid="461676204055740" type="AJAX">
-                            <param id="0" name="Tag">&quot;moresettings&quot;</param>
-                            <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/Central/moresettings.html&quot;</param>
-                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -1159,21 +1079,9 @@
                             <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/moresettings.html&quot;</param>
                             <param id="2" name="Encoding">&quot;utf8&quot;</param>
                         </action>
-                        <action disabled="1" id="0" name="Request URL" sid="534747951510868" type="AJAX">
-                            <param id="0" name="Tag">&quot;moresettings&quot;</param>
-                            <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/Central/moresettings.html&quot;</param>
-                        </action>
                     </actions>
                 </event-block>
             </sub-events>
-        </event-block>
-        <event-block disabled="1" sid="249490351708447">
-            <conditions>
-                <condition id="0" name="On completed" sid="890667776317170" type="AJAX">
-                    <param id="0" name="Tag">&quot;moresettings&quot;</param>
-                </condition>
-            </conditions>
-            <actions />
         </event-block>
         <event-block sid="172754224303482">
             <conditions>
