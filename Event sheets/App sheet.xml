@@ -1460,7 +1460,7 @@
                             </conditions>
                             <actions>
                                 <action id="25" name="Run file" sid="213300623705754" type="Electron">
-                                    <param id="0" name="Path">&quot;/1/Apps/gdevelop/gdevelop&quot;</param>
+                                    <param id="0" name="Path">&quot;gdevelop&quot;</param>
                                     <param id="1" name="Parameters">&quot;&quot;</param>
                                 </action>
                             </actions>
