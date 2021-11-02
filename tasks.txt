@@ -1,3 +1,9 @@
+- If Cinnamon avatar isn't found, display generic
+
+- Support GNOME (avatars, settings app)
+
+- Support KDE (avatars, settings app)
+
 - frameless window (implement Framlr)
 - hover/title at oslogotype
 - home's up-to-date: lnksh, click and open About
