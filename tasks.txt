@@ -1,3 +1,5 @@
+- Spawn token count script; script writes to a JSON file; Floflis Central reads
+
 - If Cinnamon avatar isn't found, display generic
 
 - Support GNOME (avatars, settings app)
