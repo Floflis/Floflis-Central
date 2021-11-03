@@ -1,6 +1,7 @@
 - If Cinnamon avatar isn't found, display generic
 
 - Support GNOME (avatars, settings app)
+- Prevent conflicts between having different avatars on different DEs
 
 - Support KDE (avatars, settings app)
 
