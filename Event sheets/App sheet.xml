@@ -80,6 +80,23 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block sid="255062159241315">
+            <conditions>
+                <condition id="1" name="Is online" sid="692150408640973" type="Browser" />
+                <condition id="-4" name="Trigger once while true" sid="278868009689480" type="System" />
+            </conditions>
+            <actions>
+                <action id="17" name="Execute Javascript" sid="928310768818773" type="Browser">
+                    <param id="0" name="Javascript">&quot;const{exec}=require(&apos;child_process&apos;);exec(`cd /1/apps/central/scripts &amp;&amp; sh ./tokenbalance.sh`,(error,stdout,stderr)=&gt;{if(error){console.log(`error:${error.message}`);return}if(stderr){console.log(`stderr:${stderr}`);return}console.log(`${stdout}`)});&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="377943227193033">
+            <conditions>
+                <condition id="1" inverted="1" name="Is online" sid="581994521111980" type="Browser" />
+            </conditions>
+            <actions />
+        </event-block>
         <event-block sid="287814634929795">
             <conditions>
                 <condition id="0" name="On completed" sid="707978036472146" type="AJAX">
@@ -648,6 +665,100 @@
                     <param id="0" name="ID/Class">&quot;#usrpic&quot;</param>
                     <param id="1" name="Set"> &quot;&lt;img onclick=C2(&apos;userwindow-show&apos;); width=&apos;150px&apos; style=&apos;border-radius:50%&apos; src=&apos;file://&quot; &amp; &quot;/home/&quot; &amp; Browser.ExecJS(&quot;username.sync()&quot;) &amp; &quot;/.face&quot; &amp; &quot;&apos; title=&apos;&quot; &amp; &quot;Click to change &quot; &amp; Browser.ExecJS(&quot;username.sync()&quot;) &amp; &quot;`s avatar, password, etc.&quot; &amp; &quot;&apos; class=&apos;linkish&apos;/&gt;&quot;</param>
                     <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="457374691546515" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action disabled="1" id="9" name="Read" sid="522883484977186" type="Electron">
+                    <param id="0" name="Tag">&quot;userjsonread&quot;</param>
+                    <param id="1" name="Path">&quot;/1/config/user.json&quot;</param>
+                    <param id="2" name="Encoding">&quot;utf8&quot;</param>
+                </action>
+                <action id="19" name="Include Javascript file" sid="411631848155367" type="UI">
+                    <param id="0" name="Javascript file">&quot;odometer.js&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="364361617881323" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action id="2" name="Import CSS file" sid="316339968052197" type="UI">
+                    <param id="0" name="CSS file">&quot;https://github.hubspot.com/odometer/themes/odometer-theme-minimal.css&quot;</param>
+                </action>
+                <action id="2" name="Import CSS file" sid="306309160135244" type="UI">
+                    <param id="0" name="CSS file">&quot;https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css&quot;</param>
+                </action>
+                <action id="9" name="Read" sid="989445045641562" type="Electron">
+                    <param id="0" name="Tag">&quot;tokensjsonread&quot;</param>
+                    <param id="1" name="Path">&quot;/1/config/tokens.json&quot;</param>
+                    <param id="2" name="Encoding">&quot;utf8&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block disabled="1" sid="562627075855713">
+            <conditions>
+                <condition id="3" name="On read success" sid="142350356637051" type="Electron">
+                    <param id="0" name="Tag">&quot;userjsonread&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+        </event-block>
+        <event-block sid="785554139003489">
+            <conditions>
+                <condition id="3" name="On read success" sid="947385543121430" type="Electron">
+                    <param id="0" name="Tag">&quot;tokensjsonread&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="60" name="LoadJSON" sid="342738646124110" type="tokens">
+                    <param id="0" name="JSON">Electron.LastReadAsync</param>
+                    <param id="1" name="Reference point">0</param>
+                    <param id="2" name="Key {n}"></param>
+                </action>
+                <action id="-16" name="Wait" sid="471828125925998" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action id="24" name="Get elements" sid="342435073127481" type="UI">
+                    <param id="0" name="ID/Class">&quot;#flofbalancetotal&quot;</param>
+                    <param id="1" name="Set">&quot;&lt;div class=&quot;&quot;balancecount odometer animated fadeIn&quot;&quot; akhi=&quot;&quot;&quot;&quot; id=&quot;&quot;odometer&quot;&quot;&quot;&quot;&gt;0.00&lt;/div&gt;&quot;</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="438236363203964" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action id="24" name="Get elements" sid="295657338112452" type="UI">
+                    <param id="0" name="ID/Class">&quot;#flofbalancepolygon&quot;</param>
+                    <param id="1" name="Set">tokens.Value(0,&quot;flof&quot;,&quot;polygon&quot;)</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action id="24" name="Get elements" sid="671351729052518" type="UI">
+                    <param id="0" name="ID/Class">&quot;#flofbalancexdai&quot;</param>
+                    <param id="1" name="Set">tokens.Value(0,&quot;flof&quot;,&quot;xdai&quot;)</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action disabled="1" id="24" name="Get elements" sid="784246469239870" type="UI">
+                    <param id="0" name="ID/Class">&quot;#flofbalancetotal&quot;</param>
+                    <param id="1" name="Set">&quot;&quot;</param>
+                    <param id="2" name="Append">&quot;&lt;script&gt;const counters=document.querySelectorAll(&quot;&quot;.balancecount&quot;&quot;),speed=200;counters.forEach(c=&gt;{const r=()=&gt;{var e=+c.getAttribute(&quot;&quot;akhi&quot;&quot;),t=+c.innerText,n=e/speed;t&lt;e?(c.innerText=Math.ceil(t+n),setTimeout(r,1)):c.innerText=e};r()});&lt;/script&gt;&quot;</param>
+                </action>
+                <action disabled="1" id="19" name="Include Javascript file" sid="120831848980763" type="UI">
+                    <param id="0" name="Javascript file">&quot;tokenanimation.js&quot;</param>
+                </action>
+                <action disabled="1" id="-16" name="Wait" sid="909050596539912" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action id="19" name="Include Javascript file" sid="467758435387836" type="UI">
+                    <param id="0" name="Javascript file">&quot;tokenanimation.js&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="943966051760647" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action id="21" name="Execute Javascript" sid="855526104574104" type="UI">
+                    <param id="0" name="Javascript">&quot;odometer.render();$(&apos;.odometer&apos;).text(&quot; &amp; tokens.Value(0,&quot;flof&quot;,&quot;total&quot;) &amp; &quot;);&quot;</param>
+                </action>
+                <action disabled="1" id="-16" name="Wait" sid="622219728886096" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action disabled="1" id="17" name="Execute Javascript" sid="770036289071955" type="Browser">
+                    <param id="0" name="Javascript">&quot;odometer.render();$(&apos;.odometer&apos;).text(&quot; &amp; tokens.Value(0,&quot;flof&quot;,&quot;total&quot;) &amp; &quot;);&quot;</param>
                 </action>
             </actions>
         </event-block>

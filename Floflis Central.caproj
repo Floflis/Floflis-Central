@@ -78,6 +78,9 @@
         <object-type global="1" name="settingsfile" sid="896115479558149">
             <plugin id="JSON" />
         </object-type>
+        <object-type global="1" name="tokens" sid="349311126379705">
+            <plugin id="JSON" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -151,5 +154,7 @@
         <file name="OSlogotype.png" />
         <file name="logotype_smallball.png" />
         <file name="noderequire.js" />
+        <file name="tokenanimation.js" />
+        <file name="odometer.js" />
     </files-folder>
 </c2project>

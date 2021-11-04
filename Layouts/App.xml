@@ -72,6 +72,7 @@
         <instance type="sysinfo" uid="4" />
         <instance type="Dictionary" uid="8" />
         <instance type="settingsfile" uid="9" />
+        <instance type="tokens" uid="10" />
     </nonworld-instances>
     <effects />
 </c2layout>
