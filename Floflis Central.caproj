@@ -145,7 +145,6 @@
         <file name="loading.gif" />
         <file name="init.html" />
         <file name="page-common.css" />
-        <file name="page-common.js" />
         <file name="app-common.css" />
         <file name="ipfs.png" />
         <file name="cjdns.png" />
@@ -156,5 +155,6 @@
         <file name="noderequire.js" />
         <file name="tokenanimation.js" />
         <file name="odometer.js" />
+        <file name="page-common2.css" />
     </files-folder>
 </c2project>
