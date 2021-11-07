@@ -81,6 +81,9 @@
         <object-type global="1" name="tokens" sid="349311126379705">
             <plugin id="JSON" />
         </object-type>
+        <object-type global="1" name="personalization" sid="386309080763964">
+            <plugin id="JSON" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>

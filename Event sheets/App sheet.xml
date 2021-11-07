@@ -76,6 +76,9 @@
                         <action id="19" name="Include Javascript file" sid="518366554995020" type="UI">
                             <param id="0" name="Javascript file">&quot;popper.min.js&quot;</param>
                         </action>
+                        <action id="17" name="Execute Javascript" sid="305475955785663" type="Browser">
+                            <param id="0" name="Javascript">&quot;const{exec}=require(&apos;child_process&apos;);exec(`cd /1/apps/central/scripts &amp;&amp; sh ./personalization-update.sh`,(error,stdout,stderr)=&gt;{if(error){console.log(`error:${error.message}`);return}if(stderr){console.log(`stderr:${stderr}`);return}console.log(`${stdout}`)});&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -666,6 +669,14 @@
                     <param id="1" name="Set"> &quot;&lt;img onclick=C2(&apos;userwindow-show&apos;); width=&apos;150px&apos; style=&apos;border-radius:50%&apos; src=&apos;file://&quot; &amp; &quot;/home/&quot; &amp; Browser.ExecJS(&quot;username.sync()&quot;) &amp; &quot;/.face&quot; &amp; &quot;&apos; title=&apos;&quot; &amp; &quot;Click to change &quot; &amp; Browser.ExecJS(&quot;username.sync()&quot;) &amp; &quot;`s avatar, password, etc.&quot; &amp; &quot;&apos; class=&apos;linkish&apos;/&gt;&quot;</param>
                     <param id="2" name="Append">&quot;&quot;</param>
                 </action>
+                <action id="-16" name="Wait" sid="561032589970224" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action id="9" name="Read" sid="167108684821221" type="Electron">
+                    <param id="0" name="Tag">&quot;personalizationjsonread-home&quot;</param>
+                    <param id="1" name="Path">&quot;/1/config/personalization.json&quot;</param>
+                    <param id="2" name="Encoding">&quot;utf8&quot;</param>
+                </action>
                 <action id="-16" name="Wait" sid="457374691546515" type="System">
                     <param id="0" name="Seconds">dt</param>
                 </action>
@@ -700,6 +711,28 @@
                 </condition>
             </conditions>
             <actions />
+        </event-block>
+        <event-block sid="421714150032343">
+            <conditions>
+                <condition id="3" name="On read success" sid="540453223388925" type="Electron">
+                    <param id="0" name="Tag">&quot;personalizationjsonread-home&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="60" name="LoadJSON" sid="605824678726658" type="personalization">
+                    <param id="0" name="JSON">Electron.LastReadAsync</param>
+                    <param id="1" name="Reference point">0</param>
+                    <param id="2" name="Key {n}"></param>
+                </action>
+                <action id="-16" name="Wait" sid="265034153811652" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action id="24" name="Get elements" sid="867761485738989" type="UI">
+                    <param id="0" name="ID/Class">&quot;#getbg-home&quot;</param>
+                    <param id="1" name="Set">&quot;&lt;img class=&quot;&quot;&quot;&quot; src=&quot;&quot;&quot; &amp; personalization.Value(0,&quot;background&quot;) &amp; &quot;&quot;&quot; style=&quot;&quot;background:#3EB7E5;height:400px&quot;&quot;&gt;&quot;</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+            </actions>
         </event-block>
         <event-block sid="785554139003489">
             <conditions>
@@ -1010,6 +1043,33 @@
                 </action>
                 <action id="30" name="Set title" sid="834003864649057" type="Electron">
                     <param id="0" name="Title">&quot;Floflis Central - Personalization&quot;</param>
+                </action>
+                <action id="9" name="Read" sid="787725755448444" type="Electron">
+                    <param id="0" name="Tag">&quot;personalizationjsonread-perso&quot;</param>
+                    <param id="1" name="Path">&quot;/1/config/personalization.json&quot;</param>
+                    <param id="2" name="Encoding">&quot;utf8&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="966238009338123">
+            <conditions>
+                <condition id="3" name="On read success" sid="301884462268891" type="Electron">
+                    <param id="0" name="Tag">&quot;personalizationjsonread-perso&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="60" name="LoadJSON" sid="401346743263190" type="personalization">
+                    <param id="0" name="JSON">Electron.LastReadAsync</param>
+                    <param id="1" name="Reference point">0</param>
+                    <param id="2" name="Key {n}"></param>
+                </action>
+                <action id="-16" name="Wait" sid="533582835826203" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action id="24" name="Get elements" sid="101904350189454" type="UI">
+                    <param id="0" name="ID/Class">&quot;#getbg-personalization&quot;</param>
+                    <param id="1" name="Set">&quot;&lt;img width=&quot;&quot;100%&quot;&quot; class=&quot;&quot;card-img-top&quot;&quot; src=&quot;&quot;&quot; &amp; personalization.Value(0,&quot;background&quot;) &amp; &quot;&quot;&quot; alt=&quot;&quot;Desktop background&quot;&quot;&gt;&quot;</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
                 </action>
             </actions>
         </event-block>
