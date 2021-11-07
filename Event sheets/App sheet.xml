@@ -4,6 +4,7 @@
     <name>App sheet</name>
     <events>
         <variable constant="0" name="LoadedAbout" sid="270706131919194" static="0" type="number">0</variable>
+        <variable constant="0" name="currentdialog" sid="203874915509332" static="0" type="text"></variable>
         <include>Common sheet</include>
         <event-block sid="806523564058118">
             <conditions>
@@ -1067,6 +1068,120 @@
                     <param id="0" name="Seconds">dt</param>
                 </action>
                 <action id="24" name="Get elements" sid="101904350189454" type="UI">
+                    <param id="0" name="ID/Class">&quot;#getbg-personalization&quot;</param>
+                    <param id="1" name="Set">&quot;&lt;img width=&quot;&quot;100%&quot;&quot; class=&quot;&quot;card-img-top&quot;&quot; src=&quot;&quot;&quot; &amp; personalization.Value(0,&quot;background&quot;) &amp; &quot;&quot;&quot; alt=&quot;&quot;Desktop background&quot;&quot;&gt;&quot;</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="640737031306192">
+            <conditions>
+                <condition id="3" name="On C2 Function" sid="878687960971011" type="UI" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="110998043566619">
+                    <conditions>
+                        <condition id="4" name="Compare C2 Function" sid="852933349204476" type="UI">
+                            <param id="0" name="C2">&quot;go-changebg&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="979696688063481" type="System">
+                            <param id="0" name="Variable">currentdialog</param>
+                            <param id="1" name="Value">&quot;setbg&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="105551080619761" type="System">
+                            <param id="0" name="Seconds">dt</param>
+                        </action>
+                        <action id="20" name="Show dialog" sid="891021387124347" type="Electron">
+                            <param id="0" name="Title">&quot;Select the image you want as background...&quot;</param>
+                            <param id="1" name="Default path">&quot;~/Pictures&quot;</param>
+                            <param id="2" name="Confirmation text (optional)">&quot;Set as background&quot;</param>
+                            <param id="3" name="Filters (TODO)">&quot;&quot;</param>
+                            <param id="4" name="Properties">&quot;openFile&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="761556203444893">
+            <conditions>
+                <condition id="8" name="On validate dialog" sid="561443281583858" type="Electron" />
+                <condition id="-14" name="Compare variable" sid="541889784497290" type="System">
+                    <param id="0" name="Variable">currentdialog</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;setbg&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="361111961176993" type="System">
+                    <param id="0" name="Variable">currentdialog</param>
+                    <param id="1" name="Value">&quot;&quot;</param>
+                </action>
+                <action id="17" name="Execute Javascript" sid="267001635961342" type="Browser">
+                    <param id="0" name="Javascript">&quot;const{exec}=require(&apos;child_process&apos;);exec(`gsettings set org.cinnamon.desktop.background picture-uri file://&quot; &amp; Electron.ChosenPath &amp; &quot;`,(error,stdout,stderr)=&gt;{if(error){console.log(`error:${error.message}`);return}if(stderr){console.log(`stderr:${stderr}`);return}console.log(`${stdout}`)});&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="796874571100676" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action id="17" name="Execute Javascript" sid="979824568557834" type="Browser">
+                    <param id="0" name="Javascript">&quot;const{exec}=require(&apos;child_process&apos;);exec(`cd /1/apps/central/scripts &amp;&amp; sh ./personalization-update.sh`,(error,stdout,stderr)=&gt;{if(error){console.log(`error:${error.message}`);return}if(stderr){console.log(`stderr:${stderr}`);return}console.log(`${stdout}`)});&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="509703591411711" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action id="9" name="Read" sid="900415519784109" type="Electron">
+                    <param id="0" name="Tag">&quot;personalizationjsonread-perso-updt&quot;</param>
+                    <param id="1" name="Path">&quot;/1/config/personalization.json&quot;</param>
+                    <param id="2" name="Encoding">&quot;utf8&quot;</param>
+                </action>
+                <action disabled="1" id="55" name="Clear" sid="782985529594905" type="personalization">
+                    <param id="0" name="Reference point">0</param>
+                    <param id="1" name="Key {n}"></param>
+                </action>
+                <action disabled="1" id="-16" name="Wait" sid="280294046446424" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action disabled="1" id="60" name="LoadJSON" sid="927174524339969" type="personalization">
+                    <param id="0" name="JSON">&quot;/1/config/personalization.json&quot;</param>
+                    <param id="1" name="Reference point">0</param>
+                    <param id="2" name="Key {n}"></param>
+                </action>
+                <action disabled="1" id="-16" name="Wait" sid="961860101963491" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action disabled="1" id="24" name="Get elements" sid="306502477365420" type="UI">
+                    <param id="0" name="ID/Class">&quot;#getbg-personalization&quot;</param>
+                    <param id="1" name="Set">&quot;&lt;img width=&quot;&quot;100%&quot;&quot; class=&quot;&quot;card-img-top&quot;&quot; src=&quot;&quot;&quot; &amp; personalization.Value(0,&quot;background&quot;) &amp; &quot;&quot;&quot; alt=&quot;&quot;Desktop background&quot;&quot;&gt;&quot;</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="327369113377974">
+            <conditions>
+                <condition id="3" name="On read success" sid="646522306825316" type="Electron">
+                    <param id="0" name="Tag">&quot;personalizationjsonread-perso-updt&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="55" name="Clear" sid="199351142813555" type="personalization">
+                    <param id="0" name="Reference point">0</param>
+                    <param id="1" name="Key {n}"></param>
+                </action>
+                <action id="-16" name="Wait" sid="836006139264717" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action id="60" name="LoadJSON" sid="829273652734227" type="personalization">
+                    <param id="0" name="JSON">Electron.LastReadAsync</param>
+                    <param id="1" name="Reference point">0</param>
+                    <param id="2" name="Key {n}"></param>
+                </action>
+                <action id="-16" name="Wait" sid="334102850594137" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action id="24" name="Get elements" sid="903249590920408" type="UI">
                     <param id="0" name="ID/Class">&quot;#getbg-personalization&quot;</param>
                     <param id="1" name="Set">&quot;&lt;img width=&quot;&quot;100%&quot;&quot; class=&quot;&quot;card-img-top&quot;&quot; src=&quot;&quot;&quot; &amp; personalization.Value(0,&quot;background&quot;) &amp; &quot;&quot;&quot; alt=&quot;&quot;Desktop background&quot;&quot;&gt;&quot;</param>
                     <param id="2" name="Append">&quot;&quot;</param>
