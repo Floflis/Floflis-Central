@@ -846,18 +846,28 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block disabled="1" sid="391721475483705">
+        <event-block sid="468427571242796">
             <conditions>
-                <condition id="0" name="On completed" sid="431745045079168" type="AJAX">
-                    <param id="0" name="Tag">&quot;iconajx&quot;</param>
-                </condition>
+                <condition id="3" name="On C2 Function" sid="354452744149385" type="UI" />
             </conditions>
-            <actions>
-                <action id="0" name="Add key" sid="336191926002030" type="Dictionary">
-                    <param id="0" name="Key">&quot;OSicon&quot;</param>
-                    <param id="1" name="Value">&quot;&lt;img width=200px src=&quot; &amp; AJAX.LastData &amp; &quot;/&gt;&quot;</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="386860786912996">
+                    <conditions>
+                        <condition id="4" name="Compare C2 Function" sid="984710419735660" type="UI">
+                            <param id="0" name="C2">&quot;personalization&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Read" sid="453779234830753" type="Electron">
+                            <param id="0" name="Tag">&quot;personalization&quot;</param>
+                            <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/personalization.html&quot;</param>
+                            <param id="2" name="Encoding">&quot;utf8&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="881038938035709">
             <conditions>
@@ -968,6 +978,38 @@
                 </action>
                 <action id="30" name="Set title" sid="591191818469322" type="Electron">
                     <param id="0" name="Title">&quot;Floflis Central - Play with&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="514564243198102">
+            <conditions>
+                <condition id="3" name="On read success" sid="784458312883250" type="Electron">
+                    <param id="0" name="Tag">&quot;personalization&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="24" name="Get elements" sid="672539160954519" type="UI">
+                    <param id="0" name="ID/Class">&quot;#nav-personalization&quot;</param>
+                    <param id="1" name="Set">Electron.LastReadAsync</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action id="24" name="Get elements" sid="558313042362296" type="UI">
+                    <param id="0" name="ID/Class">&quot;#nav-home&quot;</param>
+                    <param id="1" name="Set">&quot;...&quot;</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action id="24" name="Get elements" sid="432611928218387" type="UI">
+                    <param id="0" name="ID/Class">&quot;#nav-about&quot;</param>
+                    <param id="1" name="Set">&quot;...&quot;</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action id="24" name="Get elements" sid="257961850502501" type="UI">
+                    <param id="0" name="ID/Class">&quot;#nav-moresettings&quot;</param>
+                    <param id="1" name="Set">&quot;...&quot;</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action id="30" name="Set title" sid="834003864649057" type="Electron">
+                    <param id="0" name="Title">&quot;Floflis Central - Personalization&quot;</param>
                 </action>
             </actions>
         </event-block>
