@@ -1,4 +1,4 @@
-- Spawn token count script; script writes to a JSON file; Floflis Central reads
+- Detect if it is running from ISO (live)
 
 - If Cinnamon avatar isn't found, display generic
 
