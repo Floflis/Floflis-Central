@@ -1,3 +1,9 @@
+- update script that fetches tokens from ETH address
+- read OS info from JSON
+- update order of Play with's items
+- spawn sh storing user full name, then read it
+- debug Personalization > Play with > Home/About
+
 - Detect if it is running from ISO (live)
 
 - If Cinnamon avatar isn't found, display generic
