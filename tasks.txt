@@ -1,7 +1,11 @@
-- update script that fetches tokens from ETH address
 - read OS info from JSON
 - update order of Play with's items
 - spawn sh storing user full name, then read it
+
+Attempt 31:
+
+- display tt username/link if ethaddress-sybil_verify.sh responds non-empty
+
 - debug Personalization > Play with > Home/About
 
 - Detect if it is running from ISO (live)
