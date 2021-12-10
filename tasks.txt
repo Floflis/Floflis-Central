@@ -1,28 +1,37 @@
 Attempt 31:
 
-- spawn sh storing user full name, then read it
-
-- display tt username/link if ethaddress-sybil_verify.sh responds non-empty
+- debug Error executing Javascript:  TypeError: $(...).tab is not a function
 
 - debug Personalization > Play with > Home/About
+
+- spawn sh storing user full name, then read it
+
+- hover/title at oslogotype
+- home's up-to-date: lnksh, click and open About
+
+- open neofetch
+
+- frameless window (implement Framlr)
+
+- Sounds; more sounds settings
+- Backgrounds tab: pre-picked backgrounds before new implementations
+
+- display tt username/link if ethaddress-sybil_verify.sh responds non-empty
 
 - Detect if it is running from ISO (live)
 
 - If Cinnamon avatar isn't found, display generic
+
+- show user's fullname, with username as hover/title
+
+Attempt 32:
 
 - Support GNOME (avatars, settings app)
 - Prevent conflicts between having different avatars on different DEs
 
 - Support KDE (avatars, settings app)
 
-- frameless window (implement Framlr)
-- hover/title at oslogotype
-- home's up-to-date: lnksh, click and open About
-- show user's fullname, with username as hover/title
-- open neofetch
-
 - Themes tab: "Window borders", "Icons", "Controls", "Mouse Pointer", "Desktop"; install new themes, from UniStore (also fetch from spices repos)
-- Backgrounds tab: pre-picked backgrounds before new implementations
 - Account details tab: Picture, Name, Password
 - Gadgets/Widgets/Desklets tab (also get from UniStore and Spices)
 - Extensions tab (also get from UniStore and Spices)
@@ -32,17 +41,3 @@ Attempt 31:
 - Bluetooth
 - Disks (opens app)
 - Printers (opens app)
-- Sounds; more sounds settings
-
-disk manager
-mine
-obs studio
-
-gnome-games
-keepassxc
-audacity
-gnome-system-monitor
-
-gbrainy
-lutris
-supertux2
