@@ -1,5 +1,3 @@
-- 
-
 Attempt 31:
 
 - spawn sh storing user full name, then read it
