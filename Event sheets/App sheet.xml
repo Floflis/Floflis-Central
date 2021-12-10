@@ -635,9 +635,14 @@
                 <action id="-16" name="Wait" sid="803565617865849" type="System">
                     <param id="0" name="Seconds">dt</param>
                 </action>
-                <action id="9" name="Read" sid="437110018315917" type="Electron">
+                <action disabled="1" id="9" name="Read" sid="437110018315917" type="Electron">
                     <param id="0" name="Tag">&quot;sysinfo&quot;</param>
                     <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/floflis.json&quot;</param>
+                    <param id="2" name="Encoding">&quot;utf8&quot;</param>
+                </action>
+                <action id="9" name="Read" sid="940414773713857" type="Electron">
+                    <param id="0" name="Tag">&quot;sysinfo&quot;</param>
+                    <param id="1" name="Path">&quot;/1/Floflis/system/os.json&quot;</param>
                     <param id="2" name="Encoding">&quot;utf8&quot;</param>
                 </action>
                 <action id="-16" name="Wait" sid="539268352996645" type="System">

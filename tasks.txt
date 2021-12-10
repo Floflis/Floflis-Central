@@ -1,8 +1,8 @@
-- read OS info from JSON
-- update order of Play with's items
-- spawn sh storing user full name, then read it
+- 
 
 Attempt 31:
+
+- spawn sh storing user full name, then read it
 
 - display tt username/link if ethaddress-sybil_verify.sh responds non-empty
 
