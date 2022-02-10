@@ -1,4 +1,6 @@
-Attempt 31:
+Attempt 32:
+
+- pack.sh: use same script as Floflis Soil to install global node modules
 
 - debug Error executing Javascript:  TypeError: $(...).tab is not a function
 
@@ -24,7 +26,7 @@ Attempt 31:
 
 - show user's fullname, with username as hover/title
 
-Attempt 32:
+Attempt 33:
 
 - Support GNOME (avatars, settings app)
 - Prevent conflicts between having different avatars on different DEs
