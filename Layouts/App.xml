@@ -74,6 +74,7 @@
         <instance type="settingsfile" uid="9" />
         <instance type="tokens" uid="10" />
         <instance type="personalization" uid="11" />
+        <instance type="user" uid="12" />
     </nonworld-instances>
     <effects />
 </c2layout>

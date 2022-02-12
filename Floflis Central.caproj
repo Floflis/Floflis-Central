@@ -84,6 +84,9 @@
         <object-type global="1" name="personalization" sid="386309080763964">
             <plugin id="JSON" />
         </object-type>
+        <object-type global="1" name="user" sid="857050701816113">
+            <plugin id="JSON" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
