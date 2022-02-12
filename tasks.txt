@@ -1,6 +1,5 @@
 Attempt 32:
 
-- hover/title at oslogotype
 - home's up-to-date: lnksh, click and open About
 
 - open neofetch

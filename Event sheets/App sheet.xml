@@ -1223,14 +1223,19 @@
                     <param id="1" name="Set">sysinfo.Value(0,&quot;version&quot;)</param>
                     <param id="2" name="Append">&quot;&quot;</param>
                 </action>
-                <action id="24" name="Get elements" sid="350488573913096" type="UI">
-                    <param id="0" name="ID/Class">&quot;#build&quot;</param>
-                    <param id="1" name="Set">sysinfo.Value(0,&quot;build&quot;)</param>
+                <action id="24" name="Get elements" sid="616276158806633" type="UI">
+                    <param id="0" name="ID/Class">&quot;#osicon&quot;</param>
+                    <param id="1" name="Set">&quot;&lt;img title=&quot;&quot;&quot; &amp; sysinfo.Value(0,&quot;name&quot;) &amp; &quot; &quot; &amp; sysinfo.Value(0,&quot;version&quot;) &amp; &quot;&quot;&quot; width=&quot;&quot;200px&quot;&quot; src=&quot;&quot;/1/img/OSlogotype.png&quot;&quot;/&gt;&quot;</param>
                     <param id="2" name="Append">&quot;&quot;</param>
                 </action>
                 <action id="24" name="Get elements" sid="432847699615646" type="UI">
                     <param id="0" name="ID/Class">&quot;#year&quot;</param>
                     <param id="1" name="Set">sysinfo.Value(0,&quot;year&quot;)</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action id="24" name="Get elements" sid="350488573913096" type="UI">
+                    <param id="0" name="ID/Class">&quot;#build&quot;</param>
+                    <param id="1" name="Set">sysinfo.Value(0,&quot;build&quot;)</param>
                     <param id="2" name="Append">&quot;&quot;</param>
                 </action>
             </actions>
