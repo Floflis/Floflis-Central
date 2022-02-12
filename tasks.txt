@@ -1,9 +1,5 @@
 Attempt 32:
 
-- home's up-to-date: lnksh, click and open About
-
-- open neofetch
-
 - display tt username/link if ethaddress-sybil_verify.sh responds non-empty
 
 - Detect if it is running from ISO (live)

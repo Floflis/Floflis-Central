@@ -1207,7 +1207,7 @@
                 </action>
             </actions>
         </event-block>
-        <comment>version temporarily disabled to instead use OSlogotype</comment>
+        <comment>version disabled to instead use OSlogotype</comment>
         <event-block sid="779404018750831">
             <conditions>
                 <condition id="-14" name="Compare variable" sid="332158729210241" type="System">
@@ -1863,6 +1863,27 @@
                                 <action id="25" name="Run file" sid="132150134523284" type="Electron">
                                     <param id="0" name="Path">&quot;gnome-system-monitor&quot;</param>
                                     <param id="1" name="Parameters">&quot;%U&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="812156969012387">
+                    <conditions>
+                        <condition id="3" name="On C2 Function" sid="932383664503996" type="UI" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="651847536924562">
+                            <conditions>
+                                <condition id="4" name="Compare C2 Function" sid="173364851590806" type="UI">
+                                    <param id="0" name="C2">&quot;openneofetch&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="17" name="Execute Javascript" sid="594640756502605" type="Browser">
+                                    <param id="0" name="Javascript">&quot;const{exec}=require(&apos;child_process&apos;);exec(`gnome-terminal --tab --title=&quot;&quot;Neofetch&quot;&quot; -- /bin/sh -c &apos;neofetch; exec bash&apos;`,(error,stdout,stderr)=&gt;{if(error){console.log(`error:${error.message}`);return}if(stderr){console.log(`stderr:${stderr}`);return}console.log(`${stdout}`)});&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
