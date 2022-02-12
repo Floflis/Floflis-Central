@@ -153,7 +153,5 @@
         <file name="jquery.min.js" />
         <file name="logotype_smallball.png" />
         <file name="noderequire.js" />
-        <file name="tokenanimation.js" />
-        <file name="odometer.js" />
     </files-folder>
 </c2project>

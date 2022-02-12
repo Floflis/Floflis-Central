@@ -691,18 +691,6 @@
                     <param id="1" name="Path">&quot;/1/config/user.json&quot;</param>
                     <param id="2" name="Encoding">&quot;utf8&quot;</param>
                 </action>
-                <action disabled="1" id="19" name="Include Javascript file" sid="411631848155367" type="UI">
-                    <param id="0" name="Javascript file">&quot;odometer.js&quot;</param>
-                </action>
-                <action disabled="1" id="-16" name="Wait" sid="364361617881323" type="System">
-                    <param id="0" name="Seconds">dt</param>
-                </action>
-                <action disabled="1" id="2" name="Import CSS file" sid="316339968052197" type="UI">
-                    <param id="0" name="CSS file">&quot;https://github.hubspot.com/odometer/themes/odometer-theme-minimal.css&quot;</param>
-                </action>
-                <action disabled="1" id="2" name="Import CSS file" sid="306309160135244" type="UI">
-                    <param id="0" name="CSS file">&quot;https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css&quot;</param>
-                </action>
                 <action id="9" name="Read" sid="989445045641562" type="Electron">
                     <param id="0" name="Tag">&quot;tokensjsonread&quot;</param>
                     <param id="1" name="Path">&quot;/1/config/tokens.json&quot;</param>
@@ -755,16 +743,6 @@
                 <action id="-16" name="Wait" sid="471828125925998" type="System">
                     <param id="0" name="Seconds">dt</param>
                 </action>
-                <action disabled="1" id="24" name="Get elements" sid="784246469239870" type="UI">
-                    <param id="0" name="ID/Class">&quot;#flofbalancetotal&quot;</param>
-                    <param id="1" name="Set">&quot;&quot;</param>
-                    <param id="2" name="Append">&quot;&lt;script&gt;const counters=document.querySelectorAll(&quot;&quot;.balancecount&quot;&quot;),speed=200;counters.forEach(c=&gt;{const r=()=&gt;{var e=+c.getAttribute(&quot;&quot;akhi&quot;&quot;),t=+c.innerText,n=e/speed;t&lt;e?(c.innerText=Math.ceil(t+n),setTimeout(r,1)):c.innerText=e};r()});&lt;/script&gt;&quot;</param>
-                </action>
-                <action disabled="1" id="24" name="Get elements" sid="342435073127481" type="UI">
-                    <param id="0" name="ID/Class">&quot;#flofbalancetotal&quot;</param>
-                    <param id="1" name="Set">&quot;&lt;div class=&quot;&quot;balancecount odometer animated fadeIn&quot;&quot; akhi=&quot;&quot;&quot;&quot; id=&quot;&quot;odometer&quot;&quot;&quot;&quot;&gt;0.00&lt;/div&gt;&quot;</param>
-                    <param id="2" name="Append">&quot;&quot;</param>
-                </action>
                 <action id="24" name="Get elements" sid="438037132331578" type="UI">
                     <param id="0" name="ID/Class">&quot;#flofbalancetotal&quot;</param>
                     <param id="1" name="Set">tokens.Value(0,&quot;flof&quot;,&quot;total&quot;)</param>
@@ -782,27 +760,6 @@
                     <param id="0" name="ID/Class">&quot;#flofbalancexdai&quot;</param>
                     <param id="1" name="Set">tokens.Value(0,&quot;flof&quot;,&quot;xdai&quot;)</param>
                     <param id="2" name="Append">&quot;&quot;</param>
-                </action>
-                <action disabled="1" id="19" name="Include Javascript file" sid="120831848980763" type="UI">
-                    <param id="0" name="Javascript file">&quot;tokenanimation.js&quot;</param>
-                </action>
-                <action disabled="1" id="-16" name="Wait" sid="909050596539912" type="System">
-                    <param id="0" name="Seconds">dt</param>
-                </action>
-                <action disabled="1" id="-16" name="Wait" sid="622219728886096" type="System">
-                    <param id="0" name="Seconds">dt</param>
-                </action>
-                <action disabled="1" id="17" name="Execute Javascript" sid="770036289071955" type="Browser">
-                    <param id="0" name="Javascript">&quot;odometer.render();$(&apos;.odometer&apos;).text(&quot; &amp; tokens.Value(0,&quot;flof&quot;,&quot;total&quot;) &amp; &quot;);&quot;</param>
-                </action>
-                <action disabled="1" id="19" name="Include Javascript file" sid="467758435387836" type="UI">
-                    <param id="0" name="Javascript file">&quot;tokenanimation.js&quot;</param>
-                </action>
-                <action disabled="1" id="-16" name="Wait" sid="943966051760647" type="System">
-                    <param id="0" name="Seconds">dt</param>
-                </action>
-                <action disabled="1" id="21" name="Execute Javascript" sid="855526104574104" type="UI">
-                    <param id="0" name="Javascript">&quot;odometer.render();$(&apos;.odometer&apos;).text(&quot; &amp; tokens.Value(0,&quot;flof&quot;,&quot;total&quot;) &amp; &quot;);&quot;</param>
                 </action>
             </actions>
         </event-block>

@@ -1,11 +1,5 @@
 Attempt 32:
 
-- Click to change user's avatar, password, NAME, etc.
-
-- "Breakdown" > "FLOF Balance Breakdown"
-
-- remove number counter animation (until a better is implemented)
-
 - hover/title at oslogotype
 - home's up-to-date: lnksh, click and open About
 
