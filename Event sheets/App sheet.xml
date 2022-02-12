@@ -675,7 +675,7 @@
                 </action>
                 <action id="24" name="Get elements" sid="461419287689159" type="UI">
                     <param id="0" name="ID/Class">&quot;#usrpic&quot;</param>
-                    <param id="1" name="Set"> &quot;&lt;img onclick=C2(&apos;userwindow-show&apos;); width=&apos;150px&apos; style=&apos;border-radius:50%&apos; src=&apos;file://&quot; &amp; &quot;/home/&quot; &amp; Browser.ExecJS(&quot;username.sync()&quot;) &amp; &quot;/.face&quot; &amp; &quot;&apos; title=&apos;&quot; &amp; &quot;Click to change &quot; &amp; Browser.ExecJS(&quot;username.sync()&quot;) &amp; &quot;`s avatar, password, name, etc.&quot; &amp; &quot;&apos; class=&apos;linkish&apos;/&gt;&quot;</param>
+                    <param id="1" name="Set"> &quot;&lt;img onclick=C2(&quot;&quot;userwindow-show&quot;&quot;); width=&quot;&quot;150px&apos;&quot;&quot; style=&quot;&quot;border-radius:50%&quot;&quot; src=&quot;&quot;file://&quot; &amp; &quot;/home/&quot; &amp; Browser.ExecJS(&quot;username.sync()&quot;) &amp; &quot;/.face&quot; &amp; &quot;&quot;&quot; title=&quot;&quot;&quot; &amp; &quot;Click to change &quot; &amp; Browser.ExecJS(&quot;username.sync()&quot;) &amp; &quot;&apos;s avatar, password, name, etc.&quot; &amp; &quot;&quot;&quot; class=&quot;&quot;linkish&quot;&quot;/&gt;&quot;</param>
                     <param id="2" name="Append">&quot;&quot;</param>
                 </action>
                 <action id="-16" name="Wait" sid="561032589970224" type="System">
