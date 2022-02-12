@@ -1,37 +1,56 @@
 Attempt 32:
 
-- pack.sh: use same script as Floflis Soil to install global node modules
+- Click to change user's avatar, password, NAME, etc.
 
-- debug Error executing Javascript:  TypeError: $(...).tab is not a function
+- "Breakdown" > "FLOF Balance Breakdown"
 
-- debug Personalization > Play with > Home/About
-
-- spawn sh storing user full name, then read it
+- remove number counter animation (until a better is implemented)
 
 - hover/title at oslogotype
 - home's up-to-date: lnksh, click and open About
 
 - open neofetch
 
-- frameless window (implement Framlr)
-
-- Sounds; more sounds settings
-- Backgrounds tab: pre-picked backgrounds before new implementations
-
 - display tt username/link if ethaddress-sybil_verify.sh responds non-empty
 
 - Detect if it is running from ISO (live)
 
-- If Cinnamon avatar isn't found, display generic
+- if first use, require user to read Terms of Use (can be removed of token distribution according to internal criteria. But existing FLOF tokens you own can't be taken; they're yours)
+
+- spawn sh storing user full name, then read it
 
 - show user's fullname, with username as hover/title
 
-Attempt 33:
+- If Cinnamon avatar isn't found, display generic
+
+Attempt 34:
+
+- frameless window (implement Framlr)
+
+- pack.sh: use same script as Floflis Soil to install global node modules
+
+- debug Error executing Javascript:  TypeError: $(...).tab is not a function
+
+- debug Personalization > Play with > Home/About
+
+Attempt 35:
 
 - Support GNOME (avatars, settings app)
 - Prevent conflicts between having different avatars on different DEs
 
 - Support KDE (avatars, settings app)
+
+Attempt 36:
+
+- New tab: Updates (display "Powered by Web3Updater")
+- about's up-to-date: lnksh, click and open Updates
+
+Attempt 37:
+
+- Sounds; more sounds settings
+- Backgrounds tab: pre-picked backgrounds before new implementations
+
+Attempt 38:
 
 - Themes tab: "Window borders", "Icons", "Controls", "Mouse Pointer", "Desktop"; install new themes, from UniStore (also fetch from spices repos)
 - Account details tab: Picture, Name, Password
