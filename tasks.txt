@@ -1,9 +1,11 @@
 Attempt 32:
 
-- Profile > Wallet
-listed tokens: pla, game, mana, sand, dai, stake, matic, slp, axs, usdc
-
 - display ENS address
+
+- Profile > Wallet
+listed tokens: flof, pla, game, mana, sand, dai, stake, matic, slp, axs, usdc
+
+- store user's desktop environment
 
 - if Cinnamon (and other uncompatible DEs), don't display to change lockscreen background
 
@@ -16,6 +18,8 @@ listed tokens: pla, game, mana, sand, dai, stake, matic, slp, axs, usdc
 - If user have no ETH address/fullname in user.json, display error (validation)
 
 Attempt 34:
+
+- detect and store default background, and Personalization tab have option to restore default background
 
 - user's fullname: username as hover/title
 
