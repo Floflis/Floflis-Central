@@ -1,7 +1,5 @@
 Attempt 32:
 
-- display tt username/link if ethaddress-sybil_verify.sh responds non-empty
-
 - Detect if it is running from ISO (live)
 
 - If Cinnamon avatar isn't found, display generic
