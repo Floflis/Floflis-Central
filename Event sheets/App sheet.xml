@@ -15,11 +15,20 @@
                     <param id="0" name="Title">&quot;Floflis Central&quot;</param>
                 </action>
                 <action id="32" name="Maximize" sid="568563506455960" type="Electron" />
-                <action id="19" name="Include Javascript file" sid="151088756958675" type="UI">
+                <action disabled="1" id="19" name="Include Javascript file" sid="151088756958675" type="UI">
                     <param id="0" name="Javascript file">&quot;jquery.min.js&quot;</param>
+                </action>
+                <action id="19" name="Include Javascript file" sid="518366554995020" type="UI">
+                    <param id="0" name="Javascript file">&quot;popper.min.js&quot;</param>
+                </action>
+                <action id="19" name="Include Javascript file" sid="899324844801579" type="UI">
+                    <param id="0" name="Javascript file">&quot;bootstrap.min.js&quot;</param>
                 </action>
                 <action id="19" name="Include Javascript file" sid="994970542104687" type="UI">
                     <param id="0" name="Javascript file">&quot;script.js&quot;</param>
+                </action>
+                <action id="19" name="Include Javascript file" sid="339003747574287" type="UI">
+                    <param id="0" name="Javascript file">&quot;material.min.js&quot;</param>
                 </action>
                 <action id="2" name="Import CSS file" sid="752720606937373" type="UI">
                     <param id="0" name="CSS file">&quot;style.css&quot;</param>
@@ -38,12 +47,6 @@
                 </action>
                 <action disabled="1" id="2" name="Import CSS file" sid="946398050736324" type="UI">
                     <param id="0" name="CSS file">&quot;dark-common.css&quot;</param>
-                </action>
-                <action id="19" name="Include Javascript file" sid="899324844801579" type="UI">
-                    <param id="0" name="Javascript file">&quot;bootstrap.min.js&quot;</param>
-                </action>
-                <action id="19" name="Include Javascript file" sid="339003747574287" type="UI">
-                    <param id="0" name="Javascript file">&quot;material.min.js&quot;</param>
                 </action>
                 <action id="2" name="Import CSS file" sid="473604117283294" type="UI">
                     <param id="0" name="CSS file">&quot;material.min.css&quot;</param>
@@ -74,9 +77,6 @@
                 <event-block sid="811395584260083">
                     <conditions />
                     <actions>
-                        <action id="19" name="Include Javascript file" sid="518366554995020" type="UI">
-                            <param id="0" name="Javascript file">&quot;popper.min.js&quot;</param>
-                        </action>
                         <action id="17" name="Execute Javascript" sid="305475955785663" type="Browser">
                             <param id="0" name="Javascript">&quot;const{exec}=require(&apos;child_process&apos;);exec(`cd /1/apps/central/scripts &amp;&amp; sh ./personalization-update.sh`,(error,stdout,stderr)=&gt;{if(error){console.log(`error:${error.message}`);return}if(stderr){console.log(`stderr:${stderr}`);return}console.log(`${stdout}`)});&quot;</param>
                         </action>
@@ -1037,7 +1037,7 @@
                     </conditions>
                     <actions>
                         <action id="17" name="Execute Javascript" sid="916889334749497" type="Browser">
-                            <param id="0" name="Javascript">&quot;$(&apos;#navdrawerPermanentClipped li:nth-child(3) a&apos;).tab(&apos;show&apos;)&quot;</param>
+                            <param id="0" name="Javascript">&quot;$(&apos;#navdrawerPermanentClipped li:nth-child(5) a&apos;).tab(&apos;show&apos;)&quot;</param>
                         </action>
                         <action id="9" name="Read" sid="754763944426627" type="Electron">
                             <param id="0" name="Tag">&quot;about&quot;</param>
@@ -1145,6 +1145,13 @@
                     <param id="0" name="Tag">&quot;userjsonread&quot;</param>
                     <param id="1" name="Path">&quot;/1/config/user.json&quot;</param>
                     <param id="2" name="Encoding">&quot;utf8&quot;</param>
+                </action>
+                <action disabled="1" id="17" name="Execute Javascript" sid="447142685204108" type="Browser">
+                    <param id="0" name="Javascript">&quot;$(&apos;#justifiedTab li:nth-child(3) a&apos;).tab(&apos;show&apos;)&quot;</param>
+                </action>
+                <action disabled="1" id="14" name="Log" sid="773288222182105" type="Browser">
+                    <param id="0" name="Type">0</param>
+                    <param id="1" name="Message">&quot;test tab switch&quot;</param>
                 </action>
             </actions>
         </event-block>
@@ -1613,7 +1620,7 @@
                     </conditions>
                     <actions>
                         <action id="17" name="Execute Javascript" sid="421815443445419" type="Browser">
-                            <param id="0" name="Javascript">&quot;$(&apos;#navdrawerPermanentClipped li:nth-child(4) a&apos;).tab(&apos;show&apos;)&quot;</param>
+                            <param id="0" name="Javascript">&quot;$(&apos;#navdrawerPermanentClipped li:nth-child(6) a&apos;).tab(&apos;show&apos;)&quot;</param>
                         </action>
                         <action id="9" name="Read" sid="699079803833537" type="Electron">
                             <param id="0" name="Tag">&quot;moresettings&quot;</param>

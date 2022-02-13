@@ -3,6 +3,8 @@ Attempt 32:
 - Profile > Wallet
 listed tokens: pla, game, mana, sand, dai, stake, matic, slp, axs, usdc
 
+- display ENS address
+
 - if Cinnamon (and other uncompatible DEs), don't display to change lockscreen background
 
 - Detect if it is running from ISO (live)
@@ -20,10 +22,6 @@ Attempt 34:
 - frameless window (implement Framlr)
 
 - pack.sh: use same script as Floflis Soil to install global node modules
-
-- debug Error executing Javascript:  TypeError: $(...).tab is not a function
-
-- debug Personalization > Play with > Home/About
 
 Attempt 35:
 
