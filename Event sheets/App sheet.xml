@@ -1097,7 +1097,7 @@
                     <param id="1" name="Set">&quot;🐧&quot; &amp; Browser.ExecJS(&quot;username.sync()&quot;)</param>
                     <param id="2" name="Append">&quot;&quot;</param>
                 </action>
-                <action disabled="1" id="24" name="Get elements" sid="128007717735303" type="UI">
+                <action id="24" name="Get elements" sid="128007717735303" type="UI">
                     <param id="0" name="ID/Class">&quot;#showethaddress&quot;</param>
                     <param id="1" name="Set">user.Value(0,&quot;eth&quot;)</param>
                     <param id="2" name="Append">&quot;&quot;</param>
