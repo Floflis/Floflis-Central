@@ -4,15 +4,15 @@ Attempt 32:
 
 - Detect if it is running from ISO (live)
 
-- spawn sh storing user full name, then read it
-
-- show user's fullname, with username as hover/title
-
 - If Cinnamon avatar isn't found, display generic
 
 - if first use, require user to read Terms of Use (can be removed of token distribution according to internal criteria. But existing FLOF tokens you own can't be taken; they're yours)
 
+- If user have no ETH address/fullname in user.json, display error (validation)
+
 Attempt 34:
+
+- user's fullname: username as hover/title
 
 - frameless window (implement Framlr)
 
