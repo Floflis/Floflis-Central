@@ -1,5 +1,10 @@
 Attempt 32:
 
+- Profile > Wallet
+listed tokens: pla, game, mana, sand, dai, stake, matic, slp, axs, usdc
+
+- if Cinnamon (and other uncompatible DEs), don't display to change lockscreen background
+
 - Detect if it is running from ISO (live)
 
 - If Cinnamon avatar isn't found, display generic
@@ -35,7 +40,7 @@ Attempt 36:
 Attempt 37:
 
 - Sounds; more sounds settings
-- Backgrounds tab: pre-picked backgrounds before new implementations
+- Backgrounds tab: pre-picked backgrounds before new implementations; more backgrounds settings
 
 Attempt 38:
 

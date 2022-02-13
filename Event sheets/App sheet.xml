@@ -804,7 +804,7 @@
                     <actions>
                         <action id="24" name="Get elements" sid="730888879232851" type="UI">
                             <param id="0" name="ID/Class">&quot;#showtwitterhandle&quot;</param>
-                            <param id="1" name="Set">&quot;&lt;img width=&quot;&quot;16px&quot;&quot; src=&quot;&quot;twitter-logo-black.svg&quot;&quot;&gt; &quot; &amp; &quot;&lt;span&gt;&quot; &amp; user.Value(0,&quot;sybiltwitter&quot;) &amp; &quot;&lt;/span&gt;&quot;</param>
+                            <param id="1" name="Set">&quot;&lt;img width=&quot;&quot;16px&quot;&quot; src=&quot;&quot;twitter-logo-black.svg&quot;&quot;&gt; &quot; &amp; &quot;&lt;span&gt;@&quot; &amp; user.Value(0,&quot;sybiltwitter&quot;) &amp; &quot;&lt;/span&gt;&quot;</param>
                             <param id="2" name="Append">&quot;&quot;</param>
                         </action>
                     </actions>
