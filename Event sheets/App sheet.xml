@@ -1033,15 +1033,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block disabled="1" sid="363143187523355">
-            <conditions>
-                <condition id="0" name="On completed" sid="103309429937543" type="AJAX">
-                    <param id="0" name="Tag">&quot;playwith&quot;</param>
-                </condition>
-            </conditions>
-            <actions />
-        </event-block>
-        <event-block disabled="1" sid="205024416790302">
+        <event-block sid="205024416790302">
             <conditions>
                 <condition id="3" name="On read success" sid="405173710169153" type="Electron">
                     <param id="0" name="Tag">&quot;profile&quot;</param>
@@ -1079,9 +1071,70 @@
                     <param id="2" name="Append">&quot;&quot;</param>
                 </action>
                 <action id="30" name="Set title" sid="109123357569626" type="Electron">
-                    <param id="0" name="Title">&quot;Floflis Central - Play with&quot;</param>
+                    <param id="0" name="Title">&quot;Floflis Central - Profile&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="863511187447156" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action id="24" name="Get elements" sid="697443408105620" type="UI">
+                    <param id="0" name="ID/Class">&quot;#hostname&quot;</param>
+                    <param id="1" name="Set">&quot;&lt;i class=material-icons&gt;devices&lt;/i&gt; &quot; &amp; Electron.GetOSHostname</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action disabled="1" id="-16" name="Wait" sid="721651418510421" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action disabled="1" id="9" name="Read" sid="255893733002805" type="Electron">
+                    <param id="0" name="Tag">&quot;sysinfo&quot;</param>
+                    <param id="1" name="Path">&quot;/1/Floflis/system/os.json&quot;</param>
+                    <param id="2" name="Encoding">&quot;utf8&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="435749486222655" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action id="24" name="Get elements" sid="788782399183392" type="UI">
+                    <param id="0" name="ID/Class">&quot;#showusername&quot;</param>
+                    <param id="1" name="Set">&quot;🐧&quot; &amp; Browser.ExecJS(&quot;username.sync()&quot;)</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action disabled="1" id="24" name="Get elements" sid="128007717735303" type="UI">
+                    <param id="0" name="ID/Class">&quot;#showethaddress&quot;</param>
+                    <param id="1" name="Set">user.Value(0,&quot;eth&quot;)</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="905852282297525" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action id="24" name="Get elements" sid="571331910766126" type="UI">
+                    <param id="0" name="ID/Class">&quot;#usrpic&quot;</param>
+                    <param id="1" name="Set"> &quot;&lt;img onclick=C2(&quot;&quot;userwindow-show&quot;&quot;); width=&quot;&quot;150px&apos;&quot;&quot; style=&quot;&quot;border-radius:50%&quot;&quot; src=&quot;&quot;file://&quot; &amp; &quot;/home/&quot; &amp; Browser.ExecJS(&quot;username.sync()&quot;) &amp; &quot;/.face&quot; &amp; &quot;&quot;&quot; title=&quot;&quot;&quot; &amp; &quot;Click to change &quot; &amp; Browser.ExecJS(&quot;username.sync()&quot;) &amp; &quot;&apos;s avatar, password, name, etc.&quot; &amp; &quot;&quot;&quot; class=&quot;&quot;linkish&quot;&quot;/&gt;&quot;</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="161624167635491" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action id="9" name="Read" sid="715965354356435" type="Electron">
+                    <param id="0" name="Tag">&quot;personalizationjsonread-home&quot;</param>
+                    <param id="1" name="Path">&quot;/1/config/personalization.json&quot;</param>
+                    <param id="2" name="Encoding">&quot;utf8&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="259754207512633" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action id="9" name="Read" sid="680581455094896" type="Electron">
+                    <param id="0" name="Tag">&quot;userjsonread&quot;</param>
+                    <param id="1" name="Path">&quot;/1/config/user.json&quot;</param>
+                    <param id="2" name="Encoding">&quot;utf8&quot;</param>
                 </action>
             </actions>
+        </event-block>
+        <event-block disabled="1" sid="363143187523355">
+            <conditions>
+                <condition id="0" name="On completed" sid="103309429937543" type="AJAX">
+                    <param id="0" name="Tag">&quot;playwith&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
         </event-block>
         <event-block sid="408557609751044">
             <conditions>
