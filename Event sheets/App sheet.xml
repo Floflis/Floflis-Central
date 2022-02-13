@@ -1048,6 +1048,61 @@
                 </event-block>
             </sub-events>
         </event-block>
+        <event-block disabled="1" sid="204621992040705">
+            <conditions>
+                <condition id="3" name="On C2 Function" sid="864888985138070" type="UI" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block disabled="1" sid="460678249142770">
+                    <conditions>
+                        <condition id="4" name="Compare C2 Function" sid="989652941913008" type="UI">
+                            <param id="0" name="C2">&quot;wallet-show&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block disabled="1" sid="372962411475558">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="518044880204553" type="System">
+                                    <param id="0" name="First value">Electron.WindowTitle</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;Floflis Central - Profile&quot;</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="363001737777261" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="17" name="Execute Javascript" sid="107036542303218" type="Browser">
+                                    <param id="0" name="Javascript">&quot;$(&apos;#justifiedTab li:nth-child(3) a&apos;).tab(&apos;show&apos;)&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="820072612940430">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="782488113822929" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="17" name="Execute Javascript" sid="746937448348045" type="Browser">
+                                    <param id="0" name="Javascript">&quot;$(&apos;#navdrawerPermanentClipped li:nth-child(2) a&apos;).tab(&apos;show&apos;)&quot;</param>
+                                </action>
+                                <action id="9" name="Read" sid="481503823787932" type="Electron">
+                                    <param id="0" name="Tag">&quot;profile&quot;</param>
+                                    <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/profile.html&quot;</param>
+                                    <param id="2" name="Encoding">&quot;utf8&quot;</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="358108426030513" type="System">
+                                    <param id="0" name="Seconds">dt</param>
+                                </action>
+                                <action id="17" name="Execute Javascript" sid="833903034407232" type="Browser">
+                                    <param id="0" name="Javascript">&quot;$(&apos;#justifiedTab li:nth-child(3) a&apos;).tab(&apos;show&apos;)&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
         <event-block sid="205024416790302">
             <conditions>
                 <condition id="3" name="On read success" sid="405173710169153" type="Electron">
@@ -1146,14 +1201,28 @@
                     <param id="1" name="Path">&quot;/1/config/user.json&quot;</param>
                     <param id="2" name="Encoding">&quot;utf8&quot;</param>
                 </action>
-                <action disabled="1" id="17" name="Execute Javascript" sid="447142685204108" type="Browser">
-                    <param id="0" name="Javascript">&quot;$(&apos;#justifiedTab li:nth-child(3) a&apos;).tab(&apos;show&apos;)&quot;</param>
-                </action>
-                <action disabled="1" id="14" name="Log" sid="773288222182105" type="Browser">
-                    <param id="0" name="Type">0</param>
-                    <param id="1" name="Message">&quot;test tab switch&quot;</param>
-                </action>
             </actions>
+        </event-block>
+        <event-block sid="620604282440255">
+            <conditions>
+                <condition id="3" name="On C2 Function" sid="579713364355404" type="UI" />
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="529181310163529">
+                    <conditions>
+                        <condition id="4" name="Compare C2 Function" sid="369341078744309" type="UI">
+                            <param id="0" name="C2">&quot;wallet-show&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="17" name="Execute Javascript" sid="522620032720333" type="Browser">
+                            <param id="0" name="Javascript">&quot;$(&apos;#profileTabs li:nth-child(3) a&apos;).tab(&apos;show&apos;)&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block disabled="1" sid="363143187523355">
             <conditions>
