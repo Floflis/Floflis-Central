@@ -2,11 +2,9 @@ Attempt 32:
 
 - display estimated amount of USD user haves
 
-- display ENS address
+- display gas (https://github.com/Floflis/meta/issues/117)
 
-- store user's desktop environment
-
-- if Cinnamon (and other uncompatible DEs), don't display to change lockscreen background
+- store and display ENS address
 
 - Detect if it is running from ISO (live)
 
@@ -18,9 +16,24 @@ Attempt 32:
 
 Attempt 34:
 
+- Home tab: button to enter user profile
+
+- click to open user's Twitter profile (Firedoge)
+
+- click to open user's cheers profile (Firedoge)
+
+- Wallet: displays tokens' name, and click to open their educational site (Firedoge)
+
+- Profile > Wallet: also mix token count from their wrapped version (for example, wrapped Ethereum at Ethereum)
+
+- Profile > Wallet: FLOF token frm. sgst un and lp, then count tokens
+
 - detect and store default background, and Personalization tab have option to restore default background
 
 - user's fullname: username as hover/title
+
+- store user's desktop environment
+- if Cinnamon (and other uncompatible DEs), don't display to change lockscreen background
 
 - frameless window (implement Framlr)
 
@@ -29,7 +42,7 @@ Attempt 34:
 Attempt 35:
 
 - Support GNOME (avatars, settings app)
-- Prevent conflicts between having different avatars on different DEs
+- Prevent conflicts between having different avatars on different DEs (by detecting the running DE)
 
 - Support KDE (avatars, settings app)
 
