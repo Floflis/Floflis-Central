@@ -1162,6 +1162,9 @@
                 <action id="-16" name="Wait" sid="435749486222655" type="System">
                     <param id="0" name="Seconds">dt</param>
                 </action>
+                <action id="-16" name="Wait" sid="930574496851672" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
                 <action id="24" name="Get elements" sid="788782399183392" type="UI">
                     <param id="0" name="ID/Class">&quot;#showusername&quot;</param>
                     <param id="1" name="Set">&quot;🐧&quot; &amp; Browser.ExecJS(&quot;username.sync()&quot;)</param>
@@ -1202,6 +1205,310 @@
                     <param id="2" name="Encoding">&quot;utf8&quot;</param>
                 </action>
             </actions>
+            <sub-events>
+                <comment>Load all tokens&apos; balance into Wallet</comment>
+                <event-block sid="850016689623660">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="592099612601637" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="24" name="Get elements" sid="415381858423991" type="UI">
+                            <param id="0" name="ID/Class">&quot;#flofbalancetotal-profilewallet&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;flof&quot;,&quot;total&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="348612991320813" type="System">
+                            <param id="0" name="Seconds">dt</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="131528155166093" type="UI">
+                            <param id="0" name="ID/Class">&quot;#flofbalancepolygon-profilewallet&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;flof&quot;,&quot;polygon&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="981414291557238" type="UI">
+                            <param id="0" name="ID/Class">&quot;#flofbalancexdai-profilewallet&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;flof&quot;,&quot;xdai&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="536084426641626" type="System">
+                            <param id="0" name="Seconds">dt</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="503158996039793" type="UI">
+                            <param id="0" name="ID/Class">&quot;#ethbalancetotal&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;eth&quot;,&quot;total&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="689475172078539" type="System">
+                            <param id="0" name="Seconds">dt</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="918718206792642" type="UI">
+                            <param id="0" name="ID/Class">&quot;#ethbalanceethereum&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;eth&quot;,&quot;ethereum&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="604298758032283" type="UI">
+                            <param id="0" name="ID/Class">&quot;#ethbalancepolygon&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;eth&quot;,&quot;polygon&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="643547781420786" type="UI">
+                            <param id="0" name="ID/Class">&quot;#ethbalancexdai&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;eth&quot;,&quot;xdai&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="546342663052027" type="System">
+                            <param id="0" name="Seconds">dt</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="807260041532866" type="UI">
+                            <param id="0" name="ID/Class">&quot;#plabalancetotal&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;pla&quot;,&quot;total&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="630395398406523" type="System">
+                            <param id="0" name="Seconds">dt</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="933932716110252" type="UI">
+                            <param id="0" name="ID/Class">&quot;#plabalancepolygon&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;pla&quot;,&quot;polygon&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="915044351242933" type="UI">
+                            <param id="0" name="ID/Class">&quot;#plabalancexdai&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;pla&quot;,&quot;xdai&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="523568676868519" type="System">
+                            <param id="0" name="Seconds">dt</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="900602580961547" type="UI">
+                            <param id="0" name="ID/Class">&quot;#gamebalancetotal&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;game&quot;,&quot;total&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="798405885152396" type="System">
+                            <param id="0" name="Seconds">dt</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="799560183341269" type="UI">
+                            <param id="0" name="ID/Class">&quot;#gamebalancepolygon&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;game&quot;,&quot;polygon&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="876767039208943" type="UI">
+                            <param id="0" name="ID/Class">&quot;#gamebalancexdai&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;game&quot;,&quot;xdai&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="251632238795445" type="System">
+                            <param id="0" name="Seconds">dt</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="346705863316842" type="UI">
+                            <param id="0" name="ID/Class">&quot;#manabalancetotal&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;mana&quot;,&quot;total&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="143883344072200" type="System">
+                            <param id="0" name="Seconds">dt</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="235312876856611" type="UI">
+                            <param id="0" name="ID/Class">&quot;#manabalanceethereum&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;mana&quot;,&quot;ethereum&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="902908294879302" type="UI">
+                            <param id="0" name="ID/Class">&quot;#manabalancepolygon&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;mana&quot;,&quot;polygon&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="667042891986783" type="UI">
+                            <param id="0" name="ID/Class">&quot;#manabalancexdai&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;mana&quot;,&quot;xdai&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="136677751849137" type="System">
+                            <param id="0" name="Seconds">dt</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="398529125668779" type="UI">
+                            <param id="0" name="ID/Class">&quot;#sandbalancetotal&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;sand&quot;,&quot;total&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="746119845292986" type="System">
+                            <param id="0" name="Seconds">dt</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="304288967422260" type="UI">
+                            <param id="0" name="ID/Class">&quot;#sandbalanceethereum&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;sand&quot;,&quot;ethereum&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="859417043439094" type="UI">
+                            <param id="0" name="ID/Class">&quot;#sandbalancepolygon&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;sand&quot;,&quot;polygon&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action disabled="1" id="24" name="Get elements" sid="869111519850038" type="UI">
+                            <param id="0" name="ID/Class">&quot;#sandbalancexdai&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;sand&quot;,&quot;xdai&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="767567780936150" type="System">
+                            <param id="0" name="Seconds">dt</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="445583642756387" type="UI">
+                            <param id="0" name="ID/Class">&quot;#daibalancetotal&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;dai&quot;,&quot;total&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="946002571643343" type="System">
+                            <param id="0" name="Seconds">dt</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="406058525551156" type="UI">
+                            <param id="0" name="ID/Class">&quot;#daibalanceethereum&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;dai&quot;,&quot;ethereum&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="816479621385225" type="UI">
+                            <param id="0" name="ID/Class">&quot;#daibalancepolygon&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;dai&quot;,&quot;polygon&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="714722221677758" type="UI">
+                            <param id="0" name="ID/Class">&quot;#daibalancexdai&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;dai&quot;,&quot;xdai&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="569362059209137" type="System">
+                            <param id="0" name="Seconds">dt</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="621088504910337" type="UI">
+                            <param id="0" name="ID/Class">&quot;#gnobalancetotal&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;gno&quot;,&quot;total&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="754048067075124" type="System">
+                            <param id="0" name="Seconds">dt</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="448369586358012" type="UI">
+                            <param id="0" name="ID/Class">&quot;#gnobalanceethereum&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;gno&quot;,&quot;ethereum&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="606350560280009" type="UI">
+                            <param id="0" name="ID/Class">&quot;#gnobalancepolygon&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;gno&quot;,&quot;polygon&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="512257838419180" type="UI">
+                            <param id="0" name="ID/Class">&quot;#gnobalancexdai&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;gno&quot;,&quot;xdai&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="264147057329778" type="System">
+                            <param id="0" name="Seconds">dt</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="726500944570851" type="UI">
+                            <param id="0" name="ID/Class">&quot;#maticbalancetotal&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;matic&quot;,&quot;total&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="169225358887456" type="System">
+                            <param id="0" name="Seconds">dt</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="960281884449246" type="UI">
+                            <param id="0" name="ID/Class">&quot;#maticbalanceethereum&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;matic&quot;,&quot;ethereum&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="804504072823597" type="UI">
+                            <param id="0" name="ID/Class">&quot;#maticbalancepolygon&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;matic&quot;,&quot;polygon&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="283057085519422" type="UI">
+                            <param id="0" name="ID/Class">&quot;#maticbalancexdai&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;matic&quot;,&quot;xdai&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="416635971002940" type="System">
+                            <param id="0" name="Seconds">dt</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="687640907133264" type="UI">
+                            <param id="0" name="ID/Class">&quot;#slpbalancetotal&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;slp&quot;,&quot;total&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="300424105912206" type="System">
+                            <param id="0" name="Seconds">dt</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="960151599679877" type="UI">
+                            <param id="0" name="ID/Class">&quot;#slpbalanceethereum&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;slp&quot;,&quot;ethereum&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action disabled="1" id="24" name="Get elements" sid="875040363414796" type="UI">
+                            <param id="0" name="ID/Class">&quot;#slpbalancepolygon&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;slp&quot;,&quot;polygon&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action disabled="1" id="24" name="Get elements" sid="117243551010625" type="UI">
+                            <param id="0" name="ID/Class">&quot;#slpbalancexdai&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;slp&quot;,&quot;xdai&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="298764367943172" type="System">
+                            <param id="0" name="Seconds">dt</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="348396409729460" type="UI">
+                            <param id="0" name="ID/Class">&quot;#axsbalancetotal&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;axs&quot;,&quot;total&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="879179011516900" type="System">
+                            <param id="0" name="Seconds">dt</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="599964864068133" type="UI">
+                            <param id="0" name="ID/Class">&quot;#axsbalanceethereum&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;axs&quot;,&quot;ethereum&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action disabled="1" id="24" name="Get elements" sid="283527973486913" type="UI">
+                            <param id="0" name="ID/Class">&quot;#axsbalancepolygon&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;axs&quot;,&quot;polygon&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action disabled="1" id="24" name="Get elements" sid="809059666880094" type="UI">
+                            <param id="0" name="ID/Class">&quot;#axsbalancexdai&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;axs&quot;,&quot;xdai&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="468746400820337" type="System">
+                            <param id="0" name="Seconds">dt</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="158815406796325" type="UI">
+                            <param id="0" name="ID/Class">&quot;#usdcbalancetotal&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;usdc&quot;,&quot;total&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="221062933316291" type="System">
+                            <param id="0" name="Seconds">dt</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="453564365830843" type="UI">
+                            <param id="0" name="ID/Class">&quot;#usdcbalanceethereum&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;usdc&quot;,&quot;ethereum&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="415449431271339" type="UI">
+                            <param id="0" name="ID/Class">&quot;#usdcbalancepolygon&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;usdc&quot;,&quot;polygon&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="958229250445390" type="UI">
+                            <param id="0" name="ID/Class">&quot;#usdcbalancexdai&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;usdc&quot;,&quot;xdai&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
         </event-block>
         <event-block sid="620604282440255">
             <conditions>
@@ -1782,6 +2089,28 @@
                             <actions>
                                 <action id="25" name="Run file" sid="837708817829031" type="Electron">
                                     <param id="0" name="Path">&quot;cinnamon-settings&quot;</param>
+                                    <param id="1" name="Parameters">&quot;&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="386631716879449">
+                    <conditions>
+                        <condition id="3" name="On C2 Function" sid="915373767501212" type="UI" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="347689598543849">
+                            <conditions>
+                                <condition id="4" name="Compare C2 Function" sid="719790540816982" type="UI">
+                                    <param id="0" name="C2">&quot;openframe&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="25" name="Run file" sid="359792140323619" type="Electron">
+                                    <param id="0" name="Path">&quot;frame&quot;</param>
                                     <param id="1" name="Parameters">&quot;&quot;</param>
                                 </action>
                             </actions>

@@ -158,5 +158,15 @@
         <file name="noderequire.js" />
         <file name="eth-diamond-glyph.png" />
         <file name="twitter-logo-black.svg" />
+        <file name="manatoken.svg" />
+        <file name="ethtoken.svg" />
+        <file name="sandtoken.svg" />
+        <file name="gametoken.png" />
+        <file name="platoken.png" />
+        <file name="axstoken.svg" />
+        <file name="daitoken.svg" />
+        <file name="gnotoken.svg" />
+        <file name="slptoken.svg" />
+        <file name="usdctoken.svg" />
     </files-folder>
 </c2project>

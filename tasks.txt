@@ -1,9 +1,8 @@
 Attempt 32:
 
-- display ENS address
+- display estimated amount of USD user haves
 
-- Profile > Wallet
-listed tokens: flof, pla, game, mana, sand, dai, stake, matic, slp, axs, usdc
+- display ENS address
 
 - store user's desktop environment
 
@@ -56,3 +55,6 @@ Attempt 38:
 - Bluetooth
 - Disks (opens app)
 - Printers (opens app)
+
+export fold:
+M:\Users\Daniell\Desktop\Floflis\Floflis Settings\c2export\
