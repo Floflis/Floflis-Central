@@ -1,7 +1,5 @@
 Attempt 32:
 
-- store and display ENS address
-
 - display gas (https://github.com/Floflis/meta/issues/117)
 
 - Detect if it is running from ISO (live)
