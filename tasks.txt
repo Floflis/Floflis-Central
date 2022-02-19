@@ -1,10 +1,8 @@
 Attempt 32:
 
-- display estimated amount of USD user haves
+- store and display ENS address
 
 - display gas (https://github.com/Floflis/meta/issues/117)
-
-- store and display ENS address
 
 - Detect if it is running from ISO (live)
 
@@ -45,6 +43,8 @@ Attempt 35:
 - Prevent conflicts between having different avatars on different DEs (by detecting the running DE)
 
 - Support KDE (avatars, settings app)
+
+- Taskbar settings tab: display label in Explore button, display labels in openned apps, auto-hide
 
 Attempt 36:
 

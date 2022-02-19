@@ -1506,6 +1506,28 @@
                             <param id="1" name="Set">tokens.Value(0,&quot;usdc&quot;,&quot;xdai&quot;)</param>
                             <param id="2" name="Append">&quot;&quot;</param>
                         </action>
+                        <action id="-16" name="Wait" sid="548613264456747" type="System">
+                            <param id="0" name="Seconds">dt</param>
+                        </action>
+                        <action disabled="1" id="24" name="Get elements" sid="573813491829946" type="UI">
+                            <param id="0" name="ID/Class">&quot;#totalusdbalance&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;usd&quot;,&quot;total&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action disabled="1" id="14" name="Log" sid="352670077520900" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;USD total balance:&quot; &amp; tokens.Value(0,&quot;usd&quot;,&quot;total&quot;)</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="988520893296201" type="UI">
+                            <param id="0" name="ID/Class">&quot;#totalusdbalance1&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;usd&quot;,&quot;total&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="875719343489741" type="UI">
+                            <param id="0" name="ID/Class">&quot;#totalusdbalance2&quot;</param>
+                            <param id="1" name="Set">tokens.Value(0,&quot;usd&quot;,&quot;total&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
