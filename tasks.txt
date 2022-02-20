@@ -14,6 +14,8 @@ Attempt 34:
 
 - Inventory: tabs: PoAPs, PFPs/Avatars, Backgrounds (soon, subscribe via Alerts), Pets, Paintings, Domains, Trophies, Lands (axie, decentraland, the sandbox, cryptovoxels), Metaverse Items (axie)
 
+https://etherscan.io/token/0x1b6b3026b7f5531086f3b8e6cc31c6564bbe2849#readContract
+
 - Inventory: parse and display every ExpansionPunks in "PFPs/Avatars" tab https://etherscan.io/readContract?m=normal&a=0x0d0167a823c6619d430b1a96ad85b888bcf97c37&v=0x0d0167a823c6619d430b1a96ad85b888bcf97c37#readCollapse26 https://etherscan.io/readContract?m=normal&a=0x0d0167a823c6619d430b1a96ad85b888bcf97c37&v=0x0d0167a823c6619d430b1a96ad85b888bcf97c37#readCollapse23
 ethereal contract call --contract=0x0d0167a823c6619d430b1a96ad85b888bcf97c37 --abi=universal-abi.json --call='walletOfOwner(0x38d45e8e519cb3c72f9f890dce4a5dbb0608f8a3)' --from=0xDDfC2e10702d8A781727A34D83B3bb3CA94a3E91
 
@@ -22,12 +24,14 @@ ethereal contract call --contract=0x0d0167a823c6619d430b1a96ad85b888bcf97c37 --a
 - Inventory: display amount of Axies in "Pets" tab https://etherscan.io/readContract?m=normal&a=0xf5b0a3efb8e8e4c201e2a935f110eaaf3ffecb8d&v=0xf5b0a3efb8e8e4c201e2a935f110eaaf3ffecb8d#readCollapse14
 ethereal contract call --contract=0xf5b0a3efb8e8e4c201e2a935f110eaaf3ffecb8d --abi=abi-axie.json --call='tokenOfOwnerByIndex(0xDDfC2e10702d8A781727A34D83B3bb3CA94a3E91,0)' --from=0xDDfC2e10702d8A781727A34D83B3bb3CA94a3E91
 - Bash increase count (index) and add to JSON (with increasing numbers) until it gets: "Failed to call tokenOfOwnerByIndex: execution reverted"
-- https://api.axie.technology/getaxies/142388
-- https://axie.zone/func/pixelate.php?axie_id=99228
+- https://api.axie.technology/getaxies/99228
+- https://axie.zone/func/pixelate.php?axie_id=99228 (50px)
 
 - Inventory: display Rockstars of EPNS (image, metadata, everything as its one NFT per person) in "Trophies" tab https://etherscan.io/readContract?m=normal&a=0x3f8c2152b79276b78315caf66ccf951780580a8a&v=0x3f8c2152b79276b78315caf66ccf951780580a8a#readCollapse11
 ethereal contract call --contract=0x3f8C2152b79276b78315CAF66cCF951780580A8a --abi=abi-rockstars_of_epns.json --call='tokenOfOwnerByIndex(0xDDfC2e10702d8A781727A34D83B3bb3CA94a3E91,0)' --from=0xDDfC2e10702d8A781727A34D83B3bb3CA94a3E91
-ethereal contract call --contract=0x3f8C2152b79276b78315CAF66cCF951780580A8a --abi=abi-rockstars_of_epns.json --call='balanceOf(0xDDfC2e10702d8A781727A34D83B3bb3CA94a3E91)' --from=0xDDfC2e10702d8A781727A34D83B3bb3CA94a3E91
+
+#https://blockscout.com/xdai/mainnet/address/0x22C1f6050E56d2876009903609a2cC3fEf83B415/transactions
+#ethereal contract call --connection=https://rpc.gnosischain.com/ --contract=0x22C1f6050E56d2876009903609a2cC3fEf83B415 --abi=universal-abi.json --call='tokenOfOwnerByIndex(0xDDfC2e10702d8A781727A34D83B3bb3CA94a3E91,0)' --from=0xDDfC2e10702d8A781727A34D83B3bb3CA94a3E91
 
 - Inventory: display amount of ENS domains in "Domains" tab https://etherscan.io/readContract?m=normal&a=0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85&v=0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85#readCollapse3
 
