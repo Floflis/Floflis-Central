@@ -12,6 +12,28 @@ Attempt 32:
 
 Attempt 34:
 
+- Inventory: tabs: PoAPs, PFPs/Avatars, Pets, Paintings, Domains, Trophies
+
+- Inventory: display amount of Axies in "Pets" tab https://etherscan.io/readContract?m=normal&a=0xf5b0a3efb8e8e4c201e2a935f110eaaf3ffecb8d&v=0xf5b0a3efb8e8e4c201e2a935f110eaaf3ffecb8d#readCollapse14
+ethereal contract call --contract=0xf5b0a3efb8e8e4c201e2a935f110eaaf3ffecb8d --abi=abi-axie.json --call='tokenOfOwnerByIndex(0xDDfC2e10702d8A781727A34D83B3bb3CA94a3E91,0)' --from=0xDDfC2e10702d8A781727A34D83B3bb3CA94a3E91
+Bash increase count (index) and add to JSON (with increasing numbers) until it gets: "Failed to call tokenOfOwnerByIndex: execution reverted"
+
+- Inventory: display amount of CryptoKitties in "Pets" tab https://etherscan.io/readContract?m=normal&a=0x06012c8cf97bead5deae237070f9587f8e7a266d&v=0x06012c8cf97bead5deae237070f9587f8e7a266d#readCollapse20
+
+- Inventory: display Rockstars of EPNS (image, metadata, everything as its one NFT per person) in "Trophies" tab https://etherscan.io/readContract?m=normal&a=0x3f8c2152b79276b78315caf66ccf951780580a8a&v=0x3f8c2152b79276b78315caf66ccf951780580a8a#readCollapse11
+ethereal contract call --contract=0x3f8C2152b79276b78315CAF66cCF951780580A8a --abi=abi-rockstars_of_epns.json --call='tokenOfOwnerByIndex(0xDDfC2e10702d8A781727A34D83B3bb3CA94a3E91,0)' --from=0xDDfC2e10702d8A781727A34D83B3bb3CA94a3E91
+
+- Inventory: display amount of ENS domains in "Domains" tab https://etherscan.io/readContract?m=normal&a=0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85&v=0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85#readCollapse3
+
+- Inventory: display amount of ExpansionPunks in "PFPs/Avatars" tab https://etherscan.io/readContract?m=normal&a=0x0d0167a823c6619d430b1a96ad85b888bcf97c37&v=0x0d0167a823c6619d430b1a96ad85b888bcf97c37#readCollapse3
+
+- Inventory: parse and display every ExpansionPunks in "PFPs/Avatars" tab https://etherscan.io/readContract?m=normal&a=0x0d0167a823c6619d430b1a96ad85b888bcf97c37&v=0x0d0167a823c6619d430b1a96ad85b888bcf97c37#readCollapse26 https://etherscan.io/readContract?m=normal&a=0x0d0167a823c6619d430b1a96ad85b888bcf97c37&v=0x0d0167a823c6619d430b1a96ad85b888bcf97c37#readCollapse23
+
+https://etherscan.io/token/0x1b6b3026b7f5531086f3b8e6cc31c6564bbe2849#readContract
+https://etherscan.io/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430?a=0xddfc2e10702d8a781727a34d83b3bb3ca94a3e91#readContract
+https://etherscan.io/token/0xa58b5224e2fd94020cb2837231b2b0e4247301a6?a=0xddfc2e10702d8a781727a34d83b3bb3ca94a3e91#readContract
+https://blockscout.com/xdai/mainnet/address/0x22C1f6050E56d2876009903609a2cC3fEf83B415/transactions
+
 - Home tab: button to enter user profile
 
 - click to open user's Twitter profile (Firedoge)
