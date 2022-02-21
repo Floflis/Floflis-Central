@@ -12,9 +12,10 @@ Attempt 32:
 
 Attempt 34:
 
-- Inventory: tabs: PoAPs, PFPs/Avatars, Backgrounds (soon, subscribe via Alerts), Pets, Paintings, Domains, Trophies, Lands (axie, decentraland, the sandbox, cryptovoxels), Metaverse Items (axie)
+- Inventory: tabs: PoAPs, PFPs/Avatars, Backgrounds (soon, subscribe via Alerts), Pets, Paintings, Domains, Trophies, (Metaverse Stuff: Lands (axie, decentraland, the sandbox, cryptovoxels), Items (axie), Wearables (Cryptovoxels, Decentraland))
 
 https://etherscan.io/token/0x1b6b3026b7f5531086f3b8e6cc31c6564bbe2849#readContract
+tokenURI
 
 - Inventory: parse and display every ExpansionPunks in "PFPs/Avatars" tab https://etherscan.io/readContract?m=normal&a=0x0d0167a823c6619d430b1a96ad85b888bcf97c37&v=0x0d0167a823c6619d430b1a96ad85b888bcf97c37#readCollapse26 https://etherscan.io/readContract?m=normal&a=0x0d0167a823c6619d430b1a96ad85b888bcf97c37&v=0x0d0167a823c6619d430b1a96ad85b888bcf97c37#readCollapse23
 ethereal contract call --contract=0x0d0167a823c6619d430b1a96ad85b888bcf97c37 --abi=universal-abi.json --call='walletOfOwner(0x38d45e8e519cb3c72f9f890dce4a5dbb0608f8a3)' --from=0xDDfC2e10702d8A781727A34D83B3bb3CA94a3E91 (get every item before spaces)
@@ -30,6 +31,10 @@ ethereal contract call --contract=0x0d0167a823c6619d430b1a96ad85b888bcf97c37 --a
 - Inventory: display amount of ENS domains in "Domains" tab https://etherscan.io/readContract?m=normal&a=0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85&v=0x57f1887a8bf19b14fc0df6fd9b2acc9af147ea85#readCollapse3
 
 - Inventory: display amount of CryptoKitties in "Pets" tab https://etherscan.io/readContract?m=normal&a=0x06012c8cf97bead5deae237070f9587f8e7a266d&v=0x06012c8cf97bead5deae237070f9587f8e7a266d#readCollapse20
+
+ERC-1155 which needs better understanding:
+- Rarible https://etherscan.io/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430
+- Cryptovoxel Wearables https://etherscan.io/token/0xa58b5224e2fd94020cb2837231b2b0e4247301a6
 
 
 - Home tab: button to enter user profile
