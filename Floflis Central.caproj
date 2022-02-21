@@ -87,6 +87,9 @@
         <object-type global="1" name="user" sid="857050701816113">
             <plugin id="JSON" />
         </object-type>
+        <object-type global="1" name="nfts" sid="971080275345571">
+            <plugin id="JSON" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>

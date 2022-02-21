@@ -75,6 +75,7 @@
         <instance type="tokens" uid="10" />
         <instance type="personalization" uid="11" />
         <instance type="user" uid="12" />
+        <instance type="nfts" uid="13" />
     </nonworld-instances>
     <effects />
 </c2layout>

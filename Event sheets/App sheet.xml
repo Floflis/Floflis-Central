@@ -102,6 +102,9 @@
                 <action id="17" name="Execute Javascript" sid="225424929564022" type="Browser">
                     <param id="0" name="Javascript">&quot;const{exec}=require(&apos;child_process&apos;);exec(`cd /1/apps/central/scripts &amp;&amp; sh ./ensname.sh`,(error,stdout,stderr)=&gt;{if(error){console.log(`error:${error.message}`);return}if(stderr){console.log(`stderr:${stderr}`);return}console.log(`${stdout}`)});&quot;</param>
                 </action>
+                <action id="17" name="Execute Javascript" sid="822172955218735" type="Browser">
+                    <param id="0" name="Javascript">&quot;const{exec}=require(&apos;child_process&apos;);exec(`cd /1/apps/central/scripts &amp;&amp; sh ./nfts-parse.sh`,(error,stdout,stderr)=&gt;{if(error){console.log(`error:${error.message}`);return}if(stderr){console.log(`stderr:${stderr}`);return}console.log(`${stdout}`)});&quot;</param>
+                </action>
             </actions>
         </event-block>
         <event-block disabled="1" sid="377943227193033">
@@ -847,6 +850,28 @@
                     <param id="1" name="Set">tokens.Value(0,&quot;flof&quot;,&quot;xdai&quot;)</param>
                     <param id="2" name="Append">&quot;&quot;</param>
                 </action>
+                <action id="-16" name="Wait" sid="809513348874554" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action id="9" name="Read" sid="478581351023082" type="Electron">
+                    <param id="0" name="Tag">&quot;nftsjsonread&quot;</param>
+                    <param id="1" name="Path">&quot;/1/config/nfts.json&quot;</param>
+                    <param id="2" name="Encoding">&quot;utf8&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="523643497727133">
+            <conditions>
+                <condition id="3" name="On read success" sid="532548628195294" type="Electron">
+                    <param id="0" name="Tag">&quot;nftsjsonread&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="60" name="LoadJSON" sid="841205187050303" type="nfts">
+                    <param id="0" name="JSON">Electron.LastReadAsync</param>
+                    <param id="1" name="Reference point">0</param>
+                    <param id="2" name="Key {n}"></param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="904525007699867">
@@ -1540,6 +1565,12 @@
                             <param id="2" name="Append">&quot;&quot;</param>
                         </action>
                     </actions>
+                </event-block>
+                <event-block sid="961381459149222">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="675936472581467" type="System" />
+                    </conditions>
+                    <actions />
                 </event-block>
             </sub-events>
         </event-block>
