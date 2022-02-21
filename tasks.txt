@@ -1,8 +1,12 @@
 Attempt 32:
 
-- Detect if it is running from ISO (live)
+- Profile tab: remove "Estimated total USD you hold" from card
+
+- init script (installs shared libs, creates c2export and its files, clones Central (HTML) and scripts)
 
 - If Cinnamon avatar isn't found, display generic
+
+- Detect if it is running from ISO (live)
 
 - if first use, require user to read Terms of Use (can be removed of token distribution according to internal criteria. But existing FLOF tokens you own can't be taken; they're yours)
 
