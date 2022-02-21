@@ -12,7 +12,7 @@ Attempt 32:
 
 Attempt 34:
 
-- Inventory: tabs: PoAPs, PFPs/Avatars, Backgrounds (soon, subscribe via Alerts), Pets, Paintings, Domains, Trophies, (Metaverse Stuff: Lands (axie, decentraland, the sandbox, cryptovoxels), Items (axie), Wearables (Cryptovoxels, Decentraland))
+- Inventory: tabs: PoAPs, Trophies, PFPs/Avatars, Backgrounds (soon, subscribe via Alerts), Pets, Paintings, Domains, (Metaverse Stuff: Lands (axie, decentraland, the sandbox, cryptovoxels), Items (axie), Wearables (Cryptovoxels, Decentraland))
 
 https://etherscan.io/token/0x1b6b3026b7f5531086f3b8e6cc31c6564bbe2849#readContract
 tokenURI
