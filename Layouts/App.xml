@@ -76,6 +76,7 @@
         <instance type="personalization" uid="11" />
         <instance type="user" uid="12" />
         <instance type="nfts" uid="13" />
+        <instance type="bashc2communication_ethgas" uid="14" />
     </nonworld-instances>
     <effects />
 </c2layout>

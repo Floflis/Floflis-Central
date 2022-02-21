@@ -48,6 +48,11 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder>
+        <object-folder name="bashc2-communication">
+            <object-type global="1" name="bashc2communication_ethgas" sid="909341559726196">
+                <plugin id="JSON" />
+            </object-type>
+        </object-folder>
         <object-type name="UI" sid="538434545119300">
             <plugin id="HTML_iFrame" />
         </object-type>

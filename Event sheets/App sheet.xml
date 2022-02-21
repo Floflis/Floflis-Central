@@ -5,6 +5,7 @@
     <events>
         <variable constant="0" name="LoadedAbout" sid="270706131919194" static="0" type="number">0</variable>
         <variable constant="0" name="currentdialog" sid="203874915509332" static="0" type="text"></variable>
+        <variable constant="0" name="gasreadactive" sid="400535518659236" static="0" type="number">0</variable>
         <include>Common sheet</include>
         <event-block sid="806523564058118">
             <conditions>
@@ -85,6 +86,17 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block disabled="1" sid="618551588230551">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="593145192579196" type="System">
+                            <param id="0" name="Variable">gasreadactive</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="950140741817541" type="System" />
+                    </conditions>
+                    <actions />
+                </event-block>
             </sub-events>
         </event-block>
         <event-block sid="255062159241315">
@@ -112,6 +124,122 @@
                 <condition id="1" inverted="1" name="Is online" sid="581994521111980" type="Browser" />
             </conditions>
             <actions />
+        </event-block>
+        <event-block sid="965795065046493">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="329465682899556" type="System">
+                    <param id="0" name="Interval (seconds)">10.0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="17" name="Execute Javascript" sid="350985076510025" type="Browser">
+                    <param id="0" name="Javascript">&quot;const{exec}=require(&apos;child_process&apos;);exec(`cd /1/apps/central/scripts &amp;&amp; sh ./bashc2-communication_ethgas.sh`,(error,stdout,stderr)=&gt;{if(error){console.log(`error:${error.message}`);return}if(stderr){console.log(`stderr:${stderr}`);return}console.log(`${stdout}`)});&quot;</param>
+                </action>
+                <action disabled="1" id="-9" name="Set value" sid="875721304574110" type="System">
+                    <param id="0" name="Variable">gasreadactive</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="14" name="Log" sid="609865594548213" type="Browser">
+                    <param id="0" name="Type">0</param>
+                    <param id="1" name="Message">&quot;Pinging bashc2-communication_ethgas.sh!&quot;</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="766335418560517">
+                    <conditions>
+                        <condition id="6" name="Path exists" sid="222878700388035" type="Electron">
+                            <param id="0" name="Path">&quot;/tmp/bashc2-communication_ethgas.json&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Read" sid="467704471139177" type="Electron">
+                            <param id="0" name="Tag">&quot;bashc2ethgasjsonread&quot;</param>
+                            <param id="1" name="Path">&quot;/tmp/bashc2-communication_ethgas.json&quot;</param>
+                            <param id="2" name="Encoding">&quot;utf8&quot;</param>
+                        </action>
+                        <action id="14" name="Log" sid="736671083406102" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;Success in finding /tmp/bashc2-communication_ethgas.json&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="945711261194767">
+                    <conditions>
+                        <condition id="3" name="On read success" sid="570907091113659" type="Electron">
+                            <param id="0" name="Tag">&quot;bashc2ethgasjsonread&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="14" name="Log" sid="674445175670822" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;Success in reading bashc2-ethgasjsonread!&quot;</param>
+                        </action>
+                        <action id="55" name="Clear" sid="182024143243876" type="bashc2communication_ethgas">
+                            <param id="0" name="Reference point">0</param>
+                            <param id="1" name="Key {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="683047517593703" type="System">
+                            <param id="0" name="Seconds">dt</param>
+                        </action>
+                        <action id="60" name="LoadJSON" sid="126102745705653" type="bashc2communication_ethgas">
+                            <param id="0" name="JSON">Electron.LastReadAsync</param>
+                            <param id="1" name="Reference point">0</param>
+                            <param id="2" name="Key {n}"></param>
+                        </action>
+                        <action id="-16" name="Wait" sid="422883122008533" type="System">
+                            <param id="0" name="Seconds">dt</param>
+                        </action>
+                        <action disabled="1" id="24" name="Get elements" sid="188221132294285" type="UI">
+                            <param id="0" name="ID/Class">&quot;#ethgasheaderbadge&quot;</param>
+                            <param id="1" name="Set">&quot;&lt;span title=&quot;&quot;&quot; &amp;  bashc2communication_ethgas.Value(0,&quot;ethgas_oneline&quot;) &amp; &quot;&quot;&quot; class=&quot;&quot;badge blue&quot;&quot;&gt;&quot; &amp; &quot;&lt;img width=&quot;&quot;25px&quot;&quot; src=&quot;&quot;&quot; &amp; bashc2communication_ethgas.Value(0,&quot;ethgas_icon&quot;) &amp; &quot;&quot;&quot;&gt; &quot; &amp; bashc2communication_ethgas.Value(0,&quot;ethgas_gasno&quot;) &amp; &quot;&lt;/span&gt;&quot;</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="783695247999259" type="UI">
+                            <param id="0" name="ID/Class">&quot;#ethgasheaderbadge&quot;</param>
+                            <param id="1" name="Set">&quot;&lt;span&gt;Something&lt;/span&gt;&quot;</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="528233469249378">
+            <conditions>
+                <condition id="3" name="On read success" sid="262224863705167" type="Electron">
+                    <param id="0" name="Tag">&quot;bashc2ethgasjsonread&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="14" name="Log" sid="210621105114361" type="Browser">
+                    <param id="0" name="Type">0</param>
+                    <param id="1" name="Message">&quot;Success in reading bashc2-ethgasjsonread!&quot;</param>
+                </action>
+                <action id="55" name="Clear" sid="273859424178949" type="bashc2communication_ethgas">
+                    <param id="0" name="Reference point">0</param>
+                    <param id="1" name="Key {n}"></param>
+                </action>
+                <action id="-16" name="Wait" sid="536205293083229" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action id="60" name="LoadJSON" sid="247547770363311" type="bashc2communication_ethgas">
+                    <param id="0" name="JSON">Electron.LastReadAsync</param>
+                    <param id="1" name="Reference point">0</param>
+                    <param id="2" name="Key {n}"></param>
+                </action>
+                <action id="-16" name="Wait" sid="689565705399469" type="System">
+                    <param id="0" name="Seconds">dt</param>
+                </action>
+                <action id="24" name="Get elements" sid="356140903801265" type="UI">
+                    <param id="0" name="ID/Class">&quot;#ethgasheaderbadge&quot;</param>
+                    <param id="1" name="Set">&quot;&lt;span title=&quot;&quot;&quot; &amp;  bashc2communication_ethgas.Value(0,&quot;ethgas_oneline&quot;) &amp; &quot;&quot;&quot; class=&quot;&quot;badge blue&quot;&quot;&gt;&quot; &amp; &quot;&lt;img width=&quot;&quot;25px&quot;&quot; src=&quot;&quot;&quot; &amp; bashc2communication_ethgas.Value(0,&quot;ethgas_icon&quot;) &amp; &quot;&quot;&quot;&gt; &quot; &amp; bashc2communication_ethgas.Value(0,&quot;ethgas_gasno&quot;) &amp; &quot;&lt;/span&gt;&quot;</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action disabled="1" id="24" name="Get elements" sid="119912543946162" type="UI">
+                    <param id="0" name="ID/Class">&quot;#ethgasheaderbadge&quot;</param>
+                    <param id="1" name="Set">&quot;&lt;span&gt;Something&lt;/span&gt;&quot;</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+            </actions>
         </event-block>
         <event-block sid="287814634929795">
             <conditions>
@@ -1221,7 +1349,7 @@
                 </action>
                 <action id="24" name="Get elements" sid="571331910766126" type="UI">
                     <param id="0" name="ID/Class">&quot;#usrpic&quot;</param>
-                    <param id="1" name="Set"> &quot;&lt;img onclick=C2(&quot;&quot;userwindow-show&quot;&quot;); width=&quot;&quot;150px&apos;&quot;&quot; style=&quot;&quot;border-radius:50%&quot;&quot; src=&quot;&quot;file://&quot; &amp; &quot;/home/&quot; &amp; Browser.ExecJS(&quot;username.sync()&quot;) &amp; &quot;/.face&quot; &amp; &quot;&quot;&quot; title=&quot;&quot;&quot; &amp; &quot;Click to change &quot; &amp; Browser.ExecJS(&quot;username.sync()&quot;) &amp; &quot;&apos;s avatar, password, name, etc.&quot; &amp; &quot;&quot;&quot; class=&quot;&quot;linkish&quot;&quot;/&gt;&quot;</param>
+                    <param id="1" name="Set">&quot;&lt;img onclick=C2(&quot;&quot;userwindow-show&quot;&quot;); width=&quot;&quot;150px&apos;&quot;&quot; style=&quot;&quot;border-radius:50%&quot;&quot; src=&quot;&quot;file://&quot; &amp; &quot;/home/&quot; &amp; Browser.ExecJS(&quot;username.sync()&quot;) &amp; &quot;/.face&quot; &amp; &quot;&quot;&quot; title=&quot;&quot;&quot; &amp; &quot;Click to change &quot; &amp; Browser.ExecJS(&quot;username.sync()&quot;) &amp; &quot;&apos;s avatar, password, name, etc.&quot; &amp; &quot;&quot;&quot; class=&quot;&quot;linkish&quot;&quot;/&gt;&quot;</param>
                     <param id="2" name="Append">&quot;&quot;</param>
                 </action>
                 <action id="-16" name="Wait" sid="161624167635491" type="System">
