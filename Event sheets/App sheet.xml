@@ -1706,12 +1706,12 @@
                         </action>
                         <action id="24" name="Get elements" sid="887979567904060" type="UI">
                             <param id="0" name="ID/Class">&quot;#badgecount_inventory-trophies&quot;</param>
-                            <param id="1" name="Set">nfts.Value(0,&quot;rockstarsofepns&quot;,&quot;balance&quot;) + 0</param>
+                            <param id="1" name="Set">nfts.Value(0,&quot;rockstarsofepns&quot;,&quot;balance&quot;)+0</param>
                             <param id="2" name="Append">&quot;&quot;</param>
                         </action>
                         <action id="24" name="Get elements" sid="449647910149845" type="UI">
                             <param id="0" name="ID/Class">&quot;#badgecount_inventory-avatars&quot;</param>
-                            <param id="1" name="Set">nfts.Value(0,&quot;expansionpunks&quot;,&quot;balance&quot;) + 0</param>
+                            <param id="1" name="Set">nfts.Value(0,&quot;expansionpunks&quot;,&quot;balance&quot;)+0</param>
                             <param id="2" name="Append">&quot;&quot;</param>
                         </action>
                         <action id="24" name="Get elements" sid="604197697784766" type="UI">
@@ -1746,7 +1746,7 @@
                         </action>
                         <action id="24" name="Get elements" sid="216464421332953" type="UI">
                             <param id="0" name="ID/Class">&quot;#badgecount_inventory-pets&quot;</param>
-                            <param id="1" name="Set">nfts.Value(0,&quot;axiepet&quot;,&quot;balance&quot;) + nfts.Value(0,&quot;cryptokitties&quot;,&quot;balance&quot;)</param>
+                            <param id="1" name="Set">nfts.Value(0,&quot;axiepet&quot;,&quot;balance&quot;)+nfts.Value(0,&quot;cryptokitties&quot;,&quot;balance&quot;)</param>
                             <param id="2" name="Append">&quot;&quot;</param>
                         </action>
                         <action disabled="1" id="24" name="Get elements" sid="661638032389748" type="UI">
@@ -1761,7 +1761,7 @@
                         </action>
                         <action id="24" name="Get elements" sid="987955392515982" type="UI">
                             <param id="0" name="ID/Class">&quot;#badgecount_inventory-metaversestuff&quot;</param>
-                            <param id="1" name="Set">nfts.Value(0,&quot;danimesqart&quot;,&quot;balance&quot;) + nfts.Value(0,&quot;axiepet&quot;,&quot;balance&quot;) + nfts.Value(0,&quot;cryptokitties&quot;,&quot;balance&quot;)</param>
+                            <param id="1" name="Set">nfts.Value(0,&quot;danimesqart&quot;,&quot;balance&quot;)+nfts.Value(0,&quot;axiepet&quot;,&quot;balance&quot;)+nfts.Value(0,&quot;cryptokitties&quot;,&quot;balance&quot;)</param>
                             <param id="2" name="Append">&quot;&quot;</param>
                         </action>
                     </actions>
