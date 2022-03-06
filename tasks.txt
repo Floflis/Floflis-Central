@@ -1,6 +1,12 @@
 Attempt 32:
 
+- Build from source (Floflis Packager, c2export and its Central and scripts)
+
 - Profile tab: remove "Estimated total USD you hold" from card
+
+- Display the type of Trophies and individual count
+- Display the type of Paintings and individual count
+- Display the type of Pets and individual count
 
 - init script (installs shared libs, creates c2export and its files, clones Central (HTML) and scripts)
 
@@ -14,6 +20,15 @@ Attempt 32:
 
 Attempt 34:
 
+- Display estimated total USD on every token count
+
+- "Copy to clipboard" button at ETH address and ENS name
+
+- Inventory: display amount of Axies in "Pets" tab https://etherscan.io/readContract?m=normal&a=0xf5b0a3efb8e8e4c201e2a935f110eaaf3ffecb8d&v=0xf5b0a3efb8e8e4c201e2a935f110eaaf3ffecb8d#readCollapse14
+- https://api.axie.technology/getaxies/99228
+- https://axie.zone/func/pixelate.php?axie_id=99228 (50px)
+ethereal contract call --contract=0xf5b0a3efb8e8e4c201e2a935f110eaaf3ffecb8d --abi=abi-axie.json --call='tokenURI(142388)' --from=0xDDfC2e10702d8A781727A34D83B3bb3CA94a3E91
+
 - Inventory: tabs: Backgrounds (soon, subscribe via Alerts), (Metaverse Stuff: Lands (axie, decentraland, the sandbox, cryptovoxels), Items (axie), Paintings, Wearables (Cryptovoxels, Decentraland), Pets)
 
 https://etherscan.io/token/0x1b6b3026b7f5531086f3b8e6cc31c6564bbe2849#readContract
@@ -23,10 +38,6 @@ tokenURI
 ethereal contract call --contract=0x0d0167a823c6619d430b1a96ad85b888bcf97c37 --abi=universal-abi.json --call='walletOfOwner(0x38d45e8e519cb3c72f9f890dce4a5dbb0608f8a3)' --from=0xDDfC2e10702d8A781727A34D83B3bb3CA94a3E91 (get every item before spaces)
 
 - Inventory: display amount of ExpansionPunks in "PFPs/Avatars" tab https://etherscan.io/readContract?m=normal&a=0x0d0167a823c6619d430b1a96ad85b888bcf97c37&v=0x0d0167a823c6619d430b1a96ad85b888bcf97c37#readCollapse3
-
-- Inventory: display amount of Axies in "Pets" tab https://etherscan.io/readContract?m=normal&a=0xf5b0a3efb8e8e4c201e2a935f110eaaf3ffecb8d&v=0xf5b0a3efb8e8e4c201e2a935f110eaaf3ffecb8d#readCollapse14
-- https://api.axie.technology/getaxies/99228
-- https://axie.zone/func/pixelate.php?axie_id=99228 (50px)
 
 - Inventory: display Rockstars of EPNS (image, metadata, everything as its one NFT per person) in "Trophies" tab https://etherscan.io/readContract?m=normal&a=0x3f8c2152b79276b78315caf66ccf951780580a8a&v=0x3f8c2152b79276b78315caf66ccf951780580a8a#readCollapse11
 
