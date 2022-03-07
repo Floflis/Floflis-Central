@@ -20,6 +20,11 @@ Attempt 32:
 
 Attempt 34:
 
+- bashc2-communication_ethgas.sh on its own folder
+- scripts will use external functions (tokenbalance-others.sh, nfts-parse.sh) in their own folders (include tokenbalance.sh)
+
+- independence for fullname.sh
+
 - Display estimated total USD on every token count
 
 - "Copy to clipboard" button at ETH address and ENS name
