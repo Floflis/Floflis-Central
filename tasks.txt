@@ -10,7 +10,7 @@ Attempt 32:
 
 - init script (installs shared libs, creates c2export and its files, clones Central (HTML) and scripts)
 
-- If Cinnamon avatar isn't found, display generic
+- If Cinnamon avatar isn't found, display generic (/media/daniell/UBUNTU1/avatar.png)
 
 - Detect if it is running from ISO (live)
 
