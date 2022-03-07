@@ -1024,10 +1024,6 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="298241645686882">
-            <conditions />
-            <actions />
-        </event-block>
         <event-block disabled="1" sid="393106811717467">
             <conditions>
                 <condition id="0" name="On completed" sid="183872505176367" type="AJAX">
@@ -1084,14 +1080,6 @@
                         </action>
                     </actions>
                 </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="654890099669215">
-            <conditions>
-                <condition id="3" name="On C2 Function" sid="357538067965898" type="UI" />
-            </conditions>
-            <actions />
-            <sub-events>
                 <event-block sid="830438585205710">
                     <conditions>
                         <condition id="4" name="Compare C2 Function" sid="189243554386137" type="UI">
@@ -1107,14 +1095,6 @@
                         </action>
                     </actions>
                 </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="468427571242796">
-            <conditions>
-                <condition id="3" name="On C2 Function" sid="354452744149385" type="UI" />
-            </conditions>
-            <actions />
-            <sub-events>
                 <event-block sid="386860786912996">
                     <conditions>
                         <condition id="4" name="Compare C2 Function" sid="984710419735660" type="UI">
@@ -1130,14 +1110,6 @@
                         </action>
                     </actions>
                 </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="881038938035709">
-            <conditions>
-                <condition id="3" name="On C2 Function" sid="599378927953557" type="UI" />
-            </conditions>
-            <actions />
-            <sub-events>
                 <event-block sid="891491303707848">
                     <conditions>
                         <condition id="4" name="Compare C2 Function" sid="345816259372814" type="UI">
@@ -1153,14 +1125,6 @@
                         </action>
                     </actions>
                 </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="536490077227212">
-            <conditions>
-                <condition id="3" name="On C2 Function" sid="729844925882283" type="UI" />
-            </conditions>
-            <actions />
-            <sub-events>
                 <event-block sid="221169535228367">
                     <conditions>
                         <condition id="4" name="Compare C2 Function" sid="158969982352662" type="UI">
@@ -1176,14 +1140,6 @@
                         </action>
                     </actions>
                 </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="385270924200990">
-            <conditions>
-                <condition id="3" name="On C2 Function" sid="445277239234498" type="UI" />
-            </conditions>
-            <actions />
-            <sub-events>
                 <event-block sid="440358694717458">
                     <conditions>
                         <condition id="4" name="Compare C2 Function" sid="537679178620923" type="UI">
@@ -2237,14 +2193,6 @@
                         </action>
                     </actions>
                 </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="181163129663691">
-            <conditions>
-                <condition id="3" name="On C2 Function" sid="946586706963767" type="UI" />
-            </conditions>
-            <actions />
-            <sub-events>
                 <event-block sid="221336749855364">
                     <conditions>
                         <condition id="4" name="Compare C2 Function" sid="799969271262649" type="UI">
@@ -2329,14 +2277,6 @@
                                 </action>
                             </actions>
                         </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="180708258338539">
-                    <conditions>
-                        <condition id="3" name="On C2 Function" sid="261023827841708" type="UI" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
                         <event-block sid="530659203806135">
                             <conditions>
                                 <condition id="4" name="Compare C2 Function" sid="362580387386151" type="UI">
@@ -2351,14 +2291,6 @@
                                 </action>
                             </actions>
                         </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="386631716879449">
-                    <conditions>
-                        <condition id="3" name="On C2 Function" sid="915373767501212" type="UI" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
                         <event-block sid="347689598543849">
                             <conditions>
                                 <condition id="4" name="Compare C2 Function" sid="719790540816982" type="UI">
@@ -2373,14 +2305,6 @@
                                 </action>
                             </actions>
                         </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block disabled="1" sid="807448542626919">
-                    <conditions>
-                        <condition id="3" name="On C2 Function" sid="527883734752782" type="UI" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
                         <event-block disabled="1" sid="615202482396701">
                             <conditions>
                                 <condition id="4" name="Compare C2 Function" sid="288805272310101" type="UI">
@@ -2395,14 +2319,6 @@
                                 </action>
                             </actions>
                         </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block disabled="1" sid="315473609370174">
-                    <conditions>
-                        <condition id="3" name="On C2 Function" sid="136445500235470" type="UI" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
                         <event-block disabled="1" sid="974148211037369">
                             <conditions>
                                 <condition id="4" name="Compare C2 Function" sid="843646738183899" type="UI">
@@ -2417,14 +2333,6 @@
                                 </action>
                             </actions>
                         </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block disabled="1" sid="433461710440198">
-                    <conditions>
-                        <condition id="3" name="On C2 Function" sid="530440561103249" type="UI" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
                         <event-block disabled="1" sid="725414017405398">
                             <conditions>
                                 <condition id="4" name="Compare C2 Function" sid="613570059636648" type="UI">
@@ -2439,14 +2347,6 @@
                                 </action>
                             </actions>
                         </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="572850744524659">
-                    <conditions>
-                        <condition id="3" name="On C2 Function" sid="343493298131687" type="UI" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
                         <event-block sid="354341141068307">
                             <conditions>
                                 <condition id="4" name="Compare C2 Function" sid="267999600665084" type="UI">
@@ -2461,14 +2361,6 @@
                                 </action>
                             </actions>
                         </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="364133926310986">
-                    <conditions>
-                        <condition id="3" name="On C2 Function" sid="427154642385017" type="UI" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
                         <event-block sid="676392863874980">
                             <conditions>
                                 <condition id="4" name="Compare C2 Function" sid="913655114238134" type="UI">
@@ -2483,14 +2375,6 @@
                                 </action>
                             </actions>
                         </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="745389231766425">
-                    <conditions>
-                        <condition id="3" name="On C2 Function" sid="116355356739380" type="UI" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
                         <event-block sid="434393309817634">
                             <conditions>
                                 <condition id="4" name="Compare C2 Function" sid="416992220963587" type="UI">
@@ -2505,14 +2389,6 @@
                                 </action>
                             </actions>
                         </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block disabled="1" sid="765055269291220">
-                    <conditions>
-                        <condition id="3" name="On C2 Function" sid="964733910273489" type="UI" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
                         <event-block disabled="1" sid="756810643324482">
                             <conditions>
                                 <condition id="4" name="Compare C2 Function" sid="662895385596816" type="UI">
@@ -2527,14 +2403,6 @@
                                 </action>
                             </actions>
                         </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block disabled="1" sid="255036555907568">
-                    <conditions>
-                        <condition id="3" name="On C2 Function" sid="296215466148326" type="UI" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
                         <event-block sid="383892473285239">
                             <conditions>
                                 <condition id="4" name="Compare C2 Function" sid="622930365667908" type="UI">
@@ -2549,14 +2417,6 @@
                                 </action>
                             </actions>
                         </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="563577752845818">
-                    <conditions>
-                        <condition id="3" name="On C2 Function" sid="846674015809667" type="UI" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
                         <event-block sid="636017748786680">
                             <conditions>
                                 <condition id="4" name="Compare C2 Function" sid="839167136859724" type="UI">
@@ -2571,14 +2431,6 @@
                                 </action>
                             </actions>
                         </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="220303086766250">
-                    <conditions>
-                        <condition id="3" name="On C2 Function" sid="881097237896208" type="UI" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
                         <event-block sid="477619907883337">
                             <conditions>
                                 <condition id="4" name="Compare C2 Function" sid="275100882919771" type="UI">
@@ -2593,14 +2445,6 @@
                                 </action>
                             </actions>
                         </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block disabled="1" sid="761172779312393">
-                    <conditions>
-                        <condition id="3" name="On C2 Function" sid="869340878908905" type="UI" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
                         <event-block disabled="1" sid="147155163518157">
                             <conditions>
                                 <condition id="4" name="Compare C2 Function" sid="729706064813719" type="UI">
@@ -2615,14 +2459,6 @@
                                 </action>
                             </actions>
                         </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="279064494438941">
-                    <conditions>
-                        <condition id="3" name="On C2 Function" sid="735474029738404" type="UI" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
                         <event-block sid="482704193135990">
                             <conditions>
                                 <condition id="4" name="Compare C2 Function" sid="572397994966774" type="UI">
@@ -2640,14 +2476,6 @@
                                 </action>
                             </actions>
                         </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="755310700863897">
-                    <conditions>
-                        <condition id="3" name="On C2 Function" sid="401960073452736" type="UI" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
                         <event-block sid="578426665022941">
                             <conditions>
                                 <condition id="4" name="Compare C2 Function" sid="136886645110427" type="UI">
@@ -2662,14 +2490,6 @@
                                 </action>
                             </actions>
                         </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="758538780889106">
-                    <conditions>
-                        <condition id="3" name="On C2 Function" sid="520533055060705" type="UI" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
                         <event-block sid="645642743078328">
                             <conditions>
                                 <condition id="4" name="Compare C2 Function" sid="407847612223402" type="UI">
@@ -2684,14 +2504,6 @@
                                 </action>
                             </actions>
                         </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="838454491973686">
-                    <conditions>
-                        <condition id="3" name="On C2 Function" sid="149037574413802" type="UI" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
                         <event-block sid="427476488480158">
                             <conditions>
                                 <condition id="4" name="Compare C2 Function" sid="296959169643107" type="UI">
@@ -2713,14 +2525,6 @@
                                 </action>
                             </actions>
                         </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="807415893818868">
-                    <conditions>
-                        <condition id="3" name="On C2 Function" sid="874746363221513" type="UI" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
                         <event-block sid="440601426927130">
                             <conditions>
                                 <condition id="4" name="Compare C2 Function" sid="955687571501163" type="UI">
@@ -2735,14 +2539,6 @@
                                 </action>
                             </actions>
                         </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="687744213603016">
-                    <conditions>
-                        <condition id="3" name="On C2 Function" sid="754765699339543" type="UI" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
                         <event-block sid="333076005321992">
                             <conditions>
                                 <condition id="4" name="Compare C2 Function" sid="583310031945656" type="UI">
@@ -2763,14 +2559,6 @@
                                 </action>
                             </actions>
                         </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="888513245005644">
-                    <conditions>
-                        <condition id="3" name="On C2 Function" sid="942541479202046" type="UI" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
                         <event-block sid="779749618507273">
                             <conditions>
                                 <condition id="4" name="Compare C2 Function" sid="891784094219233" type="UI">
@@ -2785,14 +2573,6 @@
                                 </action>
                             </actions>
                         </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="812156969012387">
-                    <conditions>
-                        <condition id="3" name="On C2 Function" sid="932383664503996" type="UI" />
-                    </conditions>
-                    <actions />
-                    <sub-events>
                         <event-block sid="651847536924562">
                             <conditions>
                                 <condition id="4" name="Compare C2 Function" sid="173364851590806" type="UI">
