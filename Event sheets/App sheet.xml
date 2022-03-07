@@ -1650,6 +1650,74 @@
                         </action>
                     </actions>
                 </event-block>
+                <variable constant="0" name="nftsValue0rockstarsofepnsbalance" sid="794333857569124" static="0" type="number">0</variable>
+                <variable constant="0" name="nftsValue0expansionpunksbalance" sid="689870517265902" static="0" type="number">0</variable>
+                <variable constant="0" name="nftsValue0axiepetbalance" sid="156842127520712" static="0" type="number">0</variable>
+                <variable constant="0" name="nftsValue0cryptokittiesbalance" sid="162679746883415" static="0" type="number">0</variable>
+                <variable constant="0" name="nftsValue0danimesqartbalance" sid="268249741010372" static="0" type="number">0</variable>
+                <variable constant="0" name="sumtrophies" sid="662226647004010" static="0" type="number">0</variable>
+                <variable constant="0" name="sumpfps" sid="724176902960722" static="0" type="number">0</variable>
+                <variable constant="0" name="sumpets" sid="458805655992338" static="0" type="number">0</variable>
+                <variable constant="0" name="summetaversestuff" sid="536476763398718" static="0" type="number">0</variable>
+                <event-block sid="363424903545081">
+                    <conditions>
+                        <condition id="-4" name="Trigger once while true" sid="288989771859338" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="213640921377845" type="System">
+                            <param id="0" name="Variable">nftsValue0rockstarsofepnsbalance</param>
+                            <param id="1" name="Value">nfts.Value(0,&quot;rockstarsofepns&quot;,&quot;balance&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="902332806685515" type="System">
+                            <param id="0" name="Variable">nftsValue0expansionpunksbalance</param>
+                            <param id="1" name="Value">nfts.Value(0,&quot;expansionpunks&quot;,&quot;balance&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="633688858956957" type="System">
+                            <param id="0" name="Variable">nftsValue0axiepetbalance</param>
+                            <param id="1" name="Value">nfts.Value(0,&quot;axiepet&quot;,&quot;balance&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="382273405547447" type="System">
+                            <param id="0" name="Variable">nftsValue0cryptokittiesbalance</param>
+                            <param id="1" name="Value">nfts.Value(0,&quot;cryptokitties&quot;,&quot;balance&quot;)</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="313596799478157" type="System">
+                            <param id="0" name="Variable">nftsValue0danimesqartbalance</param>
+                            <param id="1" name="Value">nfts.Value(0,&quot;danimesqart&quot;,&quot;balance&quot;)</param>
+                        </action>
+                        <action disabled="1" id="-9" name="Set value" sid="771173294869206" type="System">
+                            <param id="0" name="Variable">sumtrophies</param>
+                            <param id="1" name="Value">nftsValue0rockstarsofepnsbalance+0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="498981096176105" type="System">
+                            <param id="0" name="Variable">sumtrophies</param>
+                            <param id="1" name="Value">int(nftsValue0rockstarsofepnsbalance)+0</param>
+                        </action>
+                        <action disabled="1" id="-9" name="Set value" sid="703252494043904" type="System">
+                            <param id="0" name="Variable">sumpfps</param>
+                            <param id="1" name="Value">nftsValue0expansionpunksbalance+0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="803680803681547" type="System">
+                            <param id="0" name="Variable">sumpfps</param>
+                            <param id="1" name="Value">int(nftsValue0expansionpunksbalance)+0</param>
+                        </action>
+                        <action disabled="1" id="-9" name="Set value" sid="453825446674350" type="System">
+                            <param id="0" name="Variable">sumpets</param>
+                            <param id="1" name="Value">nftsValue0axiepetbalance+nftsValue0cryptokittiesbalance</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="635275889669568" type="System">
+                            <param id="0" name="Variable">sumpets</param>
+                            <param id="1" name="Value">int(nftsValue0axiepetbalance)+int(nftsValue0cryptokittiesbalance)</param>
+                        </action>
+                        <action disabled="1" id="-9" name="Set value" sid="660346626622027" type="System">
+                            <param id="0" name="Variable">summetaversestuff</param>
+                            <param id="1" name="Value">nftsValue0danimesqartbalance+sumpets</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="623726356999270" type="System">
+                            <param id="0" name="Variable">summetaversestuff</param>
+                            <param id="1" name="Value">int(nftsValue0danimesqartbalance)+int(sumpets)</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="961381459149222">
                     <conditions>
                         <condition id="-4" name="Trigger once while true" sid="675936472581467" type="System" />
@@ -1660,14 +1728,24 @@
                             <param id="1" name="Set">nfts.Value(0,&quot;poap&quot;,&quot;balance&quot;)</param>
                             <param id="2" name="Append">&quot;&quot;</param>
                         </action>
-                        <action id="24" name="Get elements" sid="887979567904060" type="UI">
+                        <action disabled="1" id="24" name="Get elements" sid="887979567904060" type="UI">
                             <param id="0" name="ID/Class">&quot;#badgecount_inventory-trophies&quot;</param>
-                            <param id="1" name="Set">nfts.Value(0,&quot;rockstarsofepns&quot;,&quot;balance&quot;)+0</param>
+                            <param id="1" name="Set">nftsValue0rockstarsofepnsbalance+0</param>
                             <param id="2" name="Append">&quot;&quot;</param>
                         </action>
-                        <action id="24" name="Get elements" sid="449647910149845" type="UI">
+                        <action id="24" name="Get elements" sid="163419179730367" type="UI">
+                            <param id="0" name="ID/Class">&quot;#badgecount_inventory-trophies&quot;</param>
+                            <param id="1" name="Set">sumtrophies</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action disabled="1" id="24" name="Get elements" sid="449647910149845" type="UI">
                             <param id="0" name="ID/Class">&quot;#badgecount_inventory-avatars&quot;</param>
-                            <param id="1" name="Set">nfts.Value(0,&quot;expansionpunks&quot;,&quot;balance&quot;)+0</param>
+                            <param id="1" name="Set">nftsValue0expansionpunksbalance+0</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="537811911283095" type="UI">
+                            <param id="0" name="ID/Class">&quot;#badgecount_inventory-avatars&quot;</param>
+                            <param id="1" name="Set">sumpfps</param>
                             <param id="2" name="Append">&quot;&quot;</param>
                         </action>
                         <action id="24" name="Get elements" sid="604197697784766" type="UI">
@@ -1700,24 +1778,24 @@
                             <param id="1" name="Set">&quot;0&quot;</param>
                             <param id="2" name="Append">&quot;&quot;</param>
                         </action>
-                        <action id="24" name="Get elements" sid="216464421332953" type="UI">
+                        <action disabled="1" id="24" name="Get elements" sid="216464421332953" type="UI">
                             <param id="0" name="ID/Class">&quot;#badgecount_inventory-pets&quot;</param>
-                            <param id="1" name="Set">nfts.Value(0,&quot;axiepet&quot;,&quot;balance&quot;)+nfts.Value(0,&quot;cryptokitties&quot;,&quot;balance&quot;)</param>
+                            <param id="1" name="Set">nftsValue0axiepetbalance+nftsValue0cryptokittiesbalance</param>
                             <param id="2" name="Append">&quot;&quot;</param>
                         </action>
-                        <action disabled="1" id="24" name="Get elements" sid="661638032389748" type="UI">
-                            <param id="0" name="ID/Class">&quot;#badgecount_inventory-metaversestuff&quot;</param>
-                            <param id="1" name="Set">&quot;0&quot;</param>
+                        <action id="24" name="Get elements" sid="588314053855826" type="UI">
+                            <param id="0" name="ID/Class">&quot;#badgecount_inventory-pets&quot;</param>
+                            <param id="1" name="Set">sumpets</param>
                             <param id="2" name="Append">&quot;&quot;</param>
                         </action>
-                        <action disabled="1" id="24" name="Get elements" sid="236856672394389" type="UI">
-                            <param id="0" name="ID/Class">&quot;#badgecount_inventory-metaversestuff&quot;</param>
-                            <param id="1" name="Set">nfts.Value(0,&quot;danimesqart&quot;,&quot;balance&quot;)</param>
-                            <param id="2" name="Append">&quot;&quot;</param>
-                        </action>
-                        <action id="24" name="Get elements" sid="987955392515982" type="UI">
+                        <action disabled="1" id="24" name="Get elements" sid="987955392515982" type="UI">
                             <param id="0" name="ID/Class">&quot;#badgecount_inventory-metaversestuff&quot;</param>
                             <param id="1" name="Set">nfts.Value(0,&quot;danimesqart&quot;,&quot;balance&quot;)+nfts.Value(0,&quot;axiepet&quot;,&quot;balance&quot;)+nfts.Value(0,&quot;cryptokitties&quot;,&quot;balance&quot;)</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="888151976993147" type="UI">
+                            <param id="0" name="ID/Class">&quot;#badgecount_inventory-metaversestuff&quot;</param>
+                            <param id="1" name="Set">summetaversestuff</param>
                             <param id="2" name="Append">&quot;&quot;</param>
                         </action>
                     </actions>
