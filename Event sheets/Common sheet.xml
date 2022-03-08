@@ -5,7 +5,7 @@
     <events>
         <comment>Defines if fullscreen is active or else.</comment>
         <variable constant="0" name="Fullscreen" sid="572591868848104" static="0" type="number">0</variable>
-        <event-group description="" sid="441320609743452" title="Keyboard shortcuts2">
+        <event-group description="" sid="441320609743452" title="Keyboard shortcuts">
             <sub-events>
                 <event-group description="" sid="575669606180813" title="F12">
                     <sub-events>
