@@ -1,6 +1,6 @@
 Attempt 32:
 
-- Build from source (Floflis Packager, c2export and its Central and scripts)
+- Build from source (Floflis Packager, c2export and its Central/HTML and scripts)
 
 - Profile tab: remove "Estimated total USD you hold" from card
 
@@ -20,7 +20,10 @@ Attempt 32:
 
 Attempt 34:
 
-- bashc2-communication_ethgas.sh on its own folder
+- tubby cats PFP
+
+- get rid of sh<>c2 json communication (bashc2-communication_ethgas.sh)
+
 - scripts will use external functions (tokenbalance-others.sh, nfts-parse.sh) in their own folders (include tokenbalance.sh)
 
 - independence for fullname.sh
@@ -110,5 +113,5 @@ Attempt 38:
 - Disks (opens app)
 - Printers (opens app)
 
-export fold:
-M:\Users\Daniell\Desktop\Floflis\Floflis Settings\c2export\
+v2:
+use https://docs.etherscan.io/getting-started/viewing-api-usage-statistics to get/display all tokens/NFTs/semifungibles
