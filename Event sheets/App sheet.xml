@@ -70,7 +70,7 @@
                 </action>
                 <action id="9" name="Read" sid="852171897768643" type="Electron">
                     <param id="0" name="Tag">&quot;init&quot;</param>
-                    <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/app.html&quot;</param>
+                    <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/HTML/app.html&quot;</param>
                     <param id="2" name="Encoding">&quot;utf8&quot;</param>
                 </action>
             </actions>
@@ -276,13 +276,13 @@
                         <event-block sid="594655322647805">
                             <conditions>
                                 <condition id="6" name="Path exists" sid="466845572524476" type="Electron">
-                                    <param id="0" name="Path">Electron.GetAppPath &amp; &quot;/Central/setup.json&quot;</param>
+                                    <param id="0" name="Path">Electron.GetAppPath &amp; &quot;/HTML/setup.json&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
                                 <action id="9" name="Read" sid="482585686794622" type="Electron">
                                     <param id="0" name="Tag">&quot;setup&quot;</param>
-                                    <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/setup/setup.html&quot;</param>
+                                    <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/HTML/setup/setup.html&quot;</param>
                                     <param id="2" name="Encoding">&quot;utf8&quot;</param>
                                 </action>
                                 <action disabled="1" id="19" name="Include Javascript file" sid="461679147832822" type="UI">
@@ -719,7 +719,7 @@
                 </action>
                 <action id="9" name="Read" sid="491998598005987" type="Electron">
                     <param id="0" name="Tag">&quot;home&quot;</param>
-                    <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/home.html&quot;</param>
+                    <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/HTML/home.html&quot;</param>
                     <param id="2" name="Encoding">&quot;utf8&quot;</param>
                 </action>
             </actions>
@@ -729,7 +729,7 @@
             <actions>
                 <action id="9" name="Read" sid="137306239782012" type="Electron">
                     <param id="0" name="Tag">&quot;home&quot;</param>
-                    <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/home.html&quot;</param>
+                    <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/HTML/home.html&quot;</param>
                     <param id="2" name="Encoding">&quot;utf8&quot;</param>
                 </action>
             </actions>
@@ -792,7 +792,7 @@
                 </action>
                 <action disabled="1" id="9" name="Read" sid="437110018315917" type="Electron">
                     <param id="0" name="Tag">&quot;sysinfo&quot;</param>
-                    <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/floflis.json&quot;</param>
+                    <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/HTML/floflis.json&quot;</param>
                     <param id="2" name="Encoding">&quot;utf8&quot;</param>
                 </action>
                 <action id="9" name="Read" sid="940414773713857" type="Electron">
@@ -805,12 +805,12 @@
                 </action>
                 <action id="9" name="Read" sid="952300222970365" type="Electron">
                     <param id="0" name="Tag">&quot;&quot;</param>
-                    <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/icon.png&quot;</param>
+                    <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/HTML/icon.png&quot;</param>
                     <param id="2" name="Encoding">&quot;base64&quot;</param>
                 </action>
                 <action id="0" name="Request URL" sid="151099340431140" type="AJAX">
                     <param id="0" name="Tag">&quot;iconajx&quot;</param>
-                    <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/Central/icon.png&quot;</param>
+                    <param id="1" name="URL">Electron.GetAppPath &amp; &quot;/HTML/icon.png&quot;</param>
                 </action>
                 <action id="24" name="Get elements" sid="489372006931318" type="UI">
                     <param id="0" name="ID/Class">&quot;#showusername&quot;</param>
@@ -1075,7 +1075,7 @@
                     <actions>
                         <action id="9" name="Read" sid="742725687656396" type="Electron">
                             <param id="0" name="Tag">&quot;profile&quot;</param>
-                            <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/profile.html&quot;</param>
+                            <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/HTML/profile.html&quot;</param>
                             <param id="2" name="Encoding">&quot;utf8&quot;</param>
                         </action>
                     </actions>
@@ -1090,7 +1090,7 @@
                     <actions>
                         <action id="9" name="Read" sid="283033050067706" type="Electron">
                             <param id="0" name="Tag">&quot;playwith&quot;</param>
-                            <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/playwith.html&quot;</param>
+                            <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/HTML/playwith.html&quot;</param>
                             <param id="2" name="Encoding">&quot;utf8&quot;</param>
                         </action>
                     </actions>
@@ -1105,7 +1105,7 @@
                     <actions>
                         <action id="9" name="Read" sid="453779234830753" type="Electron">
                             <param id="0" name="Tag">&quot;personalization&quot;</param>
-                            <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/personalization.html&quot;</param>
+                            <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/HTML/personalization.html&quot;</param>
                             <param id="2" name="Encoding">&quot;utf8&quot;</param>
                         </action>
                     </actions>
@@ -1120,7 +1120,7 @@
                     <actions>
                         <action id="9" name="Read" sid="148401893420264" type="Electron">
                             <param id="0" name="Tag">&quot;home&quot;</param>
-                            <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/home.html&quot;</param>
+                            <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/HTML/home.html&quot;</param>
                             <param id="2" name="Encoding">&quot;utf8&quot;</param>
                         </action>
                     </actions>
@@ -1135,7 +1135,7 @@
                     <actions>
                         <action id="9" name="Read" sid="654508956613230" type="Electron">
                             <param id="0" name="Tag">&quot;about&quot;</param>
-                            <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/about.html&quot;</param>
+                            <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/HTML/about.html&quot;</param>
                             <param id="2" name="Encoding">&quot;utf8&quot;</param>
                         </action>
                     </actions>
@@ -1153,7 +1153,7 @@
                         </action>
                         <action id="9" name="Read" sid="754763944426627" type="Electron">
                             <param id="0" name="Tag">&quot;about&quot;</param>
-                            <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/about.html&quot;</param>
+                            <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/HTML/about.html&quot;</param>
                             <param id="2" name="Encoding">&quot;utf8&quot;</param>
                         </action>
                     </actions>
@@ -1200,7 +1200,7 @@
                                 </action>
                                 <action id="9" name="Read" sid="481503823787932" type="Electron">
                                     <param id="0" name="Tag">&quot;profile&quot;</param>
-                                    <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/profile.html&quot;</param>
+                                    <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/HTML/profile.html&quot;</param>
                                     <param id="2" name="Encoding">&quot;utf8&quot;</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="358108426030513" type="System">
@@ -2266,7 +2266,7 @@
                     <actions>
                         <action id="9" name="Read" sid="175950542818577" type="Electron">
                             <param id="0" name="Tag">&quot;moresettings&quot;</param>
-                            <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/moresettings.html&quot;</param>
+                            <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/HTML/moresettings.html&quot;</param>
                             <param id="2" name="Encoding">&quot;utf8&quot;</param>
                         </action>
                     </actions>
@@ -2284,7 +2284,7 @@
                         </action>
                         <action id="9" name="Read" sid="699079803833537" type="Electron">
                             <param id="0" name="Tag">&quot;moresettings&quot;</param>
-                            <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/Central/moresettings.html&quot;</param>
+                            <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/HTML/moresettings.html&quot;</param>
                             <param id="2" name="Encoding">&quot;utf8&quot;</param>
                         </action>
                     </actions>

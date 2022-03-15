@@ -2,11 +2,11 @@
   "id": "central",
   "application": "app",
   "name": "Floflis Central",
-  "version": "8.3.22",
+  "version": "12.3.22",
   "description": "",
   "icon": "icon.png",
   "linux_icon": "",
-  "author": "floflis",
+  "author": "Floflis",
   "url": "index.html",
   "ime_default_softkey_bar": true,
   "launch_path": "/index.html",
@@ -25,7 +25,7 @@
   },
   "developer": {
     "name": "Floflis",
-    "url": "https://github.com/floflis"
+    "url": "https://github.com/Floflis"
   },
   "locales": {
     "en-US": {
@@ -39,6 +39,5 @@
   "default_locale": "en-US",
   "width": "700",
   "height": "450",
-  "default_locale": "en-US",
   "cursor": true
 }
