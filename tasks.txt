@@ -2,8 +2,6 @@ Attempt 32:
 
 - Build from source (Floflis Packager, c2export and its Central/HTML and scripts)
 
-- Profile tab: remove "Estimated total USD you hold" from card
-
 - Display the type of Trophies and individual count
 - Display the type of Paintings and individual count
 - Display the type of Pets and individual count
@@ -12,13 +10,15 @@ Attempt 32:
 
 - If Cinnamon avatar isn't found, display generic (/media/daniell/UBUNTU1/avatar.png)
 
-- Detect if it is running from ISO (live)
-
 - if first use, require user to read Terms of Use (can be removed of token distribution according to internal criteria. But existing FLOF tokens you own can't be taken; they're yours)
 
-- If user have no ETH address/fullname in user.json, display error (validation)
-
 Attempt 34:
+
+- Profile tab: remove "Estimated total USD you hold" from card
+
+- Detect if it is running from ISO (live)
+
+- If user have no ETH address/fullname in user.json, display error (validation)
 
 - tubby cats PFP
 
@@ -115,3 +115,5 @@ Attempt 38:
 
 v2:
 use https://docs.etherscan.io/getting-started/viewing-api-usage-statistics to get/display all tokens/NFTs/semifungibles
+
+G:\Users\Daniell\Desktop\Floflis\Floflis Settings\c2export\
