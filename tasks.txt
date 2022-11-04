@@ -1,5 +1,10 @@
 Attempt 32:
 
+- If Cinnamon avatar isn't found, display generic (/media/daniell/UBUNTU1/avatar.png)
+- If Cinnamon, disable the "Change lockscreen bg" (but show background on it) card and "Change both" button. On other DEs, tell it will be implemented
+
+- Put "SOON" at tabs such as Friends and Inventory
+
 - Build from source (Floflis Packager, c2export and its Central/HTML and scripts)
 
 - Display the type of Trophies and individual count
@@ -8,17 +13,17 @@ Attempt 32:
 
 - init script (installs shared libs, creates c2export and its files, clones Central (HTML) and scripts)
 
-- If Cinnamon avatar isn't found, display generic (/media/daniell/UBUNTU1/avatar.png)
-
 - if first use, require user to read Terms of Use (can be removed of token distribution according to internal criteria. But existing FLOF tokens you own can't be taken; they're yours)
 
 Attempt 34:
 
+- If no Internet, don't display 0 tokens if already non-zero, but tell balance outdated
+
 - Profile tab: remove "Estimated total USD you hold" from card
 
-- Detect if it is running from ISO (live)
-
 - If user have no ETH address/fullname in user.json, display error (validation)
+
+- Detect if it is running from ISO (live), and change features accordingly (remove user features)
 
 - tubby cats PFP
 
@@ -57,6 +62,9 @@ ERC-1155 which needs better understanding:
 - Rarible https://etherscan.io/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430
 - Cryptovoxel Wearables https://etherscan.io/token/0xa58b5224e2fd94020cb2837231b2b0e4247301a6
 
+- support for tubby toys and unisocks
+- support for foundation arts
+
 
 - Home tab: button to enter user profile
 
@@ -74,14 +82,13 @@ ERC-1155 which needs better understanding:
 
 - user's fullname: username as hover/title
 
-- store user's desktop environment
-- if Cinnamon (and other uncompatible DEs), don't display to change lockscreen background
-
 - frameless window (implement Framlr)
 
 - pack.sh: use same script as Floflis Soil to install global node modules
 
 Attempt 35:
+
+- at Personalization tab, simulate desktop icons (get from icon theme) and lockscreen (to update: simulate according to the DE)
 
 - Support GNOME (avatars, settings app)
 - Prevent conflicts between having different avatars on different DEs (by detecting the running DE)
