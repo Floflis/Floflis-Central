@@ -1,5 +1,7 @@
 Attempt 32:
 
+- credits: (c) 2019-2023 Floflis Central
+
 - If Cinnamon avatar isn't found, display generic (/media/daniell/UBUNTU1/avatar.png)
 - If Cinnamon, disable the "Change lockscreen bg" (but show background on it) card and "Change both" button. On other DEs, tell it will be implemented
 
