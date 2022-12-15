@@ -1,5 +1,8 @@
 Attempt 32:
 
+- get c2export/scripts/abis/universal-abi from git!
+- fix icon
+
 - credits: (c) 2019-2023 Floflis Central
 
 - If Cinnamon avatar isn't found, display generic (/media/daniell/UBUNTU1/avatar.png)
@@ -7,7 +10,7 @@ Attempt 32:
 
 - Put "SOON" at tabs such as Friends and Inventory
 
-- Build from source (Floflis Packager, c2export and its Central/HTML and scripts)
+- Build from source (Floflis Packager/Plugz, c2export and its Central/HTML and scripts)
 
 - Display the type of Trophies and individual count
 - Display the type of Paintings and individual count
@@ -19,6 +22,7 @@ Attempt 32:
 
 Attempt 34:
 
+- fix sync issues of token/nft listing; don't list .sh if offline
 - If no Internet, don't display 0 tokens if already non-zero, but tell balance outdated
 
 - Profile tab: remove "Estimated total USD you hold" from card
