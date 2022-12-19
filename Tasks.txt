@@ -1,7 +1,7 @@
 Attempt 32:
 
 - get c2export/scripts/abis/universal-abi from git!
-- fix icon
+- fix icon (with help of a update for floflis-packager)
 
 - credits: (c) 2019-2023 Floflis Central
 
@@ -19,6 +19,11 @@ Attempt 32:
 - init script (installs shared libs, creates c2export and its files, clones Central (HTML) and scripts)
 
 - if first use, require user to read Terms of Use (can be removed of token distribution according to internal criteria. But existing FLOF tokens you own can't be taken; they're yours)
+
+Attempt 33:
+
+new design for floflis central tabs; for header, use svg icon
+bluetooth icon next to devicename in "About" tab; in cpu-arch, also tell its codename ("i386", "amd64")
 
 Attempt 34:
 
