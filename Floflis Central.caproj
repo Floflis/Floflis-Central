@@ -164,7 +164,6 @@
         <file name="jquery.min.js" />
         <file name="logotype_smallball.png" />
         <file name="noderequire.js" />
-        <file name="eth-diamond-glyph.png" />
         <file name="twitter-logo-black.svg" />
         <file name="manatoken.svg" />
         <file name="ethtoken.svg" />
@@ -176,5 +175,7 @@
         <file name="gnotoken.svg" />
         <file name="slptoken.svg" />
         <file name="usdctoken.svg" />
+        <file name="ens-foundation.svg" />
+        <file name="eth-foundation.svg" />
     </files-folder>
 </c2project>
