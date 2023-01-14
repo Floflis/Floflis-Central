@@ -1,16 +1,16 @@
 Attempt 32:
 
-- get c2export/scripts/abis/universal-abi from git!
-- fix icon (with help of a update for floflis-packager)
-
 - credits: (c) 2019-2023 Floflis Central
+
+- get c2export/scripts/abis/universal-abi from git!
+- Build from source (Floflis Packager/Plugz, c2export and its Central/HTML and scripts)
+
+- fix icon (with help of a update for floflis-packager)
 
 - If Cinnamon avatar isn't found, display generic (/media/daniell/UBUNTU1/avatar.png)
 - If Cinnamon, disable the "Change lockscreen bg" (but show background on it) card and "Change both" button. On other DEs, tell it will be implemented
 
 - Put "SOON" at tabs such as Friends and Inventory
-
-- Build from source (Floflis Packager/Plugz, c2export and its Central/HTML and scripts)
 
 - Display the type of Trophies and individual count
 - Display the type of Paintings and individual count
@@ -34,9 +34,7 @@ Attempt 34:
 
 - If user have no ETH address/fullname in user.json, display error (validation)
 
-- Detect if it is running from ISO (live), and change features accordingly (remove user features)
-
-- tubby cats PFP
+- Detect if it is running from ISO (live), and change features accordingly (remove user features, add shortcuts for Ubiquity)
 
 - get rid of sh<>c2 json communication (bashc2-communication_ethgas.sh)
 
@@ -69,6 +67,26 @@ ethereal contract call --contract=0x0d0167a823c6619d430b1a96ad85b888bcf97c37 --a
 
 - Inventory: display amount of CryptoKitties in "Pets" tab https://etherscan.io/readContract?m=normal&a=0x06012c8cf97bead5deae237070f9587f8e7a266d&v=0x06012c8cf97bead5deae237070f9587f8e7a266d#readCollapse20
 
+- tubby cats PFP
+
+bridge ETH NFTs to Optimism https://qx.app/bridge?address=0x1b6b3026b7f5531086f3b8e6cc31c6564bbe2849&token_id=1&network=ethereum
+
+display network symbol at NFTs, as OS does
+
+Floflis display Uniswap v3 NFTs, OP/Arbitrum Quest NFTs, Galxe Pass and Unitap Pass
+Other NFTs to list:
+https://qx.app/collection/optimistic-explorer
+Binance KYC Mistery Box: https://www.binance.com/pt-BR/nft/item/19930771 (use as Sybil point and prepare to upload it to usr srv)
+
+Floflis activities:
+- Display faded placeholder NFTs that user can obtain, such as optimistic-explorer
+https://app.optimism.io/get-started
+https://app.optimism.io/quests
+
+Floflis Sybil:
+- Sybil.org, BrightID, Binance KYC NFT and:
+- https://galxe.com/passport?step=toMint
+
 ERC-1155 which needs better understanding:
 - Rarible https://etherscan.io/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430
 - Cryptovoxel Wearables https://etherscan.io/token/0xa58b5224e2fd94020cb2837231b2b0e4247301a6
@@ -79,17 +97,18 @@ ERC-1155 which needs better understanding:
 
 - Home tab: button to enter user profile
 
-- click to open user's Twitter profile (Firedoge)
+- click to open user's Twitter profile (Firedoge; or a special one-tab window browser?)
 
-- click to open user's cheers profile (Firedoge)
+- click to open user's cheers profile (Firedoge; or a special one-tab window browser?)
 
-- Wallet: displays tokens' name, and click to open their educational site (Firedoge)
+- Wallet: displays tokens' name, and click to open their educational site (Firedoge; or a special one-tab window browser?)
 
 - Profile > Wallet: also mix token count from their wrapped version (for example, wrapped Ethereum at Ethereum)
 
 - Profile > Wallet: FLOF token frm. sgst un and lp, then count tokens
 
 - detect and store default background, and Personalization tab have option to restore default background
+poke SV bg as NFT, then pokefan personality-pack
 
 - user's fullname: username as hover/title
 
