@@ -1,11 +1,13 @@
-Attempt 32:
+Attempt 35:
 
 - credits: (c) 2019-2023 Floflis Central
 
 - get c2export/scripts/abis/universal-abi from git!
 - Build from source (Floflis Packager/Plugz, c2export and its Central/HTML and scripts)
-
+-
 - fix icon (with help of a update for floflis-packager)
+-
+- init script (installs shared libs, creates c2export and its files, clones Central (HTML) and scripts)
 
 - If Cinnamon avatar isn't found, display generic (/media/daniell/UBUNTU1/avatar.png)
 - If Cinnamon, disable the "Change lockscreen bg" (but show background on it) card and "Change both" button. On other DEs, tell it will be implemented
@@ -16,16 +18,20 @@ Attempt 32:
 - Display the type of Paintings and individual count
 - Display the type of Pets and individual count
 
-- init script (installs shared libs, creates c2export and its files, clones Central (HTML) and scripts)
-
 - if first use, require user to read Terms of Use (can be removed of token distribution according to internal criteria. But existing FLOF tokens you own can't be taken; they're yours)
 
-Attempt 33:
+Attempt 36:
+
+- SVG logotype for header
+- SVG FLOF token logo/icon
+- SVG token logos
+- use the not-png floflis 2014 logo
+- integrate IPFS (also display peerid)
 
 new design for floflis central tabs; for header, use svg icon
 bluetooth icon next to devicename in "About" tab; in cpu-arch, also tell its codename ("i386", "amd64")
 
-Attempt 34:
+Attempt 37:
 
 - fix sync issues of token/nft listing; don't list .sh if offline
 - If no Internet, don't display 0 tokens if already non-zero, but tell balance outdated
@@ -116,7 +122,7 @@ poke SV bg as NFT, then pokefan personality-pack
 
 - pack.sh: use same script as Floflis Soil to install global node modules
 
-Attempt 35:
+Attempt 38:
 
 - at Personalization tab, simulate desktop icons (get from icon theme) and lockscreen (to update: simulate according to the DE)
 
@@ -127,17 +133,20 @@ Attempt 35:
 
 - Taskbar settings tab: display label in Explore button, display labels in openned apps, auto-hide
 
-Attempt 36:
+Attempt 39:
 
 - New tab: Updates (display "Powered by Web3Updater")
 - about's up-to-date: lnksh, click and open Updates
 
-Attempt 37:
+Attempt 40:
 
 - Sounds; more sounds settings
 - Backgrounds tab: pre-picked backgrounds before new implementations; more backgrounds settings
 
-Attempt 38:
+- more details about CPU architecture
+- integration with Alertz (Profile>Inventory>Backgrounds)
+
+Attempt 41:
 
 - Themes tab: "Window borders", "Icons", "Controls", "Mouse Pointer", "Desktop"; install new themes, from UniStore (also fetch from spices repos)
 - Account details tab: Picture, Name, Password
@@ -152,5 +161,10 @@ Attempt 38:
 
 v2:
 use https://docs.etherscan.io/getting-started/viewing-api-usage-statistics to get/display all tokens/NFTs/semifungibles
+Floflis Central repaginate:
+- new font
+- New design for navbar (transparent or blur)+hover+selected (FMWK will differ vertical and horizontal tabs)
+- navbar right shadow (using updated FMWK)
+- collapsible navbar from topbar/header
 
 G:\Users\Daniell\Desktop\Floflis\Floflis Settings\c2export\
