@@ -2,13 +2,13 @@
 <c2project>
     <name>Floflis Central</name>
     <description></description>
-    <version>0.22.12.18</version>
-    <author>Floflis</author>
+    <version>b2301_1</version>
+    <author>Floflis DAO</author>
     <author-email></author-email>
-    <author-website>https://github.com/Floflis</author-website>
-    <app-id>com.floflis.central</app-id>
+    <author-website>https://github.com/Floflis/Central</author-website>
+    <app-id>eth.floflis.central</app-id>
     <unique-id>1a0mdkjfspcoo</unique-id>
-    <saved-with-version>24400</saved-with-version>
+    <saved-with-version>28000</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="AJAX" version="1">AJAX</plugin>
         <plugin author="Scirra" id="Browser" version="1">Browser</plugin>
@@ -172,10 +172,10 @@
         <file name="platoken.png" />
         <file name="axstoken.svg" />
         <file name="daitoken.svg" />
-        <file name="gnotoken.svg" />
-        <file name="slptoken.svg" />
         <file name="usdctoken.svg" />
         <file name="ens-foundation.svg" />
         <file name="eth-foundation.svg" />
+        <file name="gnotoken.svg" />
+        <file name="slptoken.svg" />
     </files-folder>
 </c2project>

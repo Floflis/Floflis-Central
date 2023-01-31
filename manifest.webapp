@@ -2,11 +2,11 @@
   "id": "central",
   "application": "app",
   "name": "Floflis Central",
-  "version": "0.22.3.15",
+  "version": "b2301_1",
   "description": "",
   "icon": "icon.png",
   "linux_icon": "",
-  "author": "Floflis",
+  "author": "Floflis DAO",
   "url": "index.html",
   "ime_default_softkey_bar": true,
   "launch_path": "/index.html",
@@ -24,8 +24,8 @@
     "512": "/notes/icon_512.png"
   },
   "developer": {
-    "name": "Floflis",
-    "url": "https://github.com/Floflis"
+    "name": "Floflis DAO",
+    "url": "https://github.com/Floflis/Central"
   },
   "locales": {
     "en-US": {
