@@ -1,1 +1,1 @@
-/media/daniell/B/git/Gamlr/tools/list-construct-addons/get-c2-proj-addons.sh
+/media/daniella/B/git/Gamlr/tools/list-construct-addons/get-c2-proj-addons.sh
