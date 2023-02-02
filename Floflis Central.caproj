@@ -2,7 +2,7 @@
 <c2project>
     <name>Floflis Central</name>
     <description></description>
-    <version>b2301_1</version>
+    <version>b2302_1</version>
     <author>Floflis DAO</author>
     <author-email></author-email>
     <author-website>https://github.com/Floflis/Central</author-website>
@@ -162,7 +162,6 @@
         <file name="app-common.css" />
         <file name="ipfs.png" />
         <file name="jquery.min.js" />
-        <file name="logotype_smallball.png" />
         <file name="noderequire.js" />
         <file name="twitter-logo-black.svg" />
         <file name="manatoken.svg" />
