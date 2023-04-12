@@ -1,6 +1,16 @@
-Attempt 35:
+Attempt 43:
 
 - credits: (c) 2019-2023 Floflis Central
+
+Attempt 44:
+
+- replace png by /media/daniella/Windows 10 main/Users/Daniell/Desktop/Installer.txt.ok.not.installe/gametoken.svg
+
+- SVG logotype for header
+- SVG FLOF token logo/icon
+- SVG token logos
+- use the not-png floflis 2014 logo
+- integrate IPFS (also display peerid)
 
 - get c2export/scripts/abis/universal-abi from git!
 - Build from source (Floflis Packager/Plugz, c2export and its Central/HTML and scripts)
@@ -20,18 +30,12 @@ Attempt 35:
 
 - if first use, require user to read Terms of Use (can be removed of token distribution according to internal criteria. But existing FLOF tokens you own can't be taken; they're yours)
 
-Attempt 36:
-
-- SVG logotype for header
-- SVG FLOF token logo/icon
-- SVG token logos
-- use the not-png floflis 2014 logo
-- integrate IPFS (also display peerid)
+Attempt 45:
 
 new design for floflis central tabs; for header, use svg icon
 bluetooth icon next to devicename in "About" tab; in cpu-arch, also tell its codename ("i386", "amd64")
 
-Attempt 37:
+Attempt 46:
 
 - fix sync issues of token/nft listing; don't list .sh if offline
 - If no Internet, don't display 0 tokens if already non-zero, but tell balance outdated
@@ -122,7 +126,7 @@ poke SV bg as NFT, then pokefan personality-pack
 
 - pack.sh: use same script as Floflis Soil to install global node modules
 
-Attempt 38:
+Attempt 47:
 
 - at Personalization tab, simulate desktop icons (get from icon theme) and lockscreen (to update: simulate according to the DE)
 
@@ -133,12 +137,12 @@ Attempt 38:
 
 - Taskbar settings tab: display label in Explore button, display labels in openned apps, auto-hide
 
-Attempt 39:
+Attempt 48:
 
 - New tab: Updates (display "Powered by Web3Updater")
 - about's up-to-date: lnksh, click and open Updates
 
-Attempt 40:
+Attempt 49:
 
 - Sounds; more sounds settings
 - Backgrounds tab: pre-picked backgrounds before new implementations; more backgrounds settings
@@ -146,7 +150,7 @@ Attempt 40:
 - more details about CPU architecture
 - integration with Alertz (Profile>Inventory>Backgrounds)
 
-Attempt 41:
+Attempt 50:
 
 - Themes tab: "Window borders", "Icons", "Controls", "Mouse Pointer", "Desktop"; install new themes, from UniStore (also fetch from spices repos)
 - Account details tab: Picture, Name, Password
