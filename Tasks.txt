@@ -1,8 +1,25 @@
-Attempt 43:
+Attempt 45:
 
-- credits: (c) 2019-2023 Floflis Central
+- credits: (c) 2019-2024 Floflis Central
 
-Attempt 44:
+.navdrawer-content {
+    background-color: transparent!important;
+    backdrop-filter: blur(10px);
+}
+
+.nav-tabs .nav-link {
+    opacity: unset!important;
+}
+
+.nav-tabs .nav-link:active, .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
+    backdrop-filter: blur(10px)!important;
+}
+.nav-link:hover{font-weight:unset!important}
+
+- svg -> png icon!
+- can enter fullscreen with F11, but can't exit it with same F11 (also, F11 works in any place of the desktop despite Central's window not visible)
+
+Attempt 46:
 
 - replace png by /media/daniella/Windows 10 main/Users/Daniell/Desktop/Installer.txt.ok.not.installe/gametoken.svg
 
@@ -30,12 +47,12 @@ Attempt 44:
 
 - if first use, require user to read Terms of Use (can be removed of token distribution according to internal criteria. But existing FLOF tokens you own can't be taken; they're yours)
 
-Attempt 45:
+Attempt 47:
 
 new design for floflis central tabs; for header, use svg icon
 bluetooth icon next to devicename in "About" tab; in cpu-arch, also tell its codename ("i386", "amd64")
 
-Attempt 46:
+Attempt 48:
 
 - fix sync issues of token/nft listing; don't list .sh if offline
 - If no Internet, don't display 0 tokens if already non-zero, but tell balance outdated
@@ -126,7 +143,7 @@ poke SV bg as NFT, then pokefan personality-pack
 
 - pack.sh: use same script as Floflis Soil to install global node modules
 
-Attempt 47:
+Attempt 49:
 
 - at Personalization tab, simulate desktop icons (get from icon theme) and lockscreen (to update: simulate according to the DE)
 
@@ -137,12 +154,12 @@ Attempt 47:
 
 - Taskbar settings tab: display label in Explore button, display labels in openned apps, auto-hide
 
-Attempt 48:
+Attempt 50:
 
 - New tab: Updates (display "Powered by Web3Updater")
 - about's up-to-date: lnksh, click and open Updates
 
-Attempt 49:
+Attempt 51:
 
 - Sounds; more sounds settings
 - Backgrounds tab: pre-picked backgrounds before new implementations; more backgrounds settings
@@ -150,7 +167,7 @@ Attempt 49:
 - more details about CPU architecture
 - integration with Alertz (Profile>Inventory>Backgrounds)
 
-Attempt 50:
+Attempt 52:
 
 - Themes tab: "Window borders", "Icons", "Controls", "Mouse Pointer", "Desktop"; install new themes, from UniStore (also fetch from spices repos)
 - Account details tab: Picture, Name, Password
