@@ -2,32 +2,11 @@ Attempt 45:
 
 - credits: (c) 2019-2024 Floflis Central
 
-.navdrawer-content {
-    background-color: transparent!important;
-    backdrop-filter: blur(10px);
-}
+new design for floflis central tabs
+bluetooth icon next to devicename in "About" tab; in cpu-arch, also tell its codename ("i386", "amd64")
 
-.nav-tabs .nav-link {
-    opacity: unset!important;
-}
-
-.nav-tabs .nav-link:active, .nav-tabs .nav-link:focus, .nav-tabs .nav-link:hover {
-    backdrop-filter: blur(10px)!important;
-}
-.nav-link:hover{font-weight:unset!important}
-
-- svg -> png icon!
-- can enter fullscreen with F11, but can't exit it with same F11 (also, F11 works in any place of the desktop despite Central's window not visible)
-
-Attempt 46:
-
-- replace png by /media/daniella/Windows 10 main/Users/Daniell/Desktop/Installer.txt.ok.not.installe/gametoken.svg
-
-- SVG logotype for header
-- SVG FLOF token logo/icon
-- SVG token logos
-- use the not-png floflis 2014 logo
-- integrate IPFS (also display peerid)
+make Central smarter (such as not bugging when username JSON not found), and move imgs/assets to the HTML repo (FrameworkJS template will follow this example)
+also, for a smarter Central: renew routing, use more functions and external common event-sheets
 
 - get c2export/scripts/abis/universal-abi from git!
 - Build from source (Floflis Packager/Plugz, c2export and its Central/HTML and scripts)
@@ -39,6 +18,8 @@ Attempt 46:
 - If Cinnamon avatar isn't found, display generic (/media/daniell/UBUNTU1/avatar.png)
 - If Cinnamon, disable the "Change lockscreen bg" (but show background on it) card and "Change both" button. On other DEs, tell it will be implemented
 
+- integrate IPFS (also display peerid)
+
 - Put "SOON" at tabs such as Friends and Inventory
 
 - Display the type of Trophies and individual count
@@ -47,12 +28,10 @@ Attempt 46:
 
 - if first use, require user to read Terms of Use (can be removed of token distribution according to internal criteria. But existing FLOF tokens you own can't be taken; they're yours)
 
-Attempt 47:
+- svg -> png app-icon!
+- can enter fullscreen with F11, but can't exit it with same F11 (also, F11 works in any place of the desktop despite Central's window not visible)
 
-new design for floflis central tabs; for header, use svg icon
-bluetooth icon next to devicename in "About" tab; in cpu-arch, also tell its codename ("i386", "amd64")
-
-Attempt 48:
+Attempt 46:
 
 - fix sync issues of token/nft listing; don't list .sh if offline
 - If no Internet, don't display 0 tokens if already non-zero, but tell balance outdated
@@ -143,7 +122,7 @@ poke SV bg as NFT, then pokefan personality-pack
 
 - pack.sh: use same script as Floflis Soil to install global node modules
 
-Attempt 49:
+Attempt 47:
 
 - at Personalization tab, simulate desktop icons (get from icon theme) and lockscreen (to update: simulate according to the DE)
 
@@ -154,12 +133,12 @@ Attempt 49:
 
 - Taskbar settings tab: display label in Explore button, display labels in openned apps, auto-hide
 
-Attempt 50:
+Attempt 48:
 
 - New tab: Updates (display "Powered by Web3Updater")
 - about's up-to-date: lnksh, click and open Updates
 
-Attempt 51:
+Attempt 49:
 
 - Sounds; more sounds settings
 - Backgrounds tab: pre-picked backgrounds before new implementations; more backgrounds settings
@@ -167,7 +146,7 @@ Attempt 51:
 - more details about CPU architecture
 - integration with Alertz (Profile>Inventory>Backgrounds)
 
-Attempt 52:
+Attempt 50:
 
 - Themes tab: "Window borders", "Icons", "Controls", "Mouse Pointer", "Desktop"; install new themes, from UniStore (also fetch from spices repos)
 - Account details tab: Picture, Name, Password
