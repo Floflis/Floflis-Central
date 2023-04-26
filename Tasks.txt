@@ -2,6 +2,8 @@ Attempt 45:
 
 - credits: (c) 2019-2024 Floflis Central
 
+support flags for opening in specific tab (useful for Explore menu, that will open directly in "More settings" tab
+
 new design for floflis central tabs
 bluetooth icon next to devicename in "About" tab; in cpu-arch, also tell its codename ("i386", "amd64")
 
