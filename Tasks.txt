@@ -78,10 +78,9 @@ ethereal contract call --contract=0x0d0167a823c6619d430b1a96ad85b888bcf97c37 --a
 - tubby cats PFP
 
 bridge ETH NFTs to Optimism https://qx.app/bridge?address=0x1b6b3026b7f5531086f3b8e6cc31c6564bbe2849&token_id=1&network=ethereum
-
 display network symbol at NFTs, as OS does
 
-Floflis display Uniswap v3 NFTs, OP/Arbitrum Quest NFTs, Galxe Pass and Unitap Pass
+display Uniswap v3 NFTs https://etherscan.io/token/0xc36442b4a4522e871399cd717abdd847ab11fe88 (should map this NFT in other chains), OP/Arbitrum Quest NFTs, Galxe Pass and Unitap Pass
 Other NFTs to list:
 https://qx.app/collection/optimistic-explorer
 Binance KYC Mistery Box: https://www.binance.com/pt-BR/nft/item/19930771 (use as Sybil point and prepare to upload it to usr srv)
