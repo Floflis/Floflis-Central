@@ -85,14 +85,17 @@ Other NFTs to list:
 https://qx.app/collection/optimistic-explorer
 Binance KYC Mistery Box: https://www.binance.com/pt-BR/nft/item/19930771 (use as Sybil point and prepare to upload it to usr srv)
 
+Floflis Sybil:
+- Sybil.org, BrightID, Binance KYC NFT and:
+- https://galxe.com/passport?step=toMint
+https://passport.gitcoin.co/, https://guild.xyz/'s Pin
+
+Floflis User Card (like Pokemon Trainer Card) containing PoAPs and KYC
+
 Floflis activities:
 - Display faded placeholder NFTs that user can obtain, such as optimistic-explorer
 https://app.optimism.io/get-started
 https://app.optimism.io/quests
-
-Floflis Sybil:
-- Sybil.org, BrightID, Binance KYC NFT and:
-- https://galxe.com/passport?step=toMint
 
 ERC-1155 which needs better understanding:
 - Rarible https://etherscan.io/token/0xd07dc4262bcdbf85190c01c996b4c06a461d2430
