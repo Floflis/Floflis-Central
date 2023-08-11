@@ -1,10 +1,13 @@
 Attempt 45:
 
+- new color for header: #00adef
 - credits: (c) 2019-2024 Floflis Central
 
 - newly supported networks: Base, Ronin, BSC, zkEVM, zkSync Era, Linea, Celo, ImmutableX, Loopring, Metis, Shibarium?, dYdX
 
 .html: dont display network in a token when amount is zero!
+
+- fix duplicate items when opening cinnamon-settings from central
 
 support flags for opening in specific tab (useful for Explore menu, that will open directly in "More settings" tab
 
