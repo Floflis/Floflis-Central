@@ -3,7 +3,7 @@ Attempt 45:
 - new color for header: #00adef
 - credits: (c) 2019-2024 Floflis Central
 
-- newly supported networks: Base, Ronin, BSC, zkEVM, zkSync Era, Linea, Celo, ImmutableX, Loopring, Metis, Shibarium?, dYdX
+- newly supported networks: Base, BSC, zkEVM, zkSync Era, Linea, Celo, ImmutableX, Loopring, Metis, Shibarium?, dYdX
 
 .html: dont display network in a token when amount is zero!
 
@@ -98,6 +98,10 @@ Floflis Sybil:
 https://passport.gitcoin.co/, https://guild.xyz/'s Pin
 
 Floflis User Card (like Pokemon Trainer Card) containing PoAPs and KYC
+
+After introducing multi-address:
+Support for Ronin and Starknet!
+Starknet use different address format, and will require: https://github.com/kariy/starknet-probe
 
 Floflis activities:
 - Display faded placeholder NFTs that user can obtain, such as optimistic-explorer
