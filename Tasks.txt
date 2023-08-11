@@ -101,7 +101,7 @@ Floflis User Card (like Pokemon Trainer Card) containing PoAPs and KYC
 
 After introducing multi-address:
 Support for Ronin and Starknet!
-Starknet use different address format, and will require: https://github.com/kariy/starknet-probe
+Starknet use different address format, and will require: /media/daniella/B/git/Floflis/Floflis/Utilities/ethereal-multi
 
 Floflis activities:
 - Display faded placeholder NFTs that user can obtain, such as optimistic-explorer
