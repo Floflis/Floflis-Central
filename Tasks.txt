@@ -66,6 +66,8 @@ Attempt 46:
 - https://axie.zone/func/pixelate.php?axie_id=99228 (50px)
 ethereal contract call --contract=0xf5b0a3efb8e8e4c201e2a935f110eaaf3ffecb8d --abi=abi-axie.json --call='tokenURI(142388)' --from=0xDDfC2e10702d8A781727A34D83B3bb3CA94a3E91
 
+- new C2 project: Bitaverse secret base. Floflis user will have a secret base and a quintal outside, merging all of its axies + allowlisted ethermons living happily at the same place. Floflis Central's Pets tab will have a button to open a early draft Bitaverse land! At the top of that window say Probably nothing™
+
 - Inventory: tabs: Backgrounds (soon, subscribe via Alerts), (Metaverse Stuff: Lands (axie, decentraland, the sandbox, cryptovoxels), Items (axie), Paintings, Wearables (Cryptovoxels, Decentraland), Pets)
 
 https://etherscan.io/token/0x1b6b3026b7f5531086f3b8e6cc31c6564bbe2849#readContract
