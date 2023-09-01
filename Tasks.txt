@@ -7,7 +7,7 @@ Attempt 45:
 - networks at a token shouldn't be anymore in the HTML, but appended via script/event-sheet
 - .html: dont display network in a token when amount is zero!
 
-- newly supported networks: Base, BSC, zkEVM, zkSync Era, Linea, Celo, ImmutableX/zkEVM, Loopring, Metis, dYdX
+- newly supported networks: Base, Arbitrum, BSC, zkEVM, zkSync Era, Linea, Celo, ImmutableX/zkEVM, Loopring, Metis, dYdX
 
 - fix duplicate items when opening cinnamon-settings from central
 
