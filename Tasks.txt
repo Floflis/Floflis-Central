@@ -4,10 +4,6 @@ Attempt 45:
 - new loader screen (same for FMWK C2)
 - credits: (c) 2019-2024 Floflis Central
 - support flags for opening in specific tab (useful for Explore menu, that will open directly in "More settings" tab
-- networks at a token shouldn't be anymore in the HTML, but appended via script/event-sheet
-- .html: dont display network in a token when amount is zero!
-
-- newly supported networks: Base, Arbitrum, BSC, zkEVM, zkSync Era, Linea, Celo, ImmutableX/zkEVM, Metis
 
 - fix duplicate items when opening cinnamon-settings from central
 
@@ -41,6 +37,19 @@ also, for a smarter Central: renew routing, use more functions and external comm
 - can enter fullscreen with F11, but can't exit it with same F11 (also, F11 works in any place of the desktop despite Central's window not visible)
 
 Attempt 46:
+
+attempt to improve blur at navitems, starting by:
+.nav-tabs .nav-link.active {
+    color: #ff4081;
+    background-color: transparent!important;
+    backdrop-filter: blur(10px);
+}
+need box-shadow:inset
+
+- networks at a token shouldn't be anymore in the HTML, but appended via script/event-sheet
+- .html: dont display network in a token when amount is zero!
+
+- newly supported networks: Base, Arbitrum, BSC, zkEVM, zkSync Era, Linea, Celo, ImmutableX/zkEVM, Metis
 
 - fix sync issues of token/nft listing; don't list .sh if offline
 - If no Internet, don't display 0 tokens if already non-zero, but tell balance outdated
