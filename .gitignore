@@ -1,4 +1,6 @@
 *.autosave
-*.capx.backup1
-/c2export
-central.apps
+*.capx.*
+*.capx
+*.apps
+c2export/
+c2export-git/
