@@ -2356,6 +2356,23 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <event-block sid="118824208448607">
+                            <conditions>
+                                <condition id="4" name="Compare C2 Function" sid="574185224280111" type="UI">
+                                    <param id="0" name="C2">&quot;blueman-open&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action disabled="1" id="25" name="Run file" sid="121482068712431" type="Electron">
+                                    <param id="0" name="Path">&quot;blueman-manager&quot;</param>
+                                    <param id="1" name="Parameters">&quot;&quot;</param>
+                                </action>
+                                <action id="17" name="Execute Javascript" sid="112003640985538" type="Browser">
+                                    <param id="0" name="Javascript">&quot;const{exec}=require(&apos;child_process&apos;);exec(`blueman-manager`,(error,stdout,stderr)=&gt;{if(error){console.log(`error:${error.message}`);return}if(stderr){console.log(`stderr:${stderr}`);return}console.log(`${stdout}`)});&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="573147133039916">
                             <conditions>
                                 <condition id="4" name="Compare C2 Function" sid="480504332694811" type="UI">
@@ -2499,7 +2516,7 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="383892473285239">
+                        <event-block disabled="1" sid="383892473285239">
                             <conditions>
                                 <condition id="4" name="Compare C2 Function" sid="622930365667908" type="UI">
                                     <param id="0" name="C2">&quot;openarbore&quot;</param>
