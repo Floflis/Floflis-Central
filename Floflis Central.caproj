@@ -2,7 +2,7 @@
 <c2project>
     <name>Floflis Central</name>
     <description></description>
-    <version>b2302_1</version>
+    <version>b2309_1</version>
     <author>Floflis DAO</author>
     <author-email></author-email>
     <author-website>https://github.com/Floflis/Central</author-website>
@@ -38,7 +38,7 @@
         <prop name="Enable WebGL">On</prop>
         <prop name="Fullscreen in browser">Letterbox scale</prop>
         <prop name="Fullscreen scaling">High quality</prop>
-        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Loader style">Progress bar &amp; logo</prop>
         <prop name="Orientations">Any</prop>
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D asm.js</prop>
