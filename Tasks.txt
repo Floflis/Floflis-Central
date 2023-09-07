@@ -1,9 +1,3 @@
-Attempt 45:
-
-- bluetooth icon next to devicename in "About" tab
-- "About" tab: in cpu-arch, also tell its codename ("i386", "amd64")
-- Put "SOON" as tab badges in Friends and Inventory
-
 Attempt 46:
 
 - new design for floflis central tabs (rmv bottom line of selected itms)
@@ -15,11 +9,15 @@ attempt to improve blur at navitems, starting by:
 }
 need box-shadow:inset
 
+- (linuxmint's)bluetooth icon next(rightside) to devicename in "About" tab (should open blueman - pending to search its name/cmd)
 - support flags for opening in specific tab (useful for Explore menu, that will open directly in "More settings" tab)
+- ethgas icon: add red/orange/yellow/green colors to represent level
 
 - networks at a token shouldn't be anymore in the HTML, but appended via script/event-sheet
 - .html: dont display network in a token when amount is zero!
 - newly supported networks: Base, Arbitrum, BSC, zkEVM, zkSync Era, Linea, Celo, ImmutableX/zkEVM, Metis
+
+- "in cpu-arch, also tell its codename ("i386", "amd64")" (HAVE TO IMPROVE THIS, by supporting ARM rather than assuming everything's x86)
 
 - if first use, require user to read Terms of Use (can be removed of token distribution according to internal criteria. But existing FLOF tokens you own can't be taken; they're yours)
 

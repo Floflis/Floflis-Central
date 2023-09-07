@@ -2193,6 +2193,11 @@
                             <param id="1" name="Set">&quot;32-bit&quot;</param>
                             <param id="2" name="Append">&quot;&quot;</param>
                         </action>
+                        <action id="24" name="Get elements" sid="779953515042295" type="UI">
+                            <param id="0" name="ID/Class">&quot;#osarchcode&quot;</param>
+                            <param id="1" name="Set">&quot;i386&quot;</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
                         <action id="-16" name="Wait" sid="580816573740533" type="System">
                             <param id="0" name="Seconds">dt</param>
                         </action>
@@ -2216,6 +2221,11 @@
                             <param id="1" name="Set">&quot;64-bit&quot;</param>
                             <param id="2" name="Append">&quot;&quot;</param>
                         </action>
+                        <action id="24" name="Get elements" sid="808894993438441" type="UI">
+                            <param id="0" name="ID/Class">&quot;#osarchcode&quot;</param>
+                            <param id="1" name="Set">&quot;amd64&quot;</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
                         <action id="-16" name="Wait" sid="100859791019602" type="System">
                             <param id="0" name="Seconds">dt</param>
                         </action>
@@ -2237,6 +2247,11 @@
                         <action id="24" name="Get elements" sid="914301173257609" type="UI">
                             <param id="0" name="ID/Class">&quot;#osarch&quot;</param>
                             <param id="1" name="Set">&quot;128-bit&quot;</param>
+                            <param id="2" name="Append">&quot;&quot;</param>
+                        </action>
+                        <action id="24" name="Get elements" sid="733369525799330" type="UI">
+                            <param id="0" name="ID/Class">&quot;#osarchcode&quot;</param>
+                            <param id="1" name="Set">&quot;?&quot;</param>
                             <param id="2" name="Append">&quot;&quot;</param>
                         </action>
                         <action id="-16" name="Wait" sid="411196504675114" type="System">
