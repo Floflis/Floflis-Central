@@ -1,5 +1,8 @@
 Attempt 46:
 
+- "(amd64)" use <small>
+- add "soon" badge to Personalization>"CHANGE LOOK-AND-FEEL" tab
+
 - new design for floflis central tabs (rmv bottom line of selected itms)
 attempt to improve blur at navitems, starting by:
 .nav-tabs .nav-link.active {
@@ -11,7 +14,6 @@ need box-shadow:inset
 
 - (linuxmint's)bluetooth icon next(rightside) to devicename in "About" tab (should open blueman - pending to search its name/cmd)
 - support flags for opening in specific tab (useful for Explore menu, that will open directly in "More settings" tab)
-- ethgas icon: add red/orange/yellow/green colors to represent level
 
 - networks at a token shouldn't be anymore in the HTML, but appended via script/event-sheet
 - .html: dont display network in a token when amount is zero!
@@ -144,6 +146,8 @@ poke SV bg as NFT, then pokefan personality-pack
 - pack.sh: use same script as Floflis Soil to install global node modules
 
 Attempt 47:
+
+- ethgas icon: add red/orange/yellow/green colors to represent level
 
 - at Personalization tab, simulate desktop icons (get from icon theme) and lockscreen (to update: simulate according to the DE)
 
