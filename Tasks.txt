@@ -2,39 +2,13 @@ Attempt 45:
 
 - new color for header: #00adef
 - new loader screen (same for FMWK C2)
-- credits: (c) 2019-2024 Floflis Central
+- credits: (c) 2019-{current-builds-year} Floflis Central (at About tab)
 - support flags for opening in specific tab (useful for Explore menu, that will open directly in "More settings" tab
-
 - fix duplicate items when opening cinnamon-settings from central
-
-new design for floflis central tabs
-bluetooth icon next to devicename in "About" tab; in cpu-arch, also tell its codename ("i386", "amd64")
-
-make Central smarter (such as not bugging when username JSON not found), and move imgs/assets to the HTML repo (FMWK C2 template will follow this example)
-also, for a smarter Central: renew routing, use more functions and external common event-sheets
-
-- get c2export/scripts/abis/universal-abi from git!
-- Build from source (Floflis Packager/Plugz, c2export and its Central/HTML and scripts)
--
-- fix icon (with help of a update for floflis-packager)
--
-- init script (installs shared libs, creates c2export and its files, clones Central (HTML) and scripts)
-
-- If Cinnamon avatar isn't found, display generic (/media/daniell/UBUNTU1/avatar.png)
-- If Cinnamon, disable the "Change lockscreen bg" (but show background on it) card and "Change both" button. On other DEs, tell it will be implemented
-
-- integrate IPFS (also display peerid)
-
-- Put "SOON" at tabs such as Friends and Inventory
-
-- Display the type of Trophies and individual count
-- Display the type of Paintings and individual count
-- Display the type of Pets and individual count
-
-- if first use, require user to read Terms of Use (can be removed of token distribution according to internal criteria. But existing FLOF tokens you own can't be taken; they're yours)
-
-- svg -> png app-icon!
-- can enter fullscreen with F11, but can't exit it with same F11 (also, F11 works in any place of the desktop despite Central's window not visible)
+- new design for floflis central tabs
+- bluetooth icon next to devicename in "About" tab
+- "About" tab: in cpu-arch, also tell its codename ("i386", "amd64")
+- Put "SOON" as tab badges in Friends and Inventory
 
 Attempt 46:
 
@@ -48,8 +22,31 @@ need box-shadow:inset
 
 - networks at a token shouldn't be anymore in the HTML, but appended via script/event-sheet
 - .html: dont display network in a token when amount is zero!
-
 - newly supported networks: Base, Arbitrum, BSC, zkEVM, zkSync Era, Linea, Celo, ImmutableX/zkEVM, Metis
+
+- if first use, require user to read Terms of Use (can be removed of token distribution according to internal criteria. But existing FLOF tokens you own can't be taken; they're yours)
+
+-? make Central smarter (such as not bugging when username JSON not found), and move imgs/assets to the HTML repo (FMWK C2 template will follow this example)
+- also, for a smarter Central: renew routing, use more functions and external common event-sheets
+
+- get c2export/scripts/abis/universal-abi from git!
+- Build from source (Floflis Packager/Plugz, c2export and its Central/HTML and scripts)
+-
+- fix icon (with help of a update for floflis-packager)
+-
+- init script (installs shared libs, creates c2export and its files, clones Central (HTML) and scripts)
+
+- If Cinnamon avatar isn't found, display generic (/media/daniell/UBUNTU1/avatar.png)
+- If Cinnamon, disable the "Change lockscreen bg" (but show background on it) card and "Change both" button. On other DEs, tell it will be implemented
+
+- integrate IPFS (also display peerid)
+
+- Display the type of Trophies and individual count
+- Display the type of Paintings and individual count
+- Display the type of Pets and individual count
+
+- svg -> png app-icon!
+- can enter fullscreen with F11, but can't exit it with same F11 (also, F11 works in any place of the desktop despite Central's window not visible)
 
 - fix sync issues of token/nft listing; don't list .sh if offline
 - If no Internet, don't display 0 tokens if already non-zero, but tell balance outdated
