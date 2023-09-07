@@ -3,11 +3,19 @@ log:
 - about.html: "(amd64)" use <small>
 - add "soon" badge to Personalization>"CHANGE LOOK-AND-FEEL" tab
 - bluetooth icon next to devicename in "About" tab
+- sidebar tabs: remove bottom line of selected items
+-🐞 begin implementing Floflis' own background-picker and avatar-picker!
+- fix nfts-parse.sh/universal-abi
+- implement an empty Updates tab! (display "Powered by Web3Updater")
+-🐞 Home/About's "up-to-date": make it a linkish: click and open the Updates tab
 
 
-- new design for floflis central tabs (rmv bottom line of selected itms)
+- Inventory: display amount of Axies in "Pets" tab https://etherscan.io/readContract?m=normal&a=0xf5b0a3efb8e8e4c201e2a935f110eaaf3ffecb8d&v=0xf5b0a3efb8e8e4c201e2a935f110eaaf3ffecb8d#readCollapse14
+- https://api.axie.technology/getaxies/99228
+- https://axie.zone/func/pixelate.php?axie_id=99228 (50px)
+ethereal contract call --contract=0xf5b0a3efb8e8e4c201e2a935f110eaaf3ffecb8d --abi=abi-axie.json --call='tokenURI(142388)' --from=0xDDfC2e10702d8A781727A34D83B3bb3CA94a3E91
 
-- support flags for opening in specific tab (useful for Explore menu, that will open directly in "More settings" tab)
+- support parameters/--flags for opening in specific tab (useful for Explore menu, that will open directly in "More settings" tab) https://www.geeksforgeeks.org/command-line-arguments-in-electronjs/ https://stackoverflow.com/questions/30815446/how-to-pass-command-line-argument-in-electron
 
 - networks at a token shouldn't be anymore in the HTML, but appended via script/event-sheet
 - .html: dont display network in a token when amount is zero!
@@ -20,7 +28,6 @@ log:
 -? make Central smarter (such as not bugging when username JSON not found), and move imgs/assets to the HTML repo (FMWK C2 template will follow this example)
 - also, for a smarter Central: renew routing, use more functions and external common event-sheets
 
-- get c2export/scripts/abis/universal-abi from git!
 - Build from source (Floflis Packager/Plugz, c2export and its Central/HTML and scripts)
 -
 - fix icon (with help of a update for floflis-packager)
@@ -58,11 +65,6 @@ log:
 
 - "Copy to clipboard" button at ETH address and ENS name
 
-- Inventory: display amount of Axies in "Pets" tab https://etherscan.io/readContract?m=normal&a=0xf5b0a3efb8e8e4c201e2a935f110eaaf3ffecb8d&v=0xf5b0a3efb8e8e4c201e2a935f110eaaf3ffecb8d#readCollapse14
-- https://api.axie.technology/getaxies/99228
-- https://axie.zone/func/pixelate.php?axie_id=99228 (50px)
-ethereal contract call --contract=0xf5b0a3efb8e8e4c201e2a935f110eaaf3ffecb8d --abi=abi-axie.json --call='tokenURI(142388)' --from=0xDDfC2e10702d8A781727A34D83B3bb3CA94a3E91
-
 - new C2 project: Bitaverse secret base. Floflis user will have a secret base and a quintal outside, merging all of its axies + allowlisted ethermons living happily at the same place. Floflis Central's Pets tab will have a button to open a early draft Bitaverse land! At the top of that window say Probably nothing™
 
 - Inventory: display amount of ExpansionPunks in "PFPs/Avatars" tab https://etherscan.io/readContract?m=normal&a=0x0d0167a823c6619d430b1a96ad85b888bcf97c37&v=0x0d0167a823c6619d430b1a96ad85b888bcf97c37#readCollapse3
@@ -73,6 +75,8 @@ ethereal contract call --contract=0xf5b0a3efb8e8e4c201e2a935f110eaaf3ffecb8d --a
 
 https://etherscan.io/token/0x1b6b3026b7f5531086f3b8e6cc31c6564bbe2849#readContract
 tokenURI (DANIMESQ Arts - Mintbase)
+
+- Set an art as NFT background!
 
 - Inventory: parse and display every ExpansionPunks in "PFPs/Avatars" tab
 ethereal contract call --contract=0x0d0167a823c6619d430b1a96ad85b888bcf97c37 --abi=universal-abi.json --call='walletOfOwner(0x38d45e8e519cb3c72f9f890dce4a5dbb0608f8a3)' --from=0xDDfC2e10702d8A781727A34D83B3bb3CA94a3E91 [OUTPUT: "[15232,14346,18706,16490]"]
@@ -90,7 +94,9 @@ have to convert ipfs:// to gateway; read from JSON: name, image
 bridge ETH NFTs to Optimism https://qx.app/bridge?address=0x1b6b3026b7f5531086f3b8e6cc31c6564bbe2849&token_id=1&network=ethereum
 display network symbol at NFTs, as OS does
 
-display Uniswap v3 NFTs https://etherscan.io/token/0xc36442b4a4522e871399cd717abdd847ab11fe88 (should map this NFT in other chains), OP/Arbitrum Quest NFTs, Galxe Pass and Unitap Pass
+display Uniswap v3 NFTs https://etherscan.io/token/0xc36442b4a4522e871399cd717abdd847ab11fe88#readContract (should map this NFT in other chains as well)
+OP/Arbitrum Quest NFTs
+Galxe Pass and Unitap Pass
 Other NFTs to list:
 https://qx.app/collection/optimistic-explorer
 Binance KYC Mistery Box: https://www.binance.com/pt-BR/nft/item/19930771 (use as Sybil point and prepare to upload it to usr srv)
@@ -145,6 +151,13 @@ poke SV bg as NFT, then pokefan personality-pack
 
 Attempt 47:
 
+
+
+- fully working avatar-picker and background-picker.
+- Can change user fullname directly from the card!
+- Button to change password, for safety will require Cinnamon
+- svg icon for different DEs
+
 - ethgas icon: add red/orange/yellow/green colors to represent level
 
 - at Personalization tab, simulate desktop icons (get from icon theme) and lockscreen (to update: simulate according to the DE)
@@ -158,8 +171,7 @@ Attempt 47:
 
 Attempt 48:
 
-- New tab: Updates (display "Powered by Web3Updater")
-- about's up-to-date: lnksh, click and open Updates
+
 
 Attempt 49:
 
