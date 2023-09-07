@@ -1,17 +1,12 @@
 Attempt 45:
 
-- new color for header: #00adef
-- new loader screen (same for FMWK C2)
-- credits: (c) 2019-{current-builds-year} Floflis Central (at About tab)
-- support flags for opening in specific tab (useful for Explore menu, that will open directly in "More settings" tab
-- fix duplicate items when opening cinnamon-settings from central
-- new design for floflis central tabs
 - bluetooth icon next to devicename in "About" tab
 - "About" tab: in cpu-arch, also tell its codename ("i386", "amd64")
 - Put "SOON" as tab badges in Friends and Inventory
 
 Attempt 46:
 
+- new design for floflis central tabs (rmv bottom line of selected itms)
 attempt to improve blur at navitems, starting by:
 .nav-tabs .nav-link.active {
     color: #ff4081;
@@ -19,6 +14,8 @@ attempt to improve blur at navitems, starting by:
     backdrop-filter: blur(10px);
 }
 need box-shadow:inset
+
+- support flags for opening in specific tab (useful for Explore menu, that will open directly in "More settings" tab)
 
 - networks at a token shouldn't be anymore in the HTML, but appended via script/event-sheet
 - .html: dont display network in a token when amount is zero!

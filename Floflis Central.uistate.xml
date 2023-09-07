@@ -13,8 +13,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <layout order="1">Splash</layout>
         <layout order="3">App</layout>
         <event-sheet order="2">Splash sheet</event-sheet>
-        <event-sheet order="4">App sheet</event-sheet>
-        <event-sheet active="1" order="5">Common sheet</event-sheet>
+        <event-sheet active="1" order="4">App sheet</event-sheet>
+        <event-sheet order="5">Common sheet</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
