@@ -827,7 +827,7 @@
                 </action>
                 <action id="24" name="Get elements" sid="461419287689159" type="UI">
                     <param id="0" name="ID/Class">&quot;#usrpic&quot;</param>
-                    <param id="1" name="Set"> &quot;&lt;img onclick=C2(&quot;&quot;userwindow-show&quot;&quot;); width=&quot;&quot;150px&apos;&quot;&quot; style=&quot;&quot;border-radius:50%&quot;&quot; src=&quot;&quot;file://&quot; &amp; &quot;/home/&quot; &amp; Browser.ExecJS(&quot;username.sync()&quot;) &amp; &quot;/.face&quot; &amp; &quot;&quot;&quot; title=&quot;&quot;&quot; &amp; &quot;Click to change &quot; &amp; Browser.ExecJS(&quot;username.sync()&quot;) &amp; &quot;&apos;s avatar, password, name, etc.&quot; &amp; &quot;&quot;&quot; class=&quot;&quot;linkish&quot;&quot;/&gt;&quot;</param>
+                    <param id="1" name="Set"> &quot;&lt;img width=&quot;&quot;150px&apos;&quot;&quot; style=&quot;&quot;border-radius:50%&quot;&quot; src=&quot;&quot;file://&quot; &amp; &quot;/home/&quot; &amp; Browser.ExecJS(&quot;username.sync()&quot;) &amp; &quot;/.face&quot; &amp; &quot;&quot;&quot; title=&quot;&quot;&quot; &amp; &quot;Click to change &quot; &amp; Browser.ExecJS(&quot;username.sync()&quot;) &amp; &quot;&apos;s avatar, password, name, etc.&quot; &amp; &quot;&quot;&quot; class=&quot;&quot;linkish&quot;&quot;/&gt;&quot;</param>
                     <param id="2" name="Append">&quot;&quot;</param>
                 </action>
                 <action id="-16" name="Wait" sid="561032589970224" type="System">
@@ -1305,7 +1305,7 @@
                 </action>
                 <action id="24" name="Get elements" sid="571331910766126" type="UI">
                     <param id="0" name="ID/Class">&quot;#usrpic&quot;</param>
-                    <param id="1" name="Set">&quot;&lt;img onclick=C2(&quot;&quot;userwindow-show&quot;&quot;); width=&quot;&quot;150px&apos;&quot;&quot; style=&quot;&quot;border-radius:50%&quot;&quot; src=&quot;&quot;file://&quot; &amp; &quot;/home/&quot; &amp; Browser.ExecJS(&quot;username.sync()&quot;) &amp; &quot;/.face&quot; &amp; &quot;&quot;&quot; title=&quot;&quot;&quot; &amp; &quot;Click to change &quot; &amp; Browser.ExecJS(&quot;username.sync()&quot;) &amp; &quot;&apos;s avatar, password, name, etc.&quot; &amp; &quot;&quot;&quot; class=&quot;&quot;linkish&quot;&quot;/&gt;&quot;</param>
+                    <param id="1" name="Set">&quot;&lt;img width=&quot;&quot;150px&apos;&quot;&quot; style=&quot;&quot;border-radius:50%&quot;&quot; src=&quot;&quot;file://&quot; &amp; &quot;/home/&quot; &amp; Browser.ExecJS(&quot;username.sync()&quot;) &amp; &quot;/.face&quot; &amp; &quot;&quot;&quot; title=&quot;&quot;&quot; &amp; &quot;Click to change &quot; &amp; Browser.ExecJS(&quot;username.sync()&quot;) &amp; &quot;&apos;s avatar, password, name, etc.&quot; &amp; &quot;&quot;&quot; class=&quot;&quot;linkish&quot;&quot;/&gt;&quot;</param>
                     <param id="2" name="Append">&quot;&quot;</param>
                 </action>
                 <action id="-16" name="Wait" sid="161624167635491" type="System">
@@ -2356,6 +2356,20 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <event-block sid="441480039531145">
+                            <conditions>
+                                <condition id="4" name="Compare C2 Function" sid="676832696735656" type="UI">
+                                    <param id="0" name="C2">&quot;cinnamonbackgrounds-open&quot;</param>
+                                    <param id="1" name="Case">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="25" name="Run file" sid="468812437340479" type="Electron">
+                                    <param id="0" name="Path">&quot;cinnamon-settings&quot;</param>
+                                    <param id="1" name="Parameters">&quot;backgrounds&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="118824208448607">
                             <conditions>
                                 <condition id="4" name="Compare C2 Function" sid="574185224280111" type="UI">

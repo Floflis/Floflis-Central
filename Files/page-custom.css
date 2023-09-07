@@ -56,7 +56,7 @@ button.color:hover{background:#fff;color:#3EB7E5}
 }
 .nav-link:hover{font-weight:unset!important}
 
-/* To implement on FrameworkJS v3 > */
+/* To implement on FrameworkJS r3 > */
 .tab-content .backgroundWrap {
     left: 0;
     top: 0;
@@ -67,4 +67,28 @@ img.linkish:hover {
 img.linkish:active {
     box-shadow: inset 0 0 15px 0 rgb(0, 0, 0), inset 0 15px 15px 0 rgb(0, 0, 0), 0 -3px 25px 0 rgb(0, 0, 0);
 }
-/* < To implement on FrameworkJS v3 */
+/* < To implement on FrameworkJS r3 */
+
+/* 2023's changes --> */
+
+/*.nav-tabs .nav-link.active {
+    color: #ff4081;
+    background-color: transparent!important;
+    backdrop-filter: blur(10px);
+}
+.navdrawer > .navdrawer-content > .navdrawer-nav > .nav-tabs > .nav-item > .nav-link {
+    background-color: #fff5!important;
+    backdrop-filter: blur(10px);
+}*/
+.navdrawer > .navdrawer-content > .navdrawer-nav > .nav-tabs > .nav-item > .nav-link.active:before {
+    opacity: 0;
+}
+
+.dropdown-menu.backgrounds .figure img {
+  border-radius: 5px;
+  width: 100px;
+}
+.dropdown-menu.avatars .figure img {
+  border-radius: 50%;
+  width: 50%;
+}
