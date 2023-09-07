@@ -770,6 +770,11 @@
                     <param id="1" name="Set">&quot;...&quot;</param>
                     <param id="2" name="Append">&quot;&quot;</param>
                 </action>
+                <action id="24" name="Get elements" sid="616191807180034" type="UI">
+                    <param id="0" name="ID/Class">&quot;#nav-updates&quot;</param>
+                    <param id="1" name="Set">&quot;...&quot;</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
                 <action id="24" name="Get elements" sid="152239138209834" type="UI">
                     <param id="0" name="ID/Class">&quot;#nav-about&quot;</param>
                     <param id="1" name="Set">&quot;...&quot;</param>
@@ -1119,6 +1124,21 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="542028449976218">
+                    <conditions>
+                        <condition id="4" name="Compare C2 Function" sid="436108999274755" type="UI">
+                            <param id="0" name="C2">&quot;updates&quot;</param>
+                            <param id="1" name="Case">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Read" sid="277851701250884" type="Electron">
+                            <param id="0" name="Tag">&quot;updates&quot;</param>
+                            <param id="1" name="Path">Electron.GetAppPath &amp; &quot;/HTML/updates.html&quot;</param>
+                            <param id="2" name="Encoding">&quot;utf8&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="891491303707848">
                     <conditions>
                         <condition id="4" name="Compare C2 Function" sid="345816259372814" type="UI">
@@ -1158,7 +1178,7 @@
                     </conditions>
                     <actions>
                         <action id="17" name="Execute Javascript" sid="916889334749497" type="Browser">
-                            <param id="0" name="Javascript">&quot;$(&apos;#navdrawerPermanentClipped li:nth-child(5) a&apos;).tab(&apos;show&apos;)&quot;</param>
+                            <param id="0" name="Javascript">&quot;$(&apos;#navdrawerPermanentClipped li:nth-child(6) a&apos;).tab(&apos;show&apos;)&quot;</param>
                         </action>
                         <action id="9" name="Read" sid="754763944426627" type="Electron">
                             <param id="0" name="Tag">&quot;about&quot;</param>
@@ -1248,6 +1268,11 @@
                 </action>
                 <action id="24" name="Get elements" sid="475517725734643" type="UI">
                     <param id="0" name="ID/Class">&quot;#nav-personalization&quot;</param>
+                    <param id="1" name="Set">&quot;...&quot;</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action id="24" name="Get elements" sid="938650246405730" type="UI">
+                    <param id="0" name="ID/Class">&quot;#nav-updates&quot;</param>
                     <param id="1" name="Set">&quot;...&quot;</param>
                     <param id="2" name="Append">&quot;&quot;</param>
                 </action>
@@ -1871,6 +1896,11 @@
                     <param id="1" name="Set">&quot;...&quot;</param>
                     <param id="2" name="Append">&quot;&quot;</param>
                 </action>
+                <action id="24" name="Get elements" sid="605971619720474" type="UI">
+                    <param id="0" name="ID/Class">&quot;#nav-updates&quot;</param>
+                    <param id="1" name="Set">&quot;...&quot;</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
                 <action id="24" name="Get elements" sid="842280581513074" type="UI">
                     <param id="0" name="ID/Class">&quot;#nav-about&quot;</param>
                     <param id="1" name="Set">&quot;...&quot;</param>
@@ -1910,6 +1940,11 @@
                 </action>
                 <action id="24" name="Get elements" sid="612299407461789" type="UI">
                     <param id="0" name="ID/Class">&quot;#nav-playwith&quot;</param>
+                    <param id="1" name="Set">&quot;...&quot;</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action id="24" name="Get elements" sid="604481552339683" type="UI">
+                    <param id="0" name="ID/Class">&quot;#nav-updates&quot;</param>
                     <param id="1" name="Set">&quot;...&quot;</param>
                     <param id="2" name="Append">&quot;&quot;</param>
                 </action>
@@ -2069,6 +2104,53 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="918981655841129">
+            <conditions>
+                <condition id="3" name="On read success" sid="120497007382868" type="Electron">
+                    <param id="0" name="Tag">&quot;updates&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="24" name="Get elements" sid="297608326922094" type="UI">
+                    <param id="0" name="ID/Class">&quot;#nav-updates&quot;</param>
+                    <param id="1" name="Set">Electron.LastReadAsync</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action id="24" name="Get elements" sid="266185088492016" type="UI">
+                    <param id="0" name="ID/Class">&quot;#nav-home&quot;</param>
+                    <param id="1" name="Set">&quot;...&quot;</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action id="24" name="Get elements" sid="909740337810186" type="UI">
+                    <param id="0" name="ID/Class">&quot;#nav-profile&quot;</param>
+                    <param id="1" name="Set">&quot;...&quot;</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action id="24" name="Get elements" sid="234116339391787" type="UI">
+                    <param id="0" name="ID/Class">&quot;#nav-playwith&quot;</param>
+                    <param id="1" name="Set">&quot;...&quot;</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action id="24" name="Get elements" sid="661889683630083" type="UI">
+                    <param id="0" name="ID/Class">&quot;#nav-about&quot;</param>
+                    <param id="1" name="Set">&quot;...&quot;</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action id="24" name="Get elements" sid="120888440929254" type="UI">
+                    <param id="0" name="ID/Class">&quot;#nav-personalization&quot;</param>
+                    <param id="1" name="Set">&quot;...&quot;</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action id="24" name="Get elements" sid="429877194013606" type="UI">
+                    <param id="0" name="ID/Class">&quot;#nav-moresettings&quot;</param>
+                    <param id="1" name="Set">&quot;...&quot;</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action id="30" name="Set title" sid="392420709967183" type="Electron">
+                    <param id="0" name="Title">&quot;Floflis Update&quot;</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block disabled="1" sid="338737194106137">
             <conditions>
                 <condition id="0" name="On completed" sid="641556917896790" type="AJAX">
@@ -2106,6 +2188,11 @@
                 </action>
                 <action id="24" name="Get elements" sid="589432968522584" type="UI">
                     <param id="0" name="ID/Class">&quot;#nav-personalization&quot;</param>
+                    <param id="1" name="Set">&quot;...&quot;</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action id="24" name="Get elements" sid="984322621173600" type="UI">
+                    <param id="0" name="ID/Class">&quot;#nav-updates&quot;</param>
                     <param id="1" name="Set">&quot;...&quot;</param>
                     <param id="2" name="Append">&quot;&quot;</param>
                 </action>
@@ -2348,6 +2435,11 @@
                 </action>
                 <action id="24" name="Get elements" sid="674861102630692" type="UI">
                     <param id="0" name="ID/Class">&quot;#nav-personalization&quot;</param>
+                    <param id="1" name="Set">&quot;...&quot;</param>
+                    <param id="2" name="Append">&quot;&quot;</param>
+                </action>
+                <action id="24" name="Get elements" sid="864216613617792" type="UI">
+                    <param id="0" name="ID/Class">&quot;#nav-updates&quot;</param>
                     <param id="1" name="Set">&quot;...&quot;</param>
                     <param id="2" name="Append">&quot;&quot;</param>
                 </action>
