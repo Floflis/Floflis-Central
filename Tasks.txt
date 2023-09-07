@@ -7,19 +7,33 @@ log:
 -🐞 begin implementing Floflis' own background-picker and avatar-picker!
 - fix nfts-parse.sh/universal-abi
 - implement an empty Updates tab! (display "Powered by Web3Updater")
--🐞 Home/About's "up-to-date": make it a linkish: click and open the Updates tab
+- Home/About's "up-to-date": make it a linkish: click and open the Updates tab
 
 
-- Inventory: display amount of Axies in "Pets" tab https://etherscan.io/readContract?m=normal&a=0xf5b0a3efb8e8e4c201e2a935f110eaaf3ffecb8d&v=0xf5b0a3efb8e8e4c201e2a935f110eaaf3ffecb8d#readCollapse14
-- https://api.axie.technology/getaxies/99228
-- https://axie.zone/func/pixelate.php?axie_id=99228 (50px)
-ethereal contract call --contract=0xf5b0a3efb8e8e4c201e2a935f110eaaf3ffecb8d --abi=abi-axie.json --call='tokenURI(142388)' --from=0xDDfC2e10702d8A781727A34D83B3bb3CA94a3E91
-
-- support parameters/--flags for opening in specific tab (useful for Explore menu, that will open directly in "More settings" tab) https://www.geeksforgeeks.org/command-line-arguments-in-electronjs/ https://stackoverflow.com/questions/30815446/how-to-pass-command-line-argument-in-electron
-
+- fix sync issues of token/nft listing; don't list .sh if offline!
 - networks at a token shouldn't be anymore in the HTML, but appended via script/event-sheet
 - .html: dont display network in a token when amount is zero!
 - newly supported networks: Base, Arbitrum, BSC, zkEVM, zkSync Era, Linea, Celo, ImmutableX/zkEVM, Metis
+
+- Inventory: display amount of Axies in "Pets"
+- Display the type of Trophies and individual count
+- Display the type of Paintings and individual count
+- Display the type of Pets and individual count
+
+- Inventory: display amount of ExpansionPunks in "PFPs/Avatars" tab https://etherscan.io/readContract?m=normal&a=0x0d0167a823c6619d430b1a96ad85b888bcf97c37&v=0x0d0167a823c6619d430b1a96ad85b888bcf97c37#readCollapse3
+
+- Inventory: parse and display every ExpansionPunks in "PFPs/Avatars" tab
+ethereal contract call --contract=0x0d0167a823c6619d430b1a96ad85b888bcf97c37 --abi=universal-abi.json --call='walletOfOwner(0x38d45e8e519cb3c72f9f890dce4a5dbb0608f8a3)' --from=0xDDfC2e10702d8A781727A34D83B3bb3CA94a3E91 [OUTPUT: "[15232,14346,18706,16490]"]
+have to loop on each item of this array!
+-
+ethereal contract call --contract=0x0d0167a823c6619d430b1a96ad85b888bcf97c37 --abi=universal-abi.json --call='tokenURI(15232)' --from=0xDDfC2e10702d8A781727A34D83B3bb3CA94a3E91 [OUTPUT: "ipfs://bafybeih7roxjr3jjaxvmrjpwja5mkx3kn4w5icvxtntbwbyw5l6stlgcbq/15232"]
+have to convert ipfs:// to gateway; read from JSON: name, image
+
+- centralize leftSidebar's items, by using margin-left/margin-right trick
+
+- fix popper.js issue
+- support parameters/--flags for opening in specific tab (useful for Explore menu, that will open directly in "More settings" tab) https://stackoverflow.com/a/64613200 https://www.geeksforgeeks.org/command-line-arguments-in-electronjs/ https://stackoverflow.com/questions/30815446/how-to-pass-command-line-argument-in-electron
+- .desktop shortcut+classic-icon for Floflis Update
 
 - "in cpu-arch, also tell its codename (i386, amd64)" (HAVE TO IMPROVE THIS, by supporting ARM rather than assuming everything's x86)
 
@@ -39,17 +53,19 @@ ethereal contract call --contract=0xf5b0a3efb8e8e4c201e2a935f110eaaf3ffecb8d --a
 
 - integrate IPFS (also display peerid)
 
-- Display the type of Trophies and individual count
-- Display the type of Paintings and individual count
-- Display the type of Pets and individual count
+Display axies, tasks:
+ tab https://etherscan.io/readContract?m=normal&a=0xf5b0a3efb8e8e4c201e2a935f110eaaf3ffecb8d&v=0xf5b0a3efb8e8e4c201e2a935f110eaaf3ffecb8d#readCollapse14
+- https://api.axie.technology/getaxies/99228
+- https://axie.zone/func/pixelate.php?axie_id=99228 (50px)
+ethereal contract call --contract=0xf5b0a3efb8e8e4c201e2a935f110eaaf3ffecb8d --abi=abi-axie.json --call='tokenURI(142388)' --from=0xDDfC2e10702d8A781727A34D83B3bb3CA94a3E91
 
 - svg -> png app-icon!
 - can enter fullscreen with F11, but can't exit it with same F11 (also, F11 works in any place of the desktop despite Central's window not visible)
 
-- fix sync issues of token/nft listing; don't list .sh if offline
 - If no Internet, don't display 0 tokens if already non-zero, but tell balance outdated
 
 - Profile tab: remove "Estimated total USD you hold" from card
+- Display estimated total USD on every token count
 
 - If user have no ETH address/fullname in user.json, display error (validation)
 
@@ -58,16 +74,11 @@ ethereal contract call --contract=0xf5b0a3efb8e8e4c201e2a935f110eaaf3ffecb8d --a
 - get rid of sh<>c2 json communication (bashc2-communication_ethgas.sh)
 
 - scripts will use external functions (tokenbalance-others.sh, nfts-parse.sh) in their own folders (include tokenbalance.sh)
-
-- independence for fullname.sh
-
-- Display estimated total USD on every token count
+- independence for fullname.sh (own repo)
 
 - "Copy to clipboard" button at ETH address and ENS name
 
 - new C2 project: Bitaverse secret base. Floflis user will have a secret base and a quintal outside, merging all of its axies + allowlisted ethermons living happily at the same place. Floflis Central's Pets tab will have a button to open a early draft Bitaverse land! At the top of that window say Probably nothing™
-
-- Inventory: display amount of ExpansionPunks in "PFPs/Avatars" tab https://etherscan.io/readContract?m=normal&a=0x0d0167a823c6619d430b1a96ad85b888bcf97c37&v=0x0d0167a823c6619d430b1a96ad85b888bcf97c37#readCollapse3
 
 - tubby cats PFP
 
@@ -77,13 +88,6 @@ https://etherscan.io/token/0x1b6b3026b7f5531086f3b8e6cc31c6564bbe2849#readContra
 tokenURI (DANIMESQ Arts - Mintbase)
 
 - Set an art as NFT background!
-
-- Inventory: parse and display every ExpansionPunks in "PFPs/Avatars" tab
-ethereal contract call --contract=0x0d0167a823c6619d430b1a96ad85b888bcf97c37 --abi=universal-abi.json --call='walletOfOwner(0x38d45e8e519cb3c72f9f890dce4a5dbb0608f8a3)' --from=0xDDfC2e10702d8A781727A34D83B3bb3CA94a3E91 [OUTPUT: "[15232,14346,18706,16490]"]
-have to loop on each item of this array!
--
-ethereal contract call --contract=0x0d0167a823c6619d430b1a96ad85b888bcf97c37 --abi=universal-abi.json --call='tokenURI(15232)' --from=0xDDfC2e10702d8A781727A34D83B3bb3CA94a3E91 [OUTPUT: "ipfs://bafybeih7roxjr3jjaxvmrjpwja5mkx3kn4w5icvxtntbwbyw5l6stlgcbq/15232"]
-have to convert ipfs:// to gateway; read from JSON: name, image
 
 - Inventory: display Rockstars of EPNS (image, metadata, everything as its one NFT per person) in "Trophies" tab https://etherscan.io/readContract?m=normal&a=0x3f8c2152b79276b78315caf66ccf951780580a8a&v=0x3f8c2152b79276b78315caf66ccf951780580a8a#F11
 
