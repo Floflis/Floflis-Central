@@ -10,9 +10,9 @@ log:
 - Home/About's "up-to-date": make it a linkish: click and open the Updates tab
 
 
+-📈 scripts: networks aren't anymore hardcoded; they're loaded dinamically (looping) from a folder
 - fix sync issues of token/nft listing; don't list .sh if offline!
-- networks at a token shouldn't be anymore in the HTML, but appended via script/event-sheet
-- .html: dont display network in a token when amount is zero!
+-📈 networks at a token shouldn't be anymore in the HTML, but appended via event-sheet. .html: dont display network in a token when amount is zero!
 - newly supported networks: Base, Arbitrum, BSC, zkEVM, zkSync Era, Linea, Celo, ImmutableX/zkEVM, Metis
 
 - Inventory: display amount of Axies in "Pets"
