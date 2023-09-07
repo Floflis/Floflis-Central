@@ -6,6 +6,15 @@
         <variable constant="0" name="LoadedAbout" sid="270706131919194" static="0" type="number">0</variable>
         <variable constant="0" name="currentdialog" sid="203874915509332" static="0" type="text"></variable>
         <variable constant="0" name="gasreadactive" sid="400535518659236" static="0" type="number">0</variable>
+        <variable constant="0" name="nftsValue0rockstarsofepnsbalance2" sid="895375782482788" static="0" type="number">0</variable>
+        <variable constant="0" name="nftsValue0expansionpunksbalance2" sid="170637276992027" static="0" type="number">0</variable>
+        <variable constant="0" name="nftsValue0axiepetbalance2" sid="967203703861254" static="0" type="number">0</variable>
+        <variable constant="0" name="nftsValue0cryptokittiesbalance2" sid="574531747756633" static="0" type="number">0</variable>
+        <variable constant="0" name="nftsValue0danimesqartbalance2" sid="329153244315096" static="0" type="number">0</variable>
+        <variable constant="0" name="sumtrophies2" sid="899128914565845" static="0" type="number">0</variable>
+        <variable constant="0" name="sumpfps2" sid="555234825878154" static="0" type="number">0</variable>
+        <variable constant="0" name="sumpets2" sid="486642162866299" static="0" type="number">0</variable>
+        <variable constant="0" name="summetaversestuff2" sid="447054640653510" static="0" type="number">0</variable>
         <include>Common sheet</include>
         <event-block sid="806523564058118">
             <conditions>
@@ -1715,6 +1724,10 @@
                         <action id="-9" name="Set value" sid="623726356999270" type="System">
                             <param id="0" name="Variable">summetaversestuff</param>
                             <param id="1" name="Value">int(nftsValue0danimesqartbalance)+int(sumpets)</param>
+                        </action>
+                        <action id="14" name="Log" sid="353007880413424" type="Browser">
+                            <param id="0" name="Type">0</param>
+                            <param id="1" name="Message">&quot;SUPER DUPER DEBUG LOG: &quot; &amp; int(nftsValue0axiepetbalance)+int(nftsValue0cryptokittiesbalance)</param>
                         </action>
                     </actions>
                 </event-block>
