@@ -1,1 +1,2 @@
 use gitfoldfocusmerger to add the first commits from Central
+/media/daniella/B/git/Gamlr/tools/list-construct-addons/get-c2-proj-addons.sh
