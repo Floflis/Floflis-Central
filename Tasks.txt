@@ -207,3 +207,17 @@ Floflis Central repaginate:
 - collapsible navbar from topbar/header
 
 G:\Users\Daniell\Desktop\Floflis\Floflis Settings\c2export\
+
+
+central in flutter
+web3:
+https://medium.com/coinmonks/building-modern-web-dapp-with-flutter-91656c71d8b
+https://pub.dev/packages/web3_connect
+https://web3auth.io/docs/content-hub/guides/flutter
+https://pub.dev/packages/web3auth_flutter
+https://namanrivaan.medium.com/build-your-first-dapp-using-flutter-web3-solidity-blockchain-6c8cafe36d05
+https://pub.dev/packages/flutter_web3
+https://fluttergems.dev/web3-crypto-blockchain/
+https://github.com/Zfinix/awesome-dart-web3
+https://coinsbench.com/flutter-web3-smart-contract-interaction-in-dart-5669595a0068
+https://pub.dev/packages/starknet_flutter
