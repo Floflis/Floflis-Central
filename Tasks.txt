@@ -29,6 +29,10 @@ have to loop on each item of this array!
 ethereal contract call --contract=0x0d0167a823c6619d430b1a96ad85b888bcf97c37 --abi=universal-abi.json --call='tokenURI(15232)' --from=0xDDfC2e10702d8A781727A34D83B3bb3CA94a3E91 [OUTPUT: "ipfs://bafybeih7roxjr3jjaxvmrjpwja5mkx3kn4w5icvxtntbwbyw5l6stlgcbq/15232"]
 have to convert ipfs:// to gateway; read from JSON: name, image
 
+Telegram 18 Oct 2023 20:54:11:BR:"
+Floflis Central home.html: screen brightness and other widgets!
+"
+
 - centralize leftSidebar's items, by using margin-left/margin-right trick
 
 - fix popper.js issue
