@@ -1,4 +1,4 @@
-Attempt 46:
+Attempt 47:
 log:
 - about.html: "(amd64)" use <small>
 - add "soon" badge to Personalization>"CHANGE LOOK-AND-FEEL" tab
@@ -153,7 +153,7 @@ poke SV bg as NFT, then pokefan personality-pack
 
 - pack.sh: use same script as Floflis Soil to install global node modules
 
-Attempt 47:
+Attempt 48:
 
 
 
@@ -173,11 +173,11 @@ Attempt 47:
 
 - Taskbar settings tab: display label in Explore button, display labels in openned apps, auto-hide
 
-Attempt 48:
-
-
-
 Attempt 49:
+
+
+
+Attempt 50:
 
 - Sounds; more sounds settings
 - Backgrounds tab: pre-picked backgrounds before new implementations; more backgrounds settings
@@ -185,7 +185,7 @@ Attempt 49:
 - more details about CPU architecture
 - integration with Alertz (Profile>Inventory>Backgrounds)
 
-Attempt 50:
+Attempt 51:
 
 - Themes tab: "Window borders", "Icons", "Controls", "Mouse Pointer", "Desktop"; install new themes, from UniStore (also fetch from spices repos)
 - Account details tab: Picture, Name, Password
