@@ -1,13 +1,6 @@
-Attempt 47:
+Attempt 48:
 log:
-- about.html: "(amd64)" use <small>
-- add "soon" badge to Personalization>"CHANGE LOOK-AND-FEEL" tab
-- bluetooth icon next to devicename in "About" tab
-- sidebar tabs: remove bottom line of selected items
--🐞 begin implementing Floflis' own background-picker and avatar-picker!
-- fix nfts-parse.sh/universal-abi
-- implement an empty Updates tab! (display "Powered by Web3Updater")
-- Home/About's "up-to-date": make it a linkish: click and open the Updates tab
+- ...
 
 
 -📈 scripts: networks aren't anymore hardcoded; they're loaded dinamically (looping) from a folder
