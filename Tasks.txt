@@ -213,7 +213,19 @@ Floflis Central repaginate:
 G:\Users\Daniell\Desktop\Floflis\Floflis Settings\c2export\
 
 
-central in flutter
+
+
+
+
+
+
+
+
+
+Flutter journey:
+
+all the previous done in JS, re-implement in these Flutter bases: /media/daniella/B/git/Floflis/Floflis/Flutter/ubuntu_settings + /media/daniella/B/git/Floflis/Floflis/Flutter/dahliaOS_settings, AND MERGE UPSTREAM bc they deserve
+
 web3:
 https://medium.com/coinmonks/building-modern-web-dapp-with-flutter-91656c71d8b
 https://pub.dev/packages/web3_connect
